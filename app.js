@@ -53,10 +53,10 @@ filterBtns.forEach(btn => {
 // ── AFF links (替换为你注册的真实推广链接) ──
 const affLinks = {
   nexitally: '#',   // 奶昔机场 AFF 链接
-  dageyun:   '#',   // 大哥云 AFF 链接
-  huanyuyun: '#',   // 寰宇云 AFF 链接
-  '69yun':   '#',   // 69云 AFF 链接
-  shunyun:   '#',   // 瞬云 AFF 链接
+  dageyun:   'https://aff02.dgy02.com/#/register?code=PQdpFA0R',
+  huanyuyun: 'https://vip3.huanyuyunbest.com/#/register?code=CPBmzXgk',
+  '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
+  shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
   shanhai:   '#'    // 山海机场 AFF 链接
 };
 function goAff(name) {
@@ -72,7 +72,7 @@ function showDetail(name) {
     dageyun: { name: '大哥云', desc: '大哥云是老牌高性价比机场，运营多年，口碑稳定。采用专线中转线路，晚高峰实测 500Mbps+，支持 Netflix、ChatGPT 解锁，提供免费试用，适合新手入门。\n\n✅ 优点：价格实惠（¥19 起）、免费试用、新手友好、运营稳定\n⚠️ 缺点：高峰期偶有波动，不是最顶级的专线' },
     huanyuyun: { name: '寰宇云', desc: '寰宇云是新晋优质机场，采用 IPLC 专线，不限时套餐设计灵活，三网优化效果好。晚高峰实测 700Mbps+，适合需要按需购买流量的用户。\n\n✅ 优点：IPLC 专线稳定、不限时套餐灵活、性价比高\n⚠️ 缺点：成立时间相对较短，建议月付观察' },
     '69yun': { name: '69云', desc: '69云以"每日签到送流量"闻名，性价比极高，同时附带 Emby 影视库服务。中转优化线路晚高峰实测 400Mbps+，适合作为主力或备用机场。\n\n✅ 优点：签到送流量、有 Emby 影视库、价格亲民（¥15 起）\n⚠️ 缺点：非专线，高峰期速度不及专线机场' },
-    shunyun: { name: '瞬云', desc: '瞬云节点覆盖丰富，套餐灵活，年付价格实惠，适合使用频率固定的用户。中转+专线混合线路，晚高峰实测 350Mbps+。\n\n✅ 优点：节点多、套餐灵活、年付价格低\n⚠️ 缺点：速度表现中规中矩，不是高端专线' },
+    shunyun: { name: '瞬云', desc: '瞬云节点覆盖丰富，套餐灵活，年付价格实惠，适合使用频率固定的用户。中转+专线混合线路，晚高峰实测 700Mbps+。新用户可使用优惠码 20off 享专属折扣。\n\n✅ 优点：节点多、套餐灵活、年付价格低、有新客优惠码\n⚠️ 缺点：非纯专线，高峰期偶有波动' },
     shanhai: { name: '山海机场', desc: '山海机场支持按量付费和不限时套餐，多协议支持（SS/V2Ray/Trojan），适合使用频率不规律的用户。入门价格最低，是备用机场的好选择。\n\n✅ 优点：按量付费灵活、入门价格低（¥10 起）、多协议支持\n⚠️ 缺点：速度表现一般，适合作为备用而非主力' }
   };
   const d = details[name];
