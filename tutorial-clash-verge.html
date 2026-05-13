@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clash Verge Rev Windows使用教程 2026 - 勇哥评测</title>
+<meta name="description" content="Clash Verge Rev Windows详细配置教程：下载安装、基础设置DNS覆写关闭、导入订阅链接、节点选择，附真实截图，10分钟完成科学上网配置。">
+<meta name="keywords" content="Clash Verge Rev教程,Clash Windows,Clash Verge配置,Windows翻墙教程,Clash订阅">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/tutorial-clash-verge.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-breadcrumb span{color:var(--text-secondary)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover,.guide-nav a.active{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.guide-step-card p:last-child{margin-bottom:0}
+.tutorial-img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--border);margin:14px 0;display:block}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.danger-box{display:flex;gap:12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.danger-box .danger-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.code-inline{background:rgba(99,120,255,.12);color:var(--accent);padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.85em}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 0}
+.dl-btn:hover{opacity:.85;transform:translateY(-1px)}
+.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}
+.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}
+.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥评测" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥评测</span></a>
+  <div class="nav-links"><a href="index.html">机场推荐</a><a href="tutorials.html" class="active">使用教程</a><a href="wiki.html">科普百科</a><a href="deals.html">优惠专区</a><a href="about.html">关于我们</a><a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a></div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="tutorials.html">使用教程</a><span>›</span><span style="color:var(--text-primary);">Windows · Clash Verge Rev</span></div>
+    <div class="section-label">🪟 Windows 教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">Clash Verge Rev 详细配置教程</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:580px;">Windows 最主流的 Clash 客户端，支持规则分流、多种协议，附真实操作截图</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">Clash Verge Rev</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">Windows 10/11</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">免费开源</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">难度：★☆☆ 简单</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar">
+        <h3>目录</h3>
+        <div class="guide-nav">
+          <a href="#step1">① 下载安装</a>
+          <a href="#step2">② 基础设置（必做）</a>
+          <a href="#step3">③ 导入订阅</a>
+          <a href="#step4">④ 开始使用</a>
+          <a href="#tips">⚠️ 重要提示</a>
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="step1">
+          <h2><div class="step-badge">1</div>下载安装 Clash Verge Rev</h2>
+          <p>点击下方按钮下载最新版 Clash Verge Rev（Windows x64）：</p>
+          <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/latest" target="_blank" class="dl-btn">⬇️ 下载 Clash Verge Rev（GitHub）</a>
+          <div class="warn-box"><span class="warn-label">⚠️ 注意</span>Clash Verge Rev <strong>不支持 Windows 7 及以下版本</strong>。请确认你的系统为 Windows 10 或 Windows 11。</div>
+          <p>下载 <span class="code-inline">.exe</span> 安装包后，双击运行，一路点「下一步」完成安装。安装完成后桌面会出现 Clash Verge Rev 图标，双击打开。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step2">
+          <h2><div class="step-badge">2</div>软件基础设置（重要，请勿跳过）</h2>
+          <p>请严格按照以下步骤设置，否则可能导致<strong>网络中断、不稳定、流媒体解锁失效</strong>等问题。</p>
+          <p>点击左侧菜单「<strong>设置</strong>」，按下图操作：</p>
+          <ul style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
+            <li>关闭「<strong>DNS 覆写</strong>」</li>
+            <li>关闭「<strong>IPv6</strong>」</li>
+            <li>打开「<strong>统一延迟</strong>」</li>
+          </ul>
+          <img src="imgs/cv-setup1.png" alt="Clash Verge 设置界面" class="tutorial-img" loading="lazy">
+          <img src="imgs/cv-setup2.png" alt="Clash Verge DNS设置" class="tutorial-img" loading="lazy">
+          <div class="tip-box"><span class="tip-label">💡 为什么要关闭 DNS 覆写？</span>开启 DNS 覆写可能导致国内网站访问变慢，或部分机场的流媒体节点解锁失效。关闭是最稳妥的设置。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step3">
+          <h2><div class="step-badge">3</div>导入订阅</h2>
+          <p><strong>第一步</strong>：登录你购买的机场后台，找到「订阅」或「使用文档」页面，选择 <span class="code-inline">Clash</span> 格式，复制订阅链接。</p>
+          <p><strong>第二步</strong>：在 Clash Verge Rev 中，点击左侧「<strong>订阅</strong>」，将复制的订阅链接粘贴到顶部输入框，点击「<strong>订阅文件链接</strong>」，再点击「<strong>导入</strong>」。</p>
+          <img src="imgs/cv-subscribe.png" alt="Clash Verge 导入订阅" class="tutorial-img" loading="lazy">
+          <p><strong>第三步</strong>：导入成功后，下方会出现配置文件。<strong>鼠标右键</strong>点击刚导入的配置文件，在下拉菜单中点击「<strong>使用</strong>」，使其变为已激活状态（蓝色高亮）。</p>
+          <div class="tip-box"><span class="tip-label">💡 提示</span>建议开启配置文件旁边的「<strong>自动更新</strong>」，设置为每 24 小时更新一次，保证获取最新节点。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step4">
+          <h2><div class="step-badge">4</div>开始使用</h2>
+          <p>点击左侧「<strong>设置</strong>」，找到「<strong>系统代理</strong>」开关，点击开启（按钮变蓝）。此时系统会接管所有浏览器网络请求，走代理访问。</p>
+          <img src="imgs/cv-usage.png" alt="Clash Verge 系统代理" class="tutorial-img" loading="lazy">
+          <p>点击左侧「<strong>代理</strong>」，进入节点控制页面，选择你想使用的节点。建议选择延迟低（绿色）的节点。</p>
+          <div class="tip-box"><span class="tip-label">✅ 验证</span>打开浏览器访问 google.com，能正常加载说明配置成功！</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="tips">
+          <h2>⚠️ 重要提示</h2>
+          <div class="danger-box"><span class="danger-label">🚫 注意</span>没有特殊情况请<strong>不要使用「全局模式」</strong>！全局模式会导致国内网站访问变慢，且可能使订阅配置文件内的某些特殊分流规则失效。<br>推荐使用「<strong>规则模式</strong>」：国内直连，国外走代理。</div>
+          <p><strong>Q：打开后节点全是红色 / 超时？</strong><br>A：点击节点右侧「测速」按钮，等待测速完成。若全部超时，检查订阅是否正确导入，或尝试重新更新订阅。</p>
+          <p><strong>Q：开启系统代理后国内网站变慢？</strong><br>A：确认使用的是「规则模式」而非「全局模式」。规则模式会自动判断国内/国外流量。</p>
+          <p><strong>Q：程序提示缺少 .NET 运行时？</strong><br>A：前往 <a href="https://dotnet.microsoft.com/download" target="_blank" style="color:var(--accent)">Microsoft 官网</a> 下载安装最新版 .NET Desktop Runtime。</p>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="tutorials.html">← 返回教程列表</a>
+          <a href="tutorial-shadowrocket.html">下一篇：iOS 小火箭 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥评测</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

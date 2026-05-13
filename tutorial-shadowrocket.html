@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadowrocket小火箭iOS使用教程 2026 - 勇哥评测</title>
+<meta name="description" content="Shadowrocket小火箭详细使用教程：美区Apple ID购买、分流规则配置、订阅导入、节点选择，附真实截图，iOS翻墙最全图文指南2026。">
+<meta name="keywords" content="Shadowrocket教程,小火箭使用,iOS翻墙教程,Shadowrocket配置,小火箭订阅导入">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/tutorial-shadowrocket.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.tutorial-img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--border);margin:14px 0;display:block}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.img-row img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--border)}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.danger-box{display:flex;gap:12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.danger-box .danger-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.code-inline{background:rgba(99,120,255,.12);color:var(--accent);padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.85em}
+.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}
+.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}
+.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}.img-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥评测" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥评测</span></a>
+  <div class="nav-links"><a href="index.html">机场推荐</a><a href="tutorials.html" class="active">使用教程</a><a href="wiki.html">科普百科</a><a href="deals.html">优惠专区</a><a href="about.html">关于我们</a><a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a></div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="tutorials.html">使用教程</a><span>›</span><span style="color:var(--text-primary);">iOS · Shadowrocket</span></div>
+    <div class="section-label">🍎 iOS 教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">Shadowrocket 小火箭详细配置教程</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:580px;">iOS 最流行的代理工具，支持多种协议，附真实截图，一步步跟着操作即可</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">Shadowrocket</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">iOS 14+</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">需购买 $2.99</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">难度：★★☆ 中等</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar">
+        <h3>目录</h3>
+        <div class="guide-nav">
+          <a href="#step1">① 下载小火箭</a>
+          <a href="#step2">② 设置分流规则</a>
+          <a href="#step3">③ 导入订阅</a>
+          <a href="#step4">④ 开始使用</a>
+          <a href="#tips">常见问题</a>
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="step1">
+          <h2><div class="step-badge">1</div>下载 Shadowrocket 小火箭</h2>
+          <p>Shadowrocket 已从中国大陆区 App Store 下架，需要使用<strong>非大陆区 Apple ID</strong>（如美区、港区、台区）购买下载，售价 $2.99 美元。</p>
+          <p>获取美区 Apple ID 的方式：</p>
+          <ul style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
+            <li>自行注册美区 Apple ID（需美国地址信息）</li>
+            <li>在淘宝/咸鱼购买一个美区账号专门用于下载</li>
+            <li>用礼品卡充值购买，避免绑定信用卡</li>
+          </ul>
+          <div class="warn-box"><span class="warn-label">⚠️ 注意</span>购买后请立即切换回你自己的 Apple ID，只在下载 Shadowrocket 时使用购买账号，<strong>不要开启自动更新</strong>，避免账号安全问题。</div>
+          <p>请确保下载的是最新版 Shadowrocket，旧版本可能不支持新协议。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step2">
+          <h2><div class="step-badge">2</div>设置分流规则（特别重要）</h2>
+          <div class="danger-box"><span class="danger-label">🚫 重要</span>使用 Shadowrocket 自带的 Default.conf 可能导致<strong>断网或访问不稳定</strong>，必须按以下步骤导入机场专用配置文件。</div>
+          <p><strong>获取配置文件</strong>：登录你的机场后台，找到「使用文档」或「客户端下载」页面，下载专用的 Shadowrocket 配置文件（通常是 <span class="code-inline">.conf</span> 格式）。</p>
+          <img src="imgs/sr-config1.png" alt="获取Shadowrocket配置文件" class="tutorial-img" loading="lazy">
+          <p>复制配置文件地址后，打开 Shadowrocket，在底部导航栏点击「<strong>配置</strong>」，点击右上角加号「<strong>+</strong>」，粘贴配置文件地址并保存。</p>
+          <div class="img-row">
+            <img src="imgs/sr-config2.png" alt="Shadowrocket配置页面" loading="lazy">
+            <img src="imgs/sr-config3.png" alt="Shadowrocket添加配置" loading="lazy">
+          </div>
+          <p>在「<strong>本地文件</strong>」中找到刚下载的 <span class="code-inline">Shadowrocket.conf</span>，点击它，在弹出菜单中选择「<strong>使用配置</strong>」，App 会自动应用该配置。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step3">
+          <h2><div class="step-badge">3</div>导入节点订阅</h2>
+          <p>登录机场后台，在「iOS」→「Shadowrocket」中复制专用的 SS 订阅链接。</p>
+          <p>回到 Shadowrocket 首页，点击右上角 <strong>「+」</strong> 按钮，弹出「类型」选项，选择 <span class="code-inline">Subscribe</span>（订阅类型）。</p>
+          <img src="imgs/sr-import.png" alt="Shadowrocket添加订阅" class="tutorial-img" loading="lazy">
+          <p>在「<strong>备注</strong>」填写机场名称，在「<strong>URL</strong>」处粘贴订阅链接，点击右上角「<strong>完成</strong>」保存，App 会自动更新获取全部节点。</p>
+          <div class="tip-box"><span class="tip-label">💡 自动更新</span>进入「设置」→「服务器订阅」，开启「打开时更新」，每次打开 App 自动拉取最新节点。</div>
+          <div class="img-row">
+            <img src="imgs/sr-img1.png" alt="Shadowrocket设置" loading="lazy">
+            <img src="imgs/sr-img2.png" alt="Shadowrocket服务器订阅" loading="lazy">
+          </div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step4">
+          <h2><div class="step-badge">4</div>开始使用</h2>
+          <p>进入「设置」→「延迟测试方法」，改为 <span class="code-inline">CONNECT</span>（更准确）。</p>
+          <p>回到首页，点击「<strong>连通性测试</strong>」，等待测速完成后，选择<strong>延迟低、速度快</strong>的节点（通常绿色显示）。</p>
+          <img src="imgs/sr-img3.png" alt="Shadowrocket节点测速" class="tutorial-img" loading="lazy">
+          <p>点击首页顶部的「<strong>未连接</strong>」开关，开启 VPN 连接。系统提示「添加 VPN 配置」时，点击「<strong>Allow（允许）</strong>」并验证 Face ID / Touch ID。</p>
+          <img src="imgs/sr-img4.png" alt="Shadowrocket开启连接" class="tutorial-img" loading="lazy">
+          <p>回到首页，将「<strong>全局路由</strong>」改为「<strong>配置</strong>」（即使用分流规则），这样国内网站直连，国外走代理，速度最优。</p>
+          <div class="tip-box"><span class="tip-label">✅ 成功标志</span>状态栏出现「VPN」标志，Safari 能打开 google.com 说明配置成功！</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="tips">
+          <h2>❓ 常见问题</h2>
+          <p><strong>Q：小火箭订阅更新后节点数为 0？</strong><br>A：点击订阅链接右边的「<strong>i</strong>」图标，然后点右上角「<strong>完成</strong>」手动刷新订阅。确认复制的是机场提供的 SS/Shadowrocket 专用订阅链接，不要用 Clash 订阅。</p>
+          <p><strong>Q：提示「无法连接到服务器」？</strong><br>A：检查当前网络环境，部分公司/学校 Wi-Fi 会屏蔽代理端口，尝试切换到手机流量测试。</p>
+          <p><strong>Q：全局路由改为「配置」后部分 App 无法访问？</strong><br>A：说明机场配置文件的规则不够完整，可在 Shadowrocket 配置里临时切换「全局」排查问题，再联系机场客服获取更完整的规则文件。</p>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="tutorial-clash-verge.html">← Windows Clash Verge</a>
+          <a href="tutorial-nekobox.html">下一篇：Android NekoBox →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥评测</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

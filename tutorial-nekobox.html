@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NekoBox Android使用教程 2026 - 勇哥评测</title>
+<meta name="description" content="NekoBox Android详细配置教程：APK下载安装、订阅导入、进阶DNS设置，支持Hysteria2/VLESS等新协议，附真实截图，Android翻墙最全指南。">
+<meta name="keywords" content="NekoBox教程,Android翻墙教程,NekoBox配置,Hysteria2教程,ClashMetaForAndroid,CMFA教程">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/tutorial-nekobox.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.tutorial-img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--border);margin:14px 0;display:block}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.code-inline{background:rgba(99,120,255,.12);color:var(--accent);padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.85em}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 4px 8px 0}
+.dl-btn:hover{opacity:.85;transform:translateY(-1px)}
+.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}
+.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}
+.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥评测" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥评测</span></a>
+  <div class="nav-links"><a href="index.html">机场推荐</a><a href="tutorials.html" class="active">使用教程</a><a href="wiki.html">科普百科</a><a href="deals.html">优惠专区</a><a href="about.html">关于我们</a><a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a></div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="tutorials.html">使用教程</a><span>›</span><span style="color:var(--text-primary);">Android · NekoBox / CMFA</span></div>
+    <div class="section-label">🤖 Android 教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">Android NekoBox / ClashMeta 详细配置教程</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:580px;">支持 Hysteria2、VLESS、Trojan 等新协议，开源免费，附真实截图全程图文指引</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">NekoBox</span>
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">ClashMeta for Android</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">Android 7+</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">✅ 完全免费</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">难度：★☆☆ 简单</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar">
+        <h3>目录</h3>
+        <div class="guide-nav">
+          <a href="#step1">① 下载安装</a>
+          <a href="#step2">② 获取订阅</a>
+          <a href="#step3">③ 导入订阅</a>
+          <a href="#step4">④ 开启代理</a>
+          <a href="#step5">⑤ 进阶设置（必做）</a>
+          <a href="#tips">常见问题</a>
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="step1">
+          <h2><div class="step-badge">1</div>下载安装</h2>
+          <p>推荐使用 <strong>ClashMeta for Android（CMFA）</strong>，这是目前 Android 上最好用的 Clash 内核客户端，支持 Hysteria2、VLESS 等最新协议。</p>
+          <p>点击下方链接下载 APK（选择适合你手机的版本）：</p>
+          <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases/latest" target="_blank" class="dl-btn">⬇️ 通用版 APK（推荐）</a>
+          <div class="warn-box"><span class="warn-label">⚠️ 提示</span>Chrome 浏览器可能拒绝直接安装 APK，建议使用「<strong>文件管理器</strong>」找到下载的 APK 文件后安装，或通过 Google Play 搜索「ClashMeta」下载。安装时需要在系统设置中开启「<strong>允许未知来源应用</strong>」。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step2">
+          <h2><div class="step-badge">2</div>获取机场订阅链接</h2>
+          <p>登录你购买的机场后台，进入「<strong>使用文档</strong>」或「<strong>订阅</strong>」页面，选择：</p>
+          <ul style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
+            <li>平台选择：<strong>Android</strong></li>
+            <li>客户端选择：<strong>Clash</strong></li>
+            <li>格式选择：<strong>Clash 2022 Subscription</strong>（或 Clash Meta）</li>
+          </ul>
+          <p>复制订阅链接备用。</p>
+          <div class="tip-box"><span class="tip-label">💡 提示</span>不同机场的后台界面不同，但都会有专门的「Android」或「Clash」订阅链接，找到后复制即可。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step3">
+          <h2><div class="step-badge">3</div>导入订阅</h2>
+          <p>打开安装好的 ClashMeta for Android，依次操作：</p>
+          <ol style="color:var(--text-secondary);font-size:.925rem;line-height:2.2;padding-left:20px;margin-bottom:12px;">
+            <li>点击底部「<strong>Profiles（配置）</strong>」</li>
+            <li>点击右上角「<strong>+ New Profile</strong>」</li>
+            <li>选择「<strong>URL</strong>」类型</li>
+            <li>在「<strong>Name</strong>」填写名称（如：我的机场）</li>
+            <li>在「<strong>URL</strong>」粘贴订阅链接</li>
+            <li>点击右上角「<strong>✓</strong>」保存</li>
+          </ol>
+          <img src="imgs/cmfa-setup.png" alt="ClashMeta Android 导入订阅" class="tutorial-img" loading="lazy">
+          <p>点击刚添加的配置文件，使其变为<strong>已选中状态</strong>，然后点击左上角返回。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step4">
+          <h2><div class="step-badge">4</div>开启代理</h2>
+          <p>回到 App 首页，点击「<strong>Stopped - Tap to start</strong>」大按钮启动代理。</p>
+          <p>系统弹出「<strong>VPN 连接请求</strong>」时，点击「<strong>确定</strong>」授权。</p>
+          <p>代理启动后，点击底部「<strong>Proxy（代理）</strong>」按钮，进入节点选择页面，选择你想使用的节点分组和具体节点。</p>
+          <div class="tip-box"><span class="tip-label">✅ 成功</span>浏览器能打开 google.com，说明配置完成！</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step5">
+          <h2><div class="step-badge">5</div>进阶设置（重要，请勿跳过）</h2>
+          <p>以下设置可避免网络中断、不稳定、流媒体解锁失效等问题，强烈建议配置：</p>
+          <ol style="color:var(--text-secondary);font-size:.925rem;line-height:2.4;padding-left:20px;margin-bottom:12px;">
+            <li>「<strong>设置</strong>」→「<strong>覆写</strong>」→「<strong>DNS</strong>」→「<strong>策略</strong>」，选择「<strong>不修改</strong>」</li>
+            <li>「<strong>设置</strong>」→「<strong>网络</strong>」→「<strong>DNS 劫持</strong>」，<strong>关闭</strong>此选项</li>
+            <li>「<strong>设置</strong>」→「<strong>Meta 特性</strong>」→「<strong>嗅探设置</strong>」→「<strong>策略</strong>」，选择「<strong>不修改</strong>」</li>
+          </ol>
+          <div class="warn-box"><span class="warn-label">⚠️ 为什么？</span>以上设置可防止 App 强制覆盖系统 DNS，避免影响部分机场的分流规则和流媒体解锁功能。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="tips">
+          <h2>❓ 常见问题</h2>
+          <p><strong>Q：订阅导入后节点数量为 0？</strong><br>A：确认复制的订阅链接是 Clash 格式。长按配置文件选择「<strong>更新</strong>」手动刷新，检查网络是否正常。</p>
+          <p><strong>Q：安装 APK 提示「未知来源」无法安装？</strong><br>A：进入手机「设置」→「安全」→「安装未知应用」，找到你的浏览器或文件管理器，允许安装。</p>
+          <p><strong>Q：启动代理后 YouTube 无法播放 4K？</strong><br>A：选择标注「IPLC 专线」的节点，普通 BGP 节点带宽有限。也可在 App 内「设置」→「DNS」中开启「<strong>Fake IP</strong>」模式测试。</p>
+          <p><strong>Q：手机发烫、耗电快？</strong><br>A：长时间保持 VPN 连接会增加电量消耗，属于正常现象。不需要科学上网时及时断开连接即可。</p>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="tutorial-shadowrocket.html">← iOS 小火箭</a>
+          <a href="tutorial-clashx.html">下一篇：macOS ClashX →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥评测</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

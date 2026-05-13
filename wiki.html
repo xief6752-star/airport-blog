@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科普百科 | 机场、节点、协议科普 - 勇哥评测</title>
+<meta name="description" content="机场科普百科：什么是机场、Clash/SS/VMess/Trojan/Hysteria2协议对比、IEPL/IPLC专线解析、节点选择技巧，新手必读。">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.wiki-hero { padding: 120px 0 60px; background: var(--gradient-hero); border-bottom: 1px solid var(--border); }
+.wiki-grid { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; }
+.wiki-sidebar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: sticky; top: 80px; }
+.wiki-sidebar h3 { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+.wiki-nav-link { display: block; padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--text-secondary); transition: var(--transition); margin-bottom: 4px; }
+.wiki-nav-link:hover, .wiki-nav-link.active { background: rgba(99,120,255,0.1); color: var(--accent); }
+.wiki-articles { display: flex; flex-direction: column; gap: 32px; }
+.wiki-article { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.wiki-article h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.wiki-article p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 14px; font-size: 0.925rem; }
+.wiki-article p:last-child { margin-bottom: 0; }
+.wiki-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.875rem; }
+.wiki-table th { background: rgba(99,120,255,0.08); color: var(--text-secondary); font-weight: 600; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.wiki-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text-secondary); }
+.wiki-table tr:last-child td { border-bottom: none; }
+.wiki-table tr:hover td { background: rgba(99,120,255,0.04); }
+.highlight-box { background: rgba(99,120,255,0.08); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 14px 18px; margin: 14px 0; font-size: 0.875rem; color: var(--text-secondary); }
+@media (max-width:768px) { .wiki-grid { grid-template-columns: 1fr; } .wiki-sidebar { position: static; } }
+</style>
+<meta name="keywords" content="机场是什么,Clash,SS,Shadowsocks,VMess,Trojan,Hysteria2,IEPL,IPLC,科学上网教程">
+<meta name="author" content="勇哥评测">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/wiki.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yongjichang.com/wiki.html">
+<meta property="og:site_name" content="勇哥评测">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="勇哥评测" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥评测</span></a>
+    <div class="nav-links">
+      <a href="index.html">机场推荐</a>
+      <a href="tutorials.html">使用教程</a>
+      <a href="wiki.html" class="active">科普百科</a>
+      <a href="deals.html">优惠专区</a>
+      <a href="about.html">关于我们</a>
+      <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+  <a href="deals.html">🎁 优惠专区</a>
+</div>
+
+<div class="wiki-hero">
+  <div class="container">
+    <div class="section-label">🔬 科普百科</div>
+    <h1 style="font-size:clamp(1.8rem,4vw,3rem);font-weight:800;margin-top:12px;">看懂机场，从这里开始</h1>
+    <p style="color:var(--text-secondary);margin-top:12px;max-width:520px;">从基础概念到技术细节，帮你真正理解科学上网，避免掉进各种坑</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="wiki-grid">
+      <div class="wiki-sidebar scroll-reveal">
+        <h3>目录</h3>
+        <a href="#what" class="wiki-nav-link active">什么是机场？</a>
+        <a href="#iplc-iepl" class="wiki-nav-link">IPLC vs IEPL</a>
+        <a href="#protocols" class="wiki-nav-link">协议详解（8种）</a>
+        <a href="#avoid" class="wiki-nav-link">防跑路指南</a>
+      </div>
+      <div class="wiki-articles">
+        <div class="wiki-article scroll-reveal" id="what">
+          <h2>✈️ 什么是机场？</h2>
+          <p>机场是科学上网圈子里对<strong style="color:var(--text-primary);">代理服务提供商</strong>的俗称。它的原理是：用户先连接到机场运营商在境外的服务器（节点），再通过节点访问 Google、YouTube、ChatGPT 等被封锁的网站。</p>
+          <p>之所以叫"机场"，是因为早期各类代理协议名称里多有"飞机"相关的元素（如 Shadowsocks 的飞机图标），且提供"起飞"上网的服务，久而久之便有了这个圈内称呼。</p>
+          <div class="highlight-box">💡 机场本质是一个中间代理服务，你的流量→机场节点→目标网站。选机场的核心：稳定性 > 速度 > 价格。</div>
+        </div>
+        <div class="wiki-article scroll-reveal" id="iplc-iepl">
+          <h2>⚡ IPLC vs IEPL：专线有什么区别？</h2>
+          <p>这是选机场最容易混淆的概念。简单来说，两者都是<strong style="color:var(--text-primary);">绕过公共互联网的专用物理链路</strong>，抗封锁能力和稳定性远超普通中转线路。</p>
+          <table class="wiki-table">
+            <thead><tr><th>对比维度</th><th>IPLC</th><th>IEPL</th></tr></thead>
+            <tbody>
+              <tr><td>全称</td><td>International Private Leased Circuit</td><td>International Ethernet Private Line</td></tr>
+              <tr><td>协议层</td><td>2层（数据链路层）</td><td>2层（以太网）</td></tr>
+              <tr><td>带宽灵活性</td><td>固定带宽</td><td>更灵活，支持动态调整</td></tr>
+              <tr><td>延迟表现</td><td>极低</td><td>极低（相近）</td></tr>
+              <tr><td>抗封锁</td><td>极强（不过GFW）</td><td>极强（不过GFW）</td></tr>
+              <tr><td>价格</td><td>贵</td><td>略贵于IPLC</td></tr>
+            </tbody>
+          </table>
+          <p>两者的核心共同点：流量<strong style="color:var(--text-primary);">不经过公共互联网</strong>，因此不会被 GFW 检测和封锁，晚高峰期间也极为稳定。</p>
+        </div>
+        <div class="wiki-article scroll-reveal" id="protocols">
+          <h2>🔐 主流代理协议详解</h2>
+          <p>协议决定了流量的加密方式和伪装能力，直接影响抗封锁能力和速度。以下是 2026 年市面上主流机场支持的协议全解析：</p>
+
+          <div class="proto-card" style="border-left:3px solid #6378ff;padding:18px;background:rgba(99,120,255,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:var(--gradient-accent);color:white;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">🔥 最推荐</span>
+              <strong style="font-size:1.05rem;">Hysteria2</strong>
+            </div>
+            <p style="margin-bottom:8px;">基于 QUIC/UDP 的新一代协议，2023年发布，专为高丢包、高延迟网络设计。伪装成 HTTPS 流量，GFW 极难识别。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>抗封锁能力顶级，高峰期丢包环境下仍能保持高速，4K 流畅无压力。</p>
+            <p style="margin-bottom:0;"><strong>适用场景：</strong>晚高峰重度用户、流媒体、游戏加速。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #6378ff;padding:18px;background:rgba(99,120,255,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:var(--gradient-accent);color:white;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">🔥 最推荐</span>
+              <strong style="font-size:1.05rem;">VLESS + Reality</strong>
+            </div>
+            <p style="margin-bottom:8px;">V2Ray 项目的升级协议，Reality 是其最强伪装方案——直接借用真实网站的 TLS 证书，GFW 无法区分正常 HTTPS 还是代理流量。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>无需自建域名和证书，零特征，抗探测能力极强。</p>
+            <p style="margin-bottom:0;"><strong>适用场景：</strong>对隐蔽性要求最高的用户，稳定优先。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #22d3a0;padding:18px;background:rgba(34,211,160,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:rgba(34,211,160,.2);color:#22d3a0;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">✅ 推荐</span>
+              <strong style="font-size:1.05rem;">Trojan / Trojan-Go</strong>
+            </div>
+            <p style="margin-bottom:8px;">将代理流量伪装成正常的 HTTPS 流量，利用真实的 TLS 握手，GFW 无法识别。性能优秀，兼容性好，大多数机场都支持。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>稳定性强，误封率低，兼容几乎所有客户端。</p>
+            <p style="margin-bottom:0;"><strong>适用场景：</strong>日常使用首选，适合大多数用户。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #22d3a0;padding:18px;background:rgba(34,211,160,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:rgba(34,211,160,.2);color:#22d3a0;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">✅ 推荐</span>
+              <strong style="font-size:1.05rem;">VMess (V2Ray)</strong>
+            </div>
+            <p style="margin-bottom:8px;">V2Ray 项目的原生协议，支持 WebSocket、HTTP/2、gRPC 等多种传输方式，可配合 CDN（如 Cloudflare）使用，实现高度灵活的流量伪装。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>传输方式多样，配合 CDN 中转后几乎不会被封。</p>
+            <p style="margin-bottom:0;"><strong>注意：</strong>裸 VMess（不加 TLS）已不安全，务必选择带 TLS 的节点。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #fb923c;padding:18px;background:rgba(251,146,60,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:rgba(251,146,60,.2);color:#fb923c;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">⚠️ 可用</span>
+              <strong style="font-size:1.05rem;">Shadowsocks (SS) / SS2022</strong>
+            </div>
+            <p style="margin-bottom:8px;">最经典的代理协议，2012年诞生，轻量高效。原版 SS 已经较容易被 GFW 识别，但升级版 SS2022 改进了加密方式，抗识别能力有所提升。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>协议开销小，速度快，对老设备友好。</p>
+            <p style="margin-bottom:0;"><strong>现状：</strong>在 IPLC/IEPL 专线上仍然好用，普通中转线路稳定性较差。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #fb923c;padding:18px;background:rgba(251,146,60,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:rgba(251,146,60,.2);color:#fb923c;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">⚠️ 可用</span>
+              <strong style="font-size:1.05rem;">ShadowsocksR (SSR)</strong>
+            </div>
+            <p style="margin-bottom:8px;">Shadowsocks 的分叉版本，增加了流量混淆插件（obfs），早期曾是主流。但目前已停止维护，GFW 对其混淆特征识别能力大幅提升。</p>
+            <p style="margin-bottom:0;"><strong>现状：</strong>不推荐新用户选择，已逐步被淘汰，遇到只支持 SSR 的机场请谨慎。</p>
+          </div>
+
+          <div class="proto-card" style="border-left:3px solid #6378ff;padding:18px;background:rgba(99,120,255,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:var(--gradient-accent);color:white;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">🆕 新协议</span>
+              <strong style="font-size:1.05rem;">TUIC v5</strong>
+            </div>
+            <p style="margin-bottom:8px;">同样基于 QUIC/UDP，与 Hysteria2 同属「下一代」协议。连接复用效率更高，低延迟表现优异，适合延迟敏感场景（如游戏）。</p>
+            <p style="margin-bottom:0;"><strong>现状：</strong>部分高端机场开始支持，客户端需要 Clash Meta 内核才能使用。</p>
+          </div>
+
+
+          <div class="proto-card" style="border-left:3px solid #6378ff;padding:18px;background:rgba(99,120,255,.06);border-radius:0 8px 8px 0;margin:16px 0;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="background:var(--gradient-accent);color:white;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;">🆕 新协议</span>
+              <strong style="font-size:1.05rem;">AnyTLS</strong>
+            </div>
+            <p style="margin-bottom:8px;">2025 年诞生的代理协议，专注解决 TLS 多路复用握手延迟问题。传统 TLS 代理每次建立新连接都需要完整的 TLS 握手，AnyTLS 通过预建立连接池复用已握手的 TLS 连接，将延迟大幅降低。</p>
+            <p style="margin-bottom:8px;"><strong>核心优势：</strong>首次连接延迟极低，在高并发场景（同时打开多个页面/多任务）下性能表现优于传统 TLS 方案。流量特征与普通 HTTPS 几乎一致，抗识别能力强。</p>
+            <p style="margin-bottom:8px;"><strong>与 Hysteria2/TUIC 的区别：</strong>后两者基于 UDP/QUIC，AnyTLS 基于 TCP+TLS，在 UDP 被 QoS 限速的网络环境（如部分校园网、企业网）下，AnyTLS 是更好的选择。</p>
+            <p style="margin-bottom:0;"><strong>支持客户端：</strong>Clash Meta（Windows/macOS/Android）、sing-box、<strong>ClashMi</strong>（iOS）、<strong>ClashParty</strong>（iOS/Android）均已支持 AnyTLS，2025年底起陆续有机场上线，推荐关注。</p>
+          </div>
+
+          <h3 style="margin:24px 0 12px;font-size:1rem;font-weight:700;">📊 协议综合对比表</h3>
+          <table class="wiki-table">
+            <thead><tr><th>协议</th><th>抗封锁</th><th>速度</th><th>延迟</th><th>兼容性</th><th>推荐指数</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hysteria2</strong></td><td>⭐⭐⭐⭐⭐</td><td>极快</td><td>低</td><td>主流客户端</td><td>🔥🔥🔥</td></tr>
+              <tr><td><strong>VLESS+Reality</strong></td><td>⭐⭐⭐⭐⭐</td><td>快</td><td>低</td><td>主流客户端</td><td>🔥🔥🔥</td></tr>
+              <tr><td><strong>Trojan</strong></td><td>⭐⭐⭐⭐</td><td>快</td><td>低</td><td>几乎全部</td><td>🔥🔥</td></tr>
+              <tr><td><strong>VMess+TLS</strong></td><td>⭐⭐⭐⭐</td><td>中</td><td>中</td><td>几乎全部</td><td>🔥🔥</td></tr>
+              <tr><td><strong>TUIC v5</strong></td><td>⭐⭐⭐⭐</td><td>极快</td><td>极低</td><td>Meta内核</td><td>🔥🔥</td></tr>
+              <tr><td><strong>AnyTLS</strong></td><td>⭐⭐⭐⭐</td><td>快</td><td>极低</td><td>Meta/sing-box/ClashMi/ClashParty</td><td>🔥🔥</td></tr>
+              <tr><td><strong>SS2022</strong></td><td>⭐⭐⭐</td><td>极快</td><td>低</td><td>广泛</td><td>🔥</td></tr>
+              <tr><td><strong>SS（旧版）</strong></td><td>⭐⭐</td><td>快</td><td>低</td><td>全部</td><td>⚠️</td></tr>
+              <tr><td><strong>SSR</strong></td><td>⭐</td><td>中</td><td>中</td><td>广泛</td><td>❌ 不推荐</td></tr>
+            </tbody>
+          </table>
+          <div class="highlight-box">💡 <strong>新手选协议建议：</strong>机场支持 Hysteria2 就选 Hysteria2，否则选 Trojan 或 VLESS+Reality。遇到只有 SS/SSR 的机场，说明技术比较落后，建议谨慎。</div>
+        </div>
+        <div class="wiki-article scroll-reveal" id="avoid">
+          <h2>🛡️ 防跑路指南：如何降低机场跑路损失</h2>
+          <p>机场跑路是行业常见现象，尤其是新机场和价格过低的机场。以下是经过实践验证的防护策略：</p>
+          <div class="tips-grid" style="margin-top:16px;">
+            <div class="tip-card" style="padding:18px;">
+              <div class="tip-icon" style="font-size:1.5rem;margin-bottom:8px;">💳</div>
+              <div class="tip-title" style="font-size:.95rem;">坚持月付</div>
+              <div class="tip-text">单次损失控制在一个月费用内，是最有效的防跑路手段。</div>
+            </div>
+            <div class="tip-card" style="padding:18px;">
+              <div class="tip-icon" style="font-size:1.5rem;margin-bottom:8px;">🔄</div>
+              <div class="tip-title" style="font-size:.95rem;">多家备用</div>
+              <div class="tip-text">至少准备2家机场，一家宕机另一家顶上，不断网。</div>
+            </div>
+            <div class="tip-card" style="padding:18px;">
+              <div class="tip-icon" style="font-size:1.5rem;margin-bottom:8px;">⏳</div>
+              <div class="tip-title" style="font-size:.95rem;">看运营年限</div>
+              <div class="tip-text">运营超过2年的机场相对可信，新机场要谨慎观望3个月再入手。</div>
+            </div>
+            <div class="tip-card" style="padding:18px;">
+              <div class="tip-icon" style="font-size:1.5rem;margin-bottom:8px;">📢</div>
+              <div class="tip-title" style="font-size:.95rem;">关注TG预警</div>
+              <div class="tip-text">订阅本站TG频道，第一时间收到跑路预警，及时止损。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div>
+      <div>© 2026 勇哥评测</div>
+    </div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

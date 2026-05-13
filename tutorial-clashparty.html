@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClashParty iOS Android使用教程 2026 - 勇哥评测</title>
+<meta name="description" content="ClashParty跨平台使用教程：iOS和Android订阅导入、节点选择、一键连接，新手5分钟快速上手翻墙配置。">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}.guide-breadcrumb span{color:var(--text-secondary)}.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}.guide-nav a:hover{background:rgba(99,120,255,.1);color:var(--accent)}.guide-content{display:flex;flex-direction:column;gap:32px}.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:12px}.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:14px}.guide-step-card p:last-child{margin-bottom:0}.guide-img-placeholder{width:100%;aspect-ratio:16/7;background:linear-gradient(135deg,rgba(99,120,255,.08),rgba(34,211,160,.06));border:1px dashed var(--border);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:16px 0;color:var(--text-muted);font-size:.85rem}.guide-img-placeholder .img-icon{font-size:2rem}.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}.code-inline{background:rgba(99,120,255,.12);color:var(--accent);padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.85em}.platform-tabs{display:flex;gap:8px;margin-bottom:20px}.platform-tab{padding:8px 20px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text-secondary);transition:var(--transition)}.platform-tab.active,.platform-tab:hover{background:var(--accent);color:white;border-color:var(--accent)}.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
+<meta name="keywords" content="ClashParty教程,ClashParty iOS,ClashParty Android,跨平台翻墙">
+<meta name="author" content="勇哥评测">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/tutorial-clashparty.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yongjichang.com/tutorial-clashparty.html">
+<meta property="og:site_name" content="勇哥评测">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner"><a href="index.html" class="logo"><img src="logo.png" alt="勇哥评测" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥评测</span></a><div class="nav-links"><a href="index.html">机场推荐</a><a href="tutorials.html" class="active">使用教程</a><a href="wiki.html">科普百科</a><a href="deals.html">优惠专区</a><a href="about.html">关于我们</a><a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a></div><button class="menu-toggle" id="menuToggle">☰</button></div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="tutorials.html">使用教程</a><span>›</span><span style="color:var(--text-primary);">iOS/Android · ClashParty</span></div>
+    <div class="section-label">🎉 跨平台教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">ClashParty 详细配置教程</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:540px;">同时支持 iOS 和 Android，界面简洁，新手5分钟即可上手</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">ClashParty</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">iOS &amp; Android</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">新手友好</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">难度：★☆☆ 入门</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar"><h3>目录</h3><div class="guide-nav"><a href="#step1">① 下载安装</a><a href="#step2">② 添加订阅</a><a href="#step3">③ 选择节点</a><a href="#step4">④ 启动连接</a><a href="#step5">⑤ 验证</a><a href="#tips">常见问题</a></div></div>
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="step1">
+          <h2><div class="step-badge">1</div>下载安装 ClashParty</h2>
+          <div class="platform-tabs">
+            <span class="platform-tab active">🍎 iOS</span>
+            <span class="platform-tab">🤖 Android</span>
+          </div>
+          <p><strong>iOS 用户：</strong><br>
+          打开 App Store，搜索 <span class="code-inline">ClashParty</span>，点击「获取」免费下载。如国区搜索不到，切换到港区或台区 App Store 搜索下载。</p>
+          <p><strong>Android 用户：</strong><br>
+          前往 GitHub 搜索 ClashParty 仓库，在 Releases 页面下载最新版本的 <span class="code-inline">.apk</span> 文件安装，或在 Google Play 搜索下载。</p>
+          <div class="guide-img-placeholder"><div class="img-icon">🖼️</div><span>App Store / GitHub 下载页面截图</span></div>
+          <div class="tip-box"><span class="tip-label">✅ 免费</span>ClashParty 基础功能完全免费，可直接正常使用，无需内购。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step2">
+          <h2><div class="step-badge">2</div>添加机场订阅链接</h2>
+          <p>打开 ClashParty，点击底部或顶部的 <strong>「配置」</strong>（Config）标签页，点击右上角 <strong>「+」→「URL 订阅」</strong>。</p>
+          <p>在弹出页面填入：<br>
+          • <strong>订阅名称</strong>：自定义，如「瞬云」<br>
+          • <strong>订阅链接（URL）</strong>：从机场后台复制的订阅地址<br>
+          • <strong>自动更新</strong>：建议开启，12 小时更新一次</p>
+          <div class="guide-img-placeholder"><div class="img-icon">🖼️</div><span>ClashParty 添加订阅界面截图</span></div>
+          <p>确认保存后，ClashParty 会自动拉取并解析订阅，节点数量会显示在配置卡片上。</p>
+          <div class="warn-box"><span class="warn-label">⚠️ 注意</span>机场订阅链接需选择 <strong>Clash 格式</strong>（而非 SS 或 V2Ray 格式），大多数机场后台都会有格式选项。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step3">
+          <h2><div class="step-badge">3</div>选择节点</h2>
+          <p>进入 <strong>「代理」</strong>（Proxy）界面，节点会按地区或延迟分组展示。</p>
+          <p>点击 <strong>「一键测速」</strong>，ClashParty 会自动测试所有节点延迟，并按速度排序。选择绿色（低延迟）的节点，通常在 100ms 以下的节点日常使用体验最佳。</p>
+          <div class="guide-img-placeholder"><div class="img-icon">🖼️</div><span>ClashParty 节点列表与测速截图</span></div>
+          <div class="tip-box"><span class="tip-label">💡 晚高峰技巧</span>晚 8-11 点用网高峰，优先选择标注「IPLC专线」「IEPL」的节点，这类节点抗拥堵能力更强。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step4">
+          <h2><div class="step-badge">4</div>启动代理连接</h2>
+          <p>回到 ClashParty 主页，点击中央的 <strong>「启动」</strong> 按钮（或顶部开关），App 会请求 VPN 权限。</p>
+          <p>• <strong>iOS</strong>：弹出「添加 VPN 配置」提示，点击「允许」并验证 Face ID<br>
+          • <strong>Android</strong>：弹出「VPN 连接请求」，点击「确定」</p>
+          <div class="guide-img-placeholder"><div class="img-icon">🖼️</div><span>ClashParty 启动连接界面截图</span></div>
+          <p>连接成功后，状态栏出现 VPN 标志，主界面显示实时上下行速度。</p>
+          <p><strong>代理模式选择：</strong><br>
+          • <strong>规则模式</strong>：推荐！国内流量直连，国外走代理 ✅<br>
+          • <strong>全局模式</strong>：所有流量都走代理（更耗流量）<br>
+          • <strong>直连模式</strong>：临时关闭代理</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step5">
+          <h2><div class="step-badge">5</div>验证连接</h2>
+          <p>打开浏览器访问 <span class="code-inline">google.com</span> 或 <span class="code-inline">youtube.com</span>，能正常加载即表示配置成功。</p>
+          <div class="tip-box"><span class="tip-label">✅ 成功</span>能正常打开 Google，YouTube 能流畅播放，状态栏显示 VPN 标志。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="tips">
+          <h2>❓ 常见问题</h2>
+          <p><strong>Q：订阅解析后节点数量为 0？</strong><br>A：确认机场订阅链接选择的是「Clash」格式。进入机场后台，找到订阅页面，切换格式为 Clash / Clash Meta 后重新复制链接。</p>
+          <p><strong>Q：iOS 连接后速度很慢？</strong><br>A：尝试在设置中切换 UDP 转发选项，或选择其他节点。Hysteria2 协议节点通常速度更快。</p>
+          <p><strong>Q：Android 安装后打开闪退？</strong><br>A：确保 Android 版本 ≥ 7.0，或尝试下载其他架构版本的 APK。</p>
+          <p><strong>Q：如何同时使用多个机场的订阅？</strong><br>A：在「配置」页面添加多个订阅，主页选择激活哪一个配置即可快速切换机场。</p>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="tutorial-clashmi.html">← iOS ClashMi</a>
+          <a href="tutorials.html">返回教程列表 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥评测</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
