@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://yongjichang.com/sitemap.xml
