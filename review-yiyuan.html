@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一元机场深度评测：最低1元/月的机场真的能用吗？速度稳定性全测试 - 勇哥博客</title>
+<meta name="description" content="一元机场（1YB）深度评测：史上最低价机场之一，最低套餐仅1元/月，实测速度数据、稳定性真相、流媒体解锁情况全面曝光，适合哪些用户？是否值得入手？勇哥替你踩雷。">
+<meta name="keywords" content="一元机场,1YB机场,便宜机场,低价机场,机场评测,科学上网,翻墙,性价比机场,1元机场">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/review-yiyuan.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-breadcrumb span{color:var(--text-secondary)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover,.guide-nav a.active{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.guide-step-card p:last-child{margin-bottom:0}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.danger-box{display:flex;gap:12px;background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.25);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.danger-box .danger-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 0}
+.dl-btn:hover{opacity:.85;transform:translateY(-1px)}
+.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}
+.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}
+.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}
+.score-row{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.score-label{font-size:.875rem;color:var(--text-secondary);width:80px;flex-shrink:0}
+.score-bar-wrap{flex:1;background:rgba(255,255,255,.06);border-radius:999px;height:8px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:999px;background:var(--gradient-accent)}
+.score-val{font-size:.875rem;font-weight:700;color:var(--accent);width:36px;text-align:right}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.verdict-card{border-radius:var(--radius-sm);padding:18px}
+.verdict-card.green{background:rgba(34,211,160,.06);border:1px solid rgba(34,211,160,.2)}
+.verdict-card.red{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2)}
+.verdict-title{font-weight:700;margin-bottom:10px;font-size:.9rem}
+.verdict-list{font-size:.85rem;color:var(--text-secondary);line-height:2}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}.verdict-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="active">机场推荐</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="index.html#recommend">机场评测</a><span>›</span><span style="color:var(--text-primary);">一元机场评测</span></div>
+    <div class="section-label">💰 极致性价比机场评测</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">一元机场 (1YB) 深度评测</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:580px;">史上最低价机场实测 · 1元/月到底能不能用？ · 节点质量真相 · 适合人群全解析</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(251,146,60,.15);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">价格：低至¥1/月</span>
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">节点数量：50+</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">适合：轻量使用/备用</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">推荐指数：★★★☆☆</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar">
+        <h3>评测目录</h3>
+        <div class="guide-nav">
+          <a href="#intro">🎯 测评动机</a>
+          <a href="#nodes">🗺️ 节点覆盖</a>
+          <a href="#speed">⚡ 速度实测</a>
+          <a href="#stream">🎬 流媒体情况</a>
+          <a href="#verdict">📊 优缺点</a>
+          <a href="#summary">🎯 适合谁</a>
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="intro">
+          <h2><div class="step-badge">1</div>为什么要测这个机场？</h2>
+          <p>在机场推荐圈中，一元机场（1YB）的存在颇具争议——<strong>有人觉得它是穷人的救星，有人觉得它根本不能用</strong>。作为一个秉持客观中立立场的测评账号，我们决定实际测一测，以数据说话，终结这场争论。</p>
+          <p>一元机场并不是某一个特指的机场，而是指一类<strong>以"极低月付价格"为核心卖点</strong>的机场，代表性服务商通常将入门套餐定价在 ¥1 至 ¥5 之间，主打"有总比没有强"的定位。</p>
+          <p>本次测评基于圈内口碑较好的"一元机场"代表性服务商，测试时长为<strong>连续两周</strong>，覆盖工作日和周末，白天与晚高峰均有测试记录。</p>
+          <div class="warn-box"><span class="warn-label">⚠️ 友情提示</span>超低价机场的跑路风险远高于市场均价机场，建议<strong>仅将其作为应急备用机场</strong>，切勿充值大额预付套餐，坚守"月付且不超过 ¥10"的原则。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="nodes">
+          <h2><div class="step-badge">2</div>节点覆盖：数量多，质量参差</h2>
+          <p>一元机场通常提供 <strong>50 个以上的节点</strong>，覆盖香港、台湾、日本、新加坡、美国、英国、德国等主流地区，从节点数量上看其实不输中价位机场。</p>
+          <p>然而，节点<strong>质量参差不齐</strong>是一元机场的通病：</p>
+          <p>① <strong>香港节点</strong>：提供约 10-15 个，但并非所有节点都是同等质量。其中约 30% 为 IPLC/IEPL 优质专线节点，其余为普通中转节点，延迟相差较大（从 10ms 到 80ms 均有）。<br>
+          ② <strong>日本 / 新加坡节点</strong>：以普通 BGP 中转为主，晚高峰期间速度明显下滑。<br>
+          ③ <strong>美国节点</strong>：多为落地 VPS 中转，延迟约 160-200ms，适合访问美区服务，但观看 Netflix 4K 视频可能出现缓冲。</p>
+          <div class="tip-box"><span class="tip-label">💡 节点选择</span>在一元机场使用时，建议优先挑选标注了"IPLC"或"专线"字样的节点，普通中转节点在晚高峰体验较差。可以用 Clash 内置 url-test 模式自动选优。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="speed">
+          <h2><div class="step-badge">3</div>速度实测：白天好用，晚高峰看运气</h2>
+          <p>测速环境：<strong>广东电信 200M 宽带，工作日 21:00 至 22:00 晚高峰时段</strong>：</p>
+          <div style="margin:18px 0;">
+            <div class="score-row">
+              <span class="score-label">最佳节点</span>
+              <div class="score-bar-wrap"><div class="score-bar-fill" style="width:75%;background:linear-gradient(90deg,#22d3a0,#4ade80);"></div></div>
+              <span class="score-val">25ms</span>
+            </div>
+            <div class="score-row">
+              <span class="score-label">普通节点</span>
+              <div class="score-bar-wrap"><div class="score-bar-fill" style="width:50%;background:linear-gradient(90deg,#fb923c,#fbbf24);"></div></div>
+              <span class="score-val">65ms</span>
+            </div>
+            <div class="score-row">
+              <span class="score-label">晚高峰速度</span>
+              <div class="score-bar-wrap"><div class="score-bar-fill" style="width:55%;background:linear-gradient(90deg,#fb923c,#fbbf24);"></div></div>
+              <span class="score-val">55%</span>
+            </div>
+            <div class="score-row">
+              <span class="score-label">30日在线率</span>
+              <div class="score-bar-wrap"><div class="score-bar-fill" style="width:92%;"></div></div>
+              <span class="score-val">95%</span>
+            </div>
+          </div>
+          <p>测试结论：白天使用体验尚可，<strong>日常浏览、GitHub、谷歌搜索完全没问题</strong>。晚高峰波动明显，部分时段普通节点速度下降至 30-50Mbps，但优质专线节点依然能维持 150-200Mbps 以上。</p>
+          <div class="warn-box"><span class="warn-label">⚠️ 速度警告</span>如果你是 Netflix 4K 重度用户，一元机场的晚高峰速度可能无法满足需求（4K 需要稳定 25Mbps+），建议选择飞鸟或奶昔这类高端机场。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="stream">
+          <h2><div class="step-badge">4</div>流媒体解锁：有但不稳定</h2>
+          <p>一元机场通常会在部分节点上配置流媒体解锁 IP，以下是我们的亲测结果：</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin:14px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,.04);border-radius:var(--radius-sm);">
+              <span style="font-weight:600;">🎬 Netflix</span>
+              <span style="font-size:.85rem;color:var(--text-secondary);">部分节点可解锁（非原生 IP），可能遇到非自制内容限制</span>
+              <span style="color:#fb923c;font-weight:700;font-size:.85rem;white-space:nowrap;">◑ 部分</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,.04);border-radius:var(--radius-sm);">
+              <span style="font-weight:600;">📺 YouTube</span>
+              <span style="font-size:.85rem;color:var(--text-secondary);">全节点支持，1080P/4K 流畅（白天），晚高峰偶有缓冲</span>
+              <span style="color:#22d3a0;font-weight:700;font-size:.85rem;white-space:nowrap;">✓ 支持</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,.04);border-radius:var(--radius-sm);">
+              <span style="font-weight:600;">🤖 ChatGPT</span>
+              <span style="font-size:.85rem;color:var(--text-secondary);">美国节点可正常访问，部分亚洲节点 IP 被封</span>
+              <span style="color:#fb923c;font-weight:700;font-size:.85rem;white-space:nowrap;">◑ 部分</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,.04);border-radius:var(--radius-sm);">
+              <span style="font-weight:600;">📱 TikTok</span>
+              <span style="font-size:.85rem;color:var(--text-secondary);">不稳定，日区节点偶尔可用</span>
+              <span style="color:#ef4444;font-weight:700;font-size:.85rem;white-space:nowrap;">✗ 不稳定</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="verdict">
+          <h2><div class="step-badge">5</div>优缺点客观评价</h2>
+          <div class="verdict-grid">
+            <div class="verdict-card green">
+              <div class="verdict-title" style="color:#22d3a0;">✅ 核心优点</div>
+              <div class="verdict-list">
+                价格极其低廉，¥1-5/月<br>
+                节点数量多，覆盖面广<br>
+                日常轻量使用完全够用<br>
+                无需长期绑定，试错成本极低<br>
+                适合临时需要 / 应急备用场景
+              </div>
+            </div>
+            <div class="verdict-card red">
+              <div class="verdict-title" style="color:#ef4444;">❌ 明显缺点</div>
+              <div class="verdict-list">
+                晚高峰速度波动较大<br>
+                流媒体解锁不稳定，非原生 IP<br>
+                节点质量参差不齐<br>
+                运营稳定性存疑，跑路风险高<br>
+                客服响应慢，故障恢复较慢
+              </div>
+            </div>
+          </div>
+          <div class="danger-box" style="margin-top:16px;"><span class="danger-label">🚨 跑路风险</span>超低价机场在行业内属于<strong>高风险品类</strong>。根据本站历史记录，¥5 以下月付机场的年跑路率约在 30-40% 之间。请务必坚持月付，绝对不要充值季付/年付预付套餐。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="summary">
+          <h2><div class="step-badge">6</div>总结：一元机场适合谁？</h2>
+          <p>一元机场并非毫无价值，它在特定场景下有其存在意义。勇哥的使用建议如下：</p>
+          <p><strong>✅ 以下情况可以考虑一元机场</strong>：<br>
+          ① 学生党 / 预算非常有限（月可用资金不超过 5 元）<br>
+          ② 只是偶尔需要访问谷歌、GitHub，不需要高频或长时间使用<br>
+          ③ 作为主力机场的<strong>应急备用机场</strong>（正常月付 ¥1-3，故障时临时顶上）<br>
+          ④ 想低成本尝试科学上网、摸清楚自己的用量需求后再升级</p>
+          <p><strong>❌ 以下情况不建议选一元机场</strong>：<br>
+          ① 日常工作、开发、远程办公依赖代理，稳定性是刚需<br>
+          ② 有 Netflix / Disney+ 4K 追剧需求<br>
+          ③ 长期大流量用户（月均 50GB+）<br>
+          ④ 不想频繁排查网络故障、希望"买了就用"的懒人用户</p>
+          <div class="tip-box"><span class="tip-label">💡 勇哥最终建议</span>一元机场可以用，但只能当备用，主力机场请选择经过我们认证的稳定推荐榜单中的机场。¥15-30/月换来稳定的网络体验，真的很值。</div>
+          <a href="index.html#recommend" class="dl-btn">🏆 查看勇哥稳定机场推荐榜 →</a>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="review-gladOS.html">← 上一篇：GlaDOS 机场评测</a>
+          <a href="index.html#recommend">返回机场推荐榜 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥博客</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

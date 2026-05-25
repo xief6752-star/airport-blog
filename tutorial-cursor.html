@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor 代码编辑器完美接入自定义中转 API 详细教程：无限制调用 Claude 3.5 & DeepSeek - 勇哥博客</title>
+<meta name="description" content="本站为广大开发者精心编写了 Cursor 编辑器接入第三方自定义中转 API 的保姆级图文教程。教您如何省下 $20/月订阅费，低成本无限调用 Claude 3.5 Sonnet 和 DeepSeek V3 满血版大模型，让智能编程畅通无阻。">
+<meta name="keywords" content="Cursor, Cursor中转, Cursor配置, API Key, Claude 3.5 Sonnet, DeepSeek V3, 智能编程">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/tutorial-cursor.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.guide-hero{padding:100px 0 50px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-breadcrumb span{color:var(--text-secondary)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover,.guide-nav a.active{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.guide-step-card p:last-child{margin-bottom:0}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.code-inline{background:rgba(99,120,255,.12);color:var(--accent);padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.85em}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 0}
+.dl-btn:hover{opacity:.85;transform:translateY(-1px)}
+.guide-footer-nav{display:flex;justify-content:space-between;gap:16px;margin-top:8px}
+.guide-footer-nav a{flex:1;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);font-size:.875rem;font-weight:600;color:var(--text-secondary);transition:var(--transition);text-align:center}
+.guide-footer-nav a:hover{border-color:var(--border-hover);color:var(--accent)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <a href="tutorials.html" class="active">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="guide-hero">
+  <div class="container">
+    <div class="guide-breadcrumb"><a href="index.html">首页</a><span>›</span><a href="tutorials.html">使用教程</a><span>›</span><span style="color:var(--text-primary);">Cursor 中转配置</span></div>
+    <div class="section-label">🛠️ 智能编程配置教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;margin-top:12px;">Cursor 编辑器中转 API 配置指南</h1>
+    <p style="color:var(--text-secondary);margin-top:10px;max-width:580px;">彻底告别 Pro 订阅限流，以超低成本调用满血 Claude 3.5 & DeepSeek V3</p>
+    <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
+      <span style="background:rgba(99,120,255,.12);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">适用工具：Cursor</span>
+      <span style="background:rgba(34,211,160,.12);color:#22d3a0;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">支持系统：Win/Mac/Linux</span>
+      <span style="background:rgba(251,146,60,.12);color:#fb923c;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:600;">难度：★☆☆ 简单</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout">
+      <div class="guide-sidebar">
+        <h3>配置目录</h3>
+        <div class="guide-nav">
+          <a href="#step1">① 准备工作</a>
+          <a href="#step2">② 打开设置</a>
+          <a href="#step3">③ 覆盖 OpenAI 路由</a>
+          <a href="#step4">④ 激活自定义模型</a>
+          <a href="#step5">⑤ 测试与验证</a>
+          <a href="#tips">⚠️ 常见排错</a>
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <div class="guide-step-card scroll-reveal" id="step1">
+          <h2><div class="step-badge">1</div>配置前的准备工作</h2>
+          <p>在进行配置前，您需要从您所信任的中转站（如我们的合作伙伴：<strong>4ksAPI</strong> 或 <strong>硅基流动</strong>）后台获取以下两个关键凭证：</p>
+          <ol style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
+            <li><strong>API Key：</strong> 格式通常为 <span class="code-inline">sk-</span> 开头的一长串乱码。</li>
+            <li><strong>接口代理地址 (Endpoint)：</strong> 例如 <span class="code-inline">https://api.4ksapi.com/v1</span>（特别提醒：必须以 <span class="code-inline">https://</span> 开头，且末尾千万不要漏掉 <span class="code-inline">/v1</span>）。</li>
+          </ol>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step2">
+          <h2><div class="step-badge">2</div>打开 Cursor 的“模型设置”面板</h2>
+          <p>① 启动您的 Cursor 编辑器。</p>
+          <p>② 点击编辑器右上角的 <strong>“齿轮图标 (Settings)”</strong>（在 Mac 上也可按下键盘快捷键 <span class="code-inline">Cmd + ,</span>，Windows/Linux 上按下 <span class="code-inline">Ctrl + ,</span>）。</p>
+          <p>③ 在弹出的设置菜单中，选择左侧导航栏的 <strong>“Models (模型)”</strong> 选项卡。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step3">
+          <h2><div class="step-badge">3</div>配置 OpenAI 自定义中转通道（核心步骤）</h2>
+          <p>绝大部分中转 API 虽然支持非 OpenAI 模型（如 Claude 3.5），但在接口协议上它们是完全兼容标准 OpenAI 格式的。因此，<strong>我们只需要通过改写 OpenAI 的请求路由来完成全部模型的配置。</strong></p>
+          <p>① 在“Models”界面中，找到 <strong>“OpenAI API Key”</strong> 选项。</p>
+          <p>② 将右侧的开关切换为 <strong>“已启用 (ON)”</strong>。</p>
+          <p>③ 在 <strong>“OpenAI API Key”</strong> 输入框中，填入您的中转 API 密钥。</p>
+          <p>④ 点击下方的 <strong>“Configure (配置)”</strong> 或 <strong>“Override (覆盖)”</strong> 展开高级选项。</p>
+          <p>⑤ 在 <strong>“Override OpenAI Base URL (覆盖 OpenAI API 代理地址)”</strong> 输入框中，准确填入刚才获取的代理地址，例如：<span class="code-inline">https://api.4ksapi.com/v1</span>。</p>
+          <p>⑥ 点击 <strong>“Save (保存)”</strong> 确认修改。</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step4">
+          <h2><div class="step-badge">4</div>激活并添加您需要使用的自定义模型</h2>
+          <p>由于中转站支持的模型极其丰富，而 Cursor 默认只展示官方内置的几个型号，我们需要手动添加对应模型的映射代号：</p>
+          <p>① 在“Models”界面的下方，找到 <strong>“Model Names (自定义模型名称)”</strong> 区域。</p>
+          <p>② 点击 <strong>“+ Add Model (添加模型)”</strong> 按钮。</p>
+          <p>③ 输入对应的模型代号，并点击右侧开关启用。常用大模型代号推荐：</p>
+          <ul style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
+            <li><span class="code-inline">claude-3-5-sonnet</span>（调用顶级代码大模型）</li>
+            <li><span class="code-inline">deepseek-chat</span>（代表满血版的 DeepSeek V3 核心模型，无敌性价比）</li>
+            <li><span class="code-inline">gpt-4o</span>（日常重度逻辑任务）</li>
+          </ul>
+          <div class="warn-box"><span class="warn-label">⚠️ 关键一步</span>添加完成后，<strong>请将 Cursor 默认自带的其他官方通道（如原生 Anthropic 或 Google 选项）全部关闭 (OFF)</strong>，以确保所有的请求都会被强制路由至我们配置的自定义中转节点。</div>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="step5">
+          <h2><div class="step-badge">5</div>测试与验证</h2>
+          <p>① 回到 Cursor 编辑器界面，打开任何一个代码文件。</p>
+          <p>② 按下键盘快捷键 <span class="code-inline">Cmd + L</span> (Mac) 或 <span class="code-inline">Ctrl + L</span> (Windows) 调出 Chat 聊天侧边栏。</p>
+          <p>③ 在下方的模型下拉菜单中，选择我们刚才添加的 <span class="code-inline">claude-3-5-sonnet</span> 或 <span class="code-inline">deepseek-chat</span>。</p>
+          <p>④ 输入任意问题（例如：“用 Go 语言写一个并发的 Map 数据结构”），观察模型是否能够极速响应并生成流畅的代码。如果输出正常，说明配置已经完美通畅！</p>
+        </div>
+
+        <div class="guide-step-card scroll-reveal" id="tips">
+          <h2>⚠️ 常见排错与小贴士</h2>
+          <p><strong>Q：报错 404 (Model Not Found)？</strong><br>
+          A：① 检查您的中转 API 代理地址末尾是否漏掉了 <span class="code-inline">/v1</span>；② 确认您的中转站账户内余额是否充足，部分中转站在欠费时会直接返回 404/403。</p>
+          <p><strong>Q：Cursor Tab (自动补全) 无法使用？</strong><br>
+          A：接入自定义 API 后，Cursor 的 Tab 自动补全功能（Cursor Tab Copilot）可能无法工作，因为该功能依赖官方底层专有流。不过，中转 API 能够完美支持 Chat 聊天、Composer 多文件编辑以及快捷键代码修改，已经能覆盖 95% 以上的高阶 AI 编码场景！</p>
+        </div>
+
+        <div class="guide-footer-nav">
+          <a href="tutorials.html">← 返回教程列表</a>
+          <a href="index.html">回到首页</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 免责声明：本站内容仅供学习研究，请遵守所在地区法律法规。</div><div>© 2026 勇哥博客</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
