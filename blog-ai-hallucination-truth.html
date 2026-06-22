@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI为什么总是一本正经地胡说八道 - 勇哥博客</title>
+<meta name="description" content="大模型的"幻觉"问题：明明问了个简单的事实问题，AI却给出了一个听起来很有道理、但实际上完全错误的答案。这究竟是怎么回事？能解决吗？">
+<meta name="keywords" content="AI幻觉,大模型幻觉,hallucination,LLM幻觉,AI错误,RAG,AI可靠性">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/blog-ai-hallucination-truth.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.article-hero{padding:88px 0 42px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.article-meta{display:flex;align-items:center;gap:14px;font-size:.82rem;color:var(--text-muted);margin-bottom:16px;flex-wrap:wrap}
+.article-meta .tag{background:rgba(99,120,255,.12);color:var(--accent);padding:3px 12px;border-radius:999px;font-weight:600;font-size:.78rem}
+.article-body{max-width:760px;margin:0 auto;padding:52px 20px 72px}
+.article-body h2{font-size:1.22rem;font-weight:800;margin:44px 0 14px;color:var(--text-primary)}
+.article-body h3{font-size:1.04rem;font-weight:700;margin:30px 0 10px;color:var(--text-primary)}
+.article-body p{color:var(--text-secondary);line-height:2.0;font-size:.935rem;margin-bottom:18px}
+.article-body ul,ol{color:var(--text-secondary);line-height:1.95;font-size:.935rem;padding-left:22px;margin-bottom:18px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--text-primary)}
+.aside-note{border-left:3px solid rgba(99,120,255,.4);padding:14px 20px;margin:24px 0;background:rgba(99,120,255,.04);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.9rem;color:var(--text-secondary);line-height:1.85}
+.warn-aside{border-left:3px solid rgba(251,146,60,.5);padding:14px 20px;margin:24px 0;background:rgba(251,146,60,.04);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.9rem;color:var(--text-secondary);line-height:1.85}
+.example-block{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 26px;margin:22px 0}
+.example-block .ex-label{font-size:.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:700;margin-bottom:10px}
+.example-block p{margin:0;line-height:1.85;font-size:.9rem;color:var(--text-secondary)}
+.example-block p + p{margin-top:12px}
+.section-line{height:1px;background:var(--border);margin:40px 0}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:12px}
+.related-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;transition:var(--transition)}
+.related-card:hover{border-color:var(--border-hover)}
+.related-card .rtag{font-size:.74rem;color:var(--accent);font-weight:600;margin-bottom:5px}
+.related-card h4{font-size:.88rem;font-weight:700;margin-bottom:3px;color:var(--text-primary)}
+.related-card p{font-size:.78rem;color:var(--text-muted);margin:0}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="article-hero">
+  <div class="container">
+    <div class="article-meta">
+      <span class="tag">🧠 AI 认知</span>
+      <span>2026年6月22日</span>
+      <span>约 4800 字 · 读完约 11 分钟</span>
+    </div>
+    <h1 style="font-size:clamp(1.65rem,3.8vw,2.6rem);font-weight:800;line-height:1.3;max-width:760px;">AI 为什么总是<br><span class="gradient-text">一本正经地胡说八道</span></h1>
+    <p style="color:var(--text-secondary);margin-top:14px;max-width:580px;line-height:1.85;font-size:.95rem;">大模型的"幻觉"问题：聊了半天，发现它说的某个关键事实根本是编的。这究竟是为什么，能解决吗，你该怎么用它？</p>
+  </div>
+</div>
+
+<div class="container">
+<div class="article-body">
+
+<p>有一次我在用 AI 整理一篇关于某位学者的资料，问了他的几篇代表性论文。AI 一口气给了我五篇，标题、期刊名、年份、摘要全都有，写得有板有眼的。我一边整理一边觉得很顺，直到我去数据库里核对——</p>
+
+<p>五篇里面有两篇根本找不到。不是收录问题，而是压根不存在这篇论文。AI 把论文名、期刊、年份全都编了一套，每一个细节都像真的，但拼在一起就是假的。</p>
+
+<p>这就是大模型"幻觉"（Hallucination）最让人抓狂的地方——它不是说"我不知道"，它是信心满满地给你一个错的答案。</p>
+
+<h2>先搞清楚 AI 是怎么"想"的</h2>
+
+<p>要理解幻觉，得先理解大模型的工作方式——哪怕只是一个很粗糙的类比。</p>
+
+<p>大模型不是一个数据库。它不是你输入关键词、它去库里查、然后把结果返回给你。它是一个被大量文本训练出来的"语言预测系统"——给它前面一段话，它预测接下来最可能出现什么内容，然后一个词一个词地生成下去。</p>
+
+<p>这个机制本身就决定了它有一个根本性的问题：<strong>它生成的东西，是"听起来最合理的"，而不是"真实准确的"</strong>。对于它来说，生成"爱因斯坦的论文发表于《物理评论》"和生成一个根本不存在的论文标题，在机制上没有任何区别——都是在给定上下文下预测最可能出现的词语序列。</p>
+
+<div class="aside-note">有个比喻我觉得挺贴切的：大模型有点像一个读过大量书、听过大量课、见识极广的人，但这个人有一个致命的弱点——他非常不愿意说"我不知道"。就算他其实不确定，他也会用听起来很有把握的语气说出来，因为沉默对他来说比说话更难受。</div>
+
+<p>所以当你问它一个它训练数据里没有明确信息的问题时，它不会说"我不知道"，而是会根据相关上下文"猜"一个听起来合理的答案，然后用同样自信的语气说出来。</p>
+
+<h2>幻觉分两种，性质不太一样</h2>
+
+<p>学术界把幻觉大致分成两类，我觉得这个分类挺有帮助的，理解了这个，你就能更好地判断什么时候要特别小心。</p>
+
+<h3>第一种：它真的不知道（数据型幻觉）</h3>
+
+<p>最简单直白的情况：你问的东西，它的训练数据里就没有——可能是因为这件事发生在它的训练截止日期之后，可能是因为这个领域的信息在互联网上本来就很少，也可能是因为它的训练数据对这块内容覆盖不足。</p>
+
+<p>在这种情况下，它没有正确答案可以检索，于是就会根据相关领域的"语言规律"拼凑一个看起来合理的输出。你问一个冷僻学者的论文，它训练数据里可能只有这个学者的名字和大致研究方向，但为了回答你，它会用这个领域的"常见论文语言"拼出一个不存在的引用。</p>
+
+<h3>第二种：推理过程中跑偏了（推理型幻觉）</h3>
+
+<p>这种更隐蔽，也更让人头疼。它其实有正确的知识，但在多步骤的推理过程中，某个中间环节的误差随着推理链条越来越大，最后得出一个错误的结论。</p>
+
+<p>你可以想象成一道数学题：每一步的计算方法都是对的，但其中某一步抄错了一个数字，导致最后的答案是错的。这种错误很难发现，因为你如果只看推理过程，每一步看起来都合乎逻辑。</p>
+
+<div class="example-block">
+  <div class="ex-label">💡 举个例子</div>
+  <p><strong>你问：</strong>A公司2024年的净利润增长率是多少？</p>
+  <p><strong>AI可能的推理链条：</strong>A公司2024年净利润是X亿元（这个数字可能是准的）→ 2023年净利润是Y亿元（这个数字可能有偏差）→ 计算增长率得到Z%（这个结果是错的）</p>
+  <p>整个推理结构是正确的，但中间某个数字出了问题，导致最终答案偏离了真实情况，而AI在输出时完全不会告诉你哪个环节出了问题。</p>
+</div>
+
+<h2>为什么它不知道自己在胡说？</h2>
+
+<p>这是很多人困惑的地方：你都说错了，为什么不知道？</p>
+
+<p>因为大模型没有"知道"和"不知道"这两种状态。它只有"这段话在给定上下文下概率高不高"。它生成一个错误的论文标题，在它的内部机制里，跟生成一个正确的论文标题，没有本质区别——都只是根据概率选择下一个词。它没有一个内置的"事实核查器"在它生成的时候实时对照。</p>
+
+<p>更有趣的是，当你问它"你确定这是对的吗"，它可能会回答"是的，我确定"——同样是用概率预测生成的回答，同样没有实际的事实基础。</p>
+
+<p>这不是说 AI 在"说谎"，说谎是需要知道真相的。AI 的幻觉更像是一个无意识的行为：它被训练得"说话要流畅、自信、有根据"，但这些训练目标都是关于语言形式的，不是关于事实准确性的。</p>
+
+<div class="warn-aside">⚠️ 有一个我自己觉得很重要的认知：幻觉不是 AI 的"bug"，是它工作机制的一个必然产物。这意味着，指望靠改进模型就彻底消灭幻觉，可能是不现实的。正确的态度是：接受它会有幻觉，然后想办法把幻觉的影响控制在可接受范围内。</div>
+
+<h2>那什么时候最容易出幻觉？</h2>
+
+<p>知道幻觉高发的场景，可以让你在使用的时候更有针对性地多做核实。根据我自己的经验和行业研究，以下几类情况是幻觉的重灾区：</p>
+
+<ul>
+  <li><strong>具体的数字、数据、日期</strong>：这类信息有固定的正确答案，但训练数据里可能有多个不一致的版本，或者根本就没有。它很可能给你一个"听起来合理范围内"的数字，但就是不准。</li>
+  <li><strong>冷门领域的专业引用</strong>：论文、书籍、学者、法律条文——任何需要精确引用的内容，都要格外小心。它太擅长编造听起来合理的引用了。</li>
+  <li><strong>时效性强的信息</strong>：训练截止日期之后的事情，它可能会根据之前的趋势"推断"，但这种推断是没有实际数据支撑的。</li>
+  <li><strong>复杂的多步骤推理</strong>：越是长的推理链，中间出错的概率就越高，错误也越难察觉。</li>
+  <li><strong>你暗示了一个错误答案的时候</strong>：如果你问"A 是不是 B？"，它有时候会倾向于顺着你的问题方向回答"是的"，即使 A 其实不是 B。</li>
+</ul>
+
+<h2>2026 年了，有什么办法缓解吗？</h2>
+
+<p>好消息是：这些年业界在这方面做了很多事，已经有不少实用的手段。坏消息是：没有任何一个手段能彻底解决这个问题。</p>
+
+<h3>RAG：给它一个可以查阅的知识库</h3>
+
+<p>RAG（检索增强生成，Retrieval Augmented Generation）是目前最被广泛采用的方案。简单说就是：不让 AI 全靠"记忆"来回答，而是先从一个可信的知识库里检索相关内容，然后让它基于这些检索到的内容来生成回答。</p>
+
+<p>这个方案对于"企业私有知识"类的场景效果非常好——比如公司的产品文档、内部规定、历史数据。AI 不需要"记住"这些内容，只需要会用这些内容回答问题就够了。</p>
+
+<p>但 RAG 不是万能的。如果知识库本身的内容有误，AI 可能会基于错误内容生成错误答案。而且 RAG 对于需要复杂推理而不只是信息检索的任务，帮助有限。</p>
+
+<h3>让它说"不知道"</h3>
+
+<p>这个听起来很简单，但实际上非常有效。在你的提示词里明确告诉它：如果不确定，就说不知道，不要猜测和编造。</p>
+
+<p>经过实验，这样做通常能减少 30%–50% 的低级事实错误。当然，它也会因此拒绝回答一些本来可以回答的问题，这是个权衡。</p>
+
+<h3>用多个来源交叉验证</h3>
+
+<p>对于重要的信息，不要只问 AI 一次就信了。可以换个角度问，或者用不同的模型问一遍，看看答案是否一致。高度一致的内容出错概率相对低，互相矛盾的内容就要特别小心了。</p>
+
+<h3>自己去核实重要信息</h3>
+
+<p>这个最朴素，也是最可靠的。任何对结果有重要影响的事实，都不要依赖 AI，去找原始来源验证。AI 可以帮你快速建立框架和方向，但事实核查这件事，还得你自己来。</p>
+
+<h2>我平时怎么跟幻觉共处</h2>
+
+<p>说了这么多理论，说说我自己的实际做法。</p>
+
+<p>我把 AI 的输出分成两类来对待：<strong>一类是我用它来思考的内容，一类是我用它来直接呈现的内容</strong>。</p>
+
+<p>用来思考的内容，我对幻觉的容忍度很高。比如让它帮我理清一个问题的思路、列出可能的解决方向、分析一段代码的逻辑——这些地方，就算它有点偏差，我自己想一下也能发现，影响不大。</p>
+
+<p>用来直接呈现的内容，我会严格核实。比如要引用的数据、需要在文章里写明的日期和数字、关于某人或某机构的具体描述——这些我都会去找原始来源核对。AI 可以帮我找到大概的方向，但最终落实到具体数字的时候，我会自己确认。</p>
+
+<div class="aside-note">有时候我会故意反着来测一下：在问完一个问题之后，接着说"我听说实际上是XXX，是这样吗？"——如果 AI 立刻同意我说的"XXX"，我就知道它在这个问题上的自信度其实不高，需要我去核实。如果它坚持自己的原答案并解释为什么，这个答案相对可信一些。当然这也不是百分百可靠的方法，只是一个参考。</div>
+
+<h2>更根本的问题：我们怎么跟这个东西共处</h2>
+
+<p>幻觉问题让很多人对 AI 产生了一种不信任感——"你都会编，我怎么敢用你做正事？"这个问题我觉得可以换个角度想。</p>
+
+<p>我们跟人类专家打交道的时候，也会遇到类似的问题：他可能记错了某个数字，可能某个观点是基于有限的样本，可能在某个他不熟悉的领域表现出超出实际水平的自信。我们不会因为人会犯错就不请教任何人，而是学会了辨别什么时候需要核实、什么时候可以信任。</p>
+
+<p>AI 也是一样。幻觉是它的限制，不是它一无是处的理由。<strong>真正的问题不是"AI 会不会出错"，而是"我有没有能力识别它什么时候在出错"。</strong></p>
+
+<p>这个能力，才是 AI 时代最值得培养的东西。</p>
+
+<div class="section-line"></div>
+
+<p style="font-size:.82rem;color:var(--text-muted);">文中关于幻觉的分类参考了 ICLR 2026 相关研究，实用建议来自作者个人使用经验及行业实践总结。</p>
+
+<div style="margin-top:40px;">
+  <p style="font-size:.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">相关阅读</p>
+  <div class="related-grid">
+    <a href="blog-ai-coding-honest.html" class="related-card">
+      <div class="rtag">💻 AI 工具</div>
+      <h4>我用 AI 写代码用了将近一年，说几句实在话</h4>
+      <p>Cursor 和 Claude Code 的真实使用体感</p>
+    </a>
+    <a href="blog-ai-jobs-reality.html" class="related-card">
+      <div class="rtag">💼 职场观察</div>
+      <h4>AI 真的在抢我们的工作吗？2026年的实际情况</h4>
+      <p>不那么危言耸听，也不那么无动于衷的观察</p>
+    </a>
+  </div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 本文为个人经验分享，不代表任何公司或机构立场。</div><div>© 2026 勇哥博客</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

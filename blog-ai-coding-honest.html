@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我用AI写代码用了一年，说几句实在话 - 勇哥博客</title>
+<meta name="description" content="用了Cursor、Claude Code将近一年，我有一些很不那么"官方"的感受想说。AI写代码这件事，没有你想的那么神奇，也没有某些人说的那么没用。">
+<meta name="keywords" content="AI编程,Cursor,Claude Code,AI写代码,程序员,GitHub Copilot,AI工具,开发效率">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/blog-ai-coding-honest.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.article-hero{padding:88px 0 42px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.article-meta{display:flex;align-items:center;gap:14px;font-size:.82rem;color:var(--text-muted);margin-bottom:16px;flex-wrap:wrap}
+.article-meta .tag{background:rgba(99,120,255,.12);color:var(--accent);padding:3px 12px;border-radius:999px;font-weight:600;font-size:.78rem}
+.article-body{max-width:760px;margin:0 auto;padding:52px 20px 72px}
+.article-body h2{font-size:1.22rem;font-weight:800;margin:44px 0 14px;color:var(--text-primary)}
+.article-body h3{font-size:1.04rem;font-weight:700;margin:30px 0 10px;color:var(--text-primary)}
+.article-body p{color:var(--text-secondary);line-height:2.0;font-size:.935rem;margin-bottom:18px}
+.article-body ul,ol{color:var(--text-secondary);line-height:1.95;font-size:.935rem;padding-left:22px;margin-bottom:18px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--text-primary)}
+.article-body em{color:var(--text-muted);font-style:italic}
+.aside-note{border-left:3px solid rgba(99,120,255,.4);padding:14px 20px;margin:24px 0;background:rgba(99,120,255,.04);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.9rem;color:var(--text-secondary);line-height:1.85}
+.aside-note::before{content:"💬 ";font-style:normal}
+.verdict-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin:32px 0}
+.verdict-box h4{font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:700;margin-bottom:14px}
+.verdict-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.verdict-row:last-child{border-bottom:none}
+.verdict-label{color:var(--text-secondary)}
+.verdict-val{font-weight:700;color:var(--accent)}
+.section-line{height:1px;background:var(--border);margin:40px 0}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:12px}
+.related-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;transition:var(--transition)}
+.related-card:hover{border-color:var(--border-hover)}
+.related-card .rtag{font-size:.74rem;color:var(--accent);font-weight:600;margin-bottom:5px}
+.related-card h4{font-size:.88rem;font-weight:700;margin-bottom:3px;color:var(--text-primary)}
+.related-card p{font-size:.78rem;color:var(--text-muted);margin:0}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="article-hero">
+  <div class="container">
+    <div class="article-meta">
+      <span class="tag">💻 AI 工具</span>
+      <span>2026年6月22日</span>
+      <span>约 5000 字 · 读完约 12 分钟</span>
+    </div>
+    <h1 style="font-size:clamp(1.65rem,3.8vw,2.6rem);font-weight:800;line-height:1.3;max-width:760px;">我用 AI 写代码用了将近一年，<br>说几句实在话</h1>
+    <p style="color:var(--text-secondary);margin-top:14px;max-width:580px;line-height:1.85;font-size:.95rem;">既不是"AI 颠覆程序员"，也不是"AI 完全没用"。真实情况比这两种说法都更复杂，也更有意思。</p>
+  </div>
+</div>
+
+<div class="container">
+<div class="article-body">
+
+<p>大概是去年年底，我开始认真地把 AI 编程工具用进日常工作里。在那之前，我也断断续续试过 GitHub Copilot、ChatGPT，但都是"试了几天觉得还行，然后忘了"的状态。真正让我开始认真对待这件事，是身边一个朋友跟我说：他一个人接了一个原本需要三四个人的项目，靠 Cursor 加 Claude Code 把它干完了。</p>
+
+<p>我当时是半信半疑的。我做后端开发六七年了，写代码这件事对我来说很有节奏感——想清楚了再动手，写的时候手感很重要，这种事我总觉得 AI 介入进来会破坏掉什么。结果试了两三个月之后，我的想法完全变了。</p>
+
+<p>不是变成了"AI 太厉害了程序员要失业"那种，而是变成了——哦，原来这玩意儿有点像是多了一个不知疲倦、知识面很广但有时候会莫名其妙出错的实习生。</p>
+
+<h2>先说 Cursor：确实好用，但有个学习过程</h2>
+
+<p>Cursor 是我用的第一个 AI IDE，本质上是一个魔改过的 VS Code。如果你是 VS Code 用户，切换进去几乎没有任何成本，界面一模一样，插件兼容，快捷键也基本一致。唯一不同的是，你多了一个侧边栏可以跟它对话，还有一个按 Tab 就能接受代码补全的功能——但这个补全比普通的自动补全要"聪明"得多。</p>
+
+<p>刚开始用的时候，最大的惊喜是它的"代码库感知"能力。你问它一个项目里某个函数是怎么实现的，它不需要你把代码粘贴过来，它自己会去读，然后给你一个有上下文的答案。这在稍微大一点的项目里非常有用，因为很多时候你脑子里已经有思路了，就差把某个具体实现细节捞出来，以前要自己去翻文件，现在直接问。</p>
+
+<p>但也不是没有坑。我遇到过几次很尴尬的情况：Cursor 给我生成了一段代码，乍一看完全没问题，甚至逻辑也对，但跑起来发现某个边界条件没处理。更烦的是，有时候它生成的代码风格和我项目里其他部分差很多，就好像换了个人写的，review 的时候很割裂。</p>
+
+<p>后来我发现，这些问题很多都能通过写一个 <code>.cursorrules</code> 文件来缓解——就是给它一份"项目守则"，告诉它你们团队的编码规范，用什么框架，有哪些命名约定，等等。这份文件写得越详细，它生成的东西就越接近你想要的。这个发现让我意识到，AI 编程工具其实特别依赖你有没有把它当工具用好，而不是简单地把它丢那里然后期待奇迹。</p>
+
+<div class="aside-note">说实话，这个发现有点像是养了一条很聪明的狗。它很能干，但你得花时间教它规矩，不然它就会按自己的理解来，有时候让你哭笑不得。</div>
+
+<h2>Claude Code 是另一个维度的东西</h2>
+
+<p>Claude Code 和 Cursor 的感觉完全不一样。Cursor 是 IDE，你在里面写代码，它帮你补全和修改。Claude Code 是命令行工具，你给它一个任务，它自己去做。</p>
+
+<p>第一次认真用 Claude Code 是在处理一个老项目的重构。那个项目大概有两万多行 Python，历史很长，代码风格非常混乱，有些模块几乎没有注释，有些函数名起得也很随意。我当时的任务是把其中一块核心逻辑从同步改成异步，影响的文件大概有二三十个。</p>
+
+<p>我在 Cursor 里试了一下，发现有点吃力——它的上下文窗口撑不住这么多文件，每次都要我手动把相关文件 add 进来，而且改了一个地方之后，它有时候对另一个地方的理解就不一致了。后来我切换到 Claude Code，直接在项目根目录下运行，告诉它我要做什么，让它先分析一下影响范围，再给我一个修改计划。</p>
+
+<p>它给出了一份相当详细的分析，列出了哪些文件需要改、改动的原因、可能的副作用，甚至还指出了几个我没注意到的地方——因为有些函数在多个地方被调用，而其中一个调用我完全忘了。确认计划之后，我让它开始执行，它一个文件一个文件地改，改完之后会告诉我每一步做了什么。</p>
+
+<p>这个过程大概花了不到两个小时，以前我估计要搞两三天，而且我改完还得写测试确认没有引入新的 bug。Claude Code 在改的时候还顺带帮我更新了部分测试文件，这是我没有要求的，但它"觉得"应该这样做——而且基本上是对的。</p>
+
+<p>当然，这中间也有失误。有一处它把一个变量名改错了，导致某个测试失败了。但我把失败信息粘给它，它很快就定位并修复了。</p>
+
+<p>说实话，这次体验之后，我对 AI 编程工具的看法有了比较大的转变——它不是"帮你敲键盘的工具"，更像是"你可以分派任务给它的协作者"。</p>
+
+<h2>我现在的工作流是什么样的</h2>
+
+<p>折腾了将近一年之后，我逐渐稳定下来了一套自己的节奏，大概是这样的：</p>
+
+<p><strong>日常的小任务、快速实现、写函数、改 bug</strong>，我用 Cursor。这类任务对上下文的要求不高，Cursor 的即时补全非常流畅，感觉就像有人在你旁边帮你打字，但比你想得更快。</p>
+
+<p><strong>跨文件的大型重构、架构调整、分析复杂 bug 的根因</strong>，我用 Claude Code。这类任务需要它有全局视角，Claude Code 在这方面确实比 Cursor 更稳。</p>
+
+<p><strong>写文档、写注释、整理 API 说明</strong>，这个我基本上全交给 AI 了，因为这是最无聊的工作，也是 AI 做得最好的工作之一。</p>
+
+<p>不过有一件事我是坚持自己做的：<strong>核心逻辑的设计和架构决策</strong>。AI 很善于实现，但"该怎么设计"这件事，我觉得还是要自己想清楚。让 AI 直接设计架构，容易出现"看起来合理但实际上对你的业务场景不对"的情况，这类错误比代码里的语法 bug 更难发现，也更难改。</p>
+
+<div class="verdict-box">
+  <h4>📊 我个人的评估（基于将近一年的使用）</h4>
+  <div class="verdict-row"><span class="verdict-label">日常编码效率提升</span><span class="verdict-val">+40% ~ 60%</span></div>
+  <div class="verdict-row"><span class="verdict-label">大型重构任务时间节省</span><span class="verdict-val">+60% ~ 70%</span></div>
+  <div class="verdict-row"><span class="verdict-label">写文档/注释时间节省</span><span class="verdict-val">+80%+</span></div>
+  <div class="verdict-row"><span class="verdict-label">引入新 bug 的概率</span><span class="verdict-val">约持平（需要更仔细 review）</span></div>
+  <div class="verdict-row"><span class="verdict-label">架构设计的质量影响</span><span class="verdict-val">基本无提升（还是得自己想）</span></div>
+</div>
+
+<h2>有几个坑，提前说一下，省得你走弯路</h2>
+
+<h3>1. 别太信任它生成的测试</h3>
+
+<p>这个是我吃过亏的地方。AI 生成的单元测试，很多时候是"可以跑过的测试"而不是"真正有意义的测试"。它会倾向于生成一些覆盖率高但实际上测不到边界条件的测试用例，看起来绿了一片，但真的出问题了还是抓不住。</p>
+
+<p>现在我的做法是让它生成测试之后，我自己再审一遍，重点检查：边界条件有没有测到、异常情况有没有覆盖、mock 数据是不是合理。这个过程比自己从头写测试要快，但不能省掉审查这一步。</p>
+
+<h3>2. 越大的任务，越要分步</h3>
+
+<p>刚开始用的时候，我喜欢把一个大需求整个甩给它，让它一次搞定。这样做很容易出问题——要么它中途迷路，要么它生成了一大堆代码，你根本不知道从哪里开始 review，出了问题也不好定位。</p>
+
+<p>现在我的做法是拆任务。就算一个功能整体上只需要三十分钟，我也会分三步来做，每步完成之后确认一下，没问题再往下走。这样既保证了质量，出了问题也很好找。</p>
+
+<h3>3. 它对你的项目一无所知，得告诉它</h3>
+
+<p>AI 不知道你的项目背景，不知道你的业务逻辑，不知道你们团队的潜规则。你得在每次对话开始的时候，或者通过 rules 文件，把关键背景告诉它。这个感觉有点麻烦，但确实值得花这个时间。</p>
+
+<p>我有一个习惯，就是给每个大项目维护一个简短的"AI 上下文文件"，里面写着项目概况、技术栈、主要模块说明、我们不用的一些方案（以及原因）。每次跟它开始一个新对话，我就把这个文件的内容粘给它，效果好很多。</p>
+
+<h3>4. 别指望它理解"隐性知识"</h3>
+
+<p>这个说起来有点抽象。所谓隐性知识，就是"这段代码为什么这么写，有一个说起来很长的历史原因"。AI 看到这段代码，只能从字面上理解，它不知道那个历史原因。</p>
+
+<p>所以有些时候，它"优化"了一段代码之后，看起来更整洁了，但实际上把当时为了规避某个特定 bug 而写的绕路逻辑给删掉了。这种情况下，你如果没注意，直接接受了它的修改，可能过几天那个 bug 就回来了。</p>
+
+<h2>关于"程序员要失业"这个话题</h2>
+
+<p>我身边有人非常焦虑这个事，也有人完全不当回事。我自己的感受是：这两种态度都有点偏。</p>
+
+<p>焦虑的那派人，往往是因为看到了一些"AI 一个人完成了整个项目"的案例，然后觉得人就没用了。但他们忽略了一件事：能够有效使用 AI 完成那些任务的人，本身通常是有相当强的技术背景的。AI 是把他们的能力放大了，而不是替代了他们。</p>
+
+<p>不当回事的那派人，往往低估了 AI 能力提升的速度。去年能做到的事和今年能做到的事，差距已经非常大了。如果还停留在"AI 只能写写简单代码"的认知里，确实有点危险。</p>
+
+<p>我觉得比较准确的描述是：AI 正在把程序员这个职业的"下限"提高，同时也在重新定义"中等水平的程序员"能做到什么。以前一个中等水平的程序员，工作上有很多时间是在处理重复性的事情——写 CRUD、写测试、改小 bug——这些事情 AI 现在越来越擅长了。如果你的工作主要是这些，那确实需要想想了。</p>
+
+<p>但如果你能搞清楚"要做什么"、能 review AI 的产出、能在 AI 迷路的时候把它带回来——那你的价值不是降低了，而是提高了，因为你现在一个人可以做原来三四个人的工作量。</p>
+
+<div class="aside-note">我有个朋友在小公司做后端，去年以一个人的状态承接了整个技术团队的工作，靠的就是 AI 工具。他不是技术上有多厉害，而是他学会了"怎么跟 AI 配合"。这可能比技术能力本身更重要。</div>
+
+<h2>最后说几句</h2>
+
+<p>写这篇文章之前，我其实不确定要不要写——因为关于 AI 编程的文章已经太多了，很多都在讲同样的话。</p>
+
+<p>但我发现很多文章要么过于乐观（"AI 完全改变了编程！"），要么过于消极（"AI 根本没法用于生产！"），很少有人说一些接地气的经验——比如我踩过哪些坑，哪些情况下 AI 真的帮了我，哪些情况下我觉得还是自己动手更快。</p>
+
+<p>所以就写了这篇。如果你还没开始认真用 AI 编程工具，我的建议是：找一个你正在做的真实项目，花两个星期认真试一下 Cursor。不用做任何特别的准备，就按正常开发的节奏来，把你平时会做的事情都试着用它辅助一次。两个星期之后，你自己就会有判断。</p>
+
+<p>我猜你不会失望的。当然，也不会觉得它是万能的。</p>
+
+<div class="section-line"></div>
+
+<p style="font-size:.82rem;color:var(--text-muted);">本文基于作者个人将近一年的使用体验，工具版本为 Cursor 0.47 / Claude Code 1.x（2026年上半年版本）。工具迭代很快，部分细节描述可能与你当前使用的版本有所不同。</p>
+
+<div style="margin-top:40px;">
+  <p style="font-size:.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">相关阅读</p>
+  <div class="related-grid">
+    <a href="blog-ai-hallucination-truth.html" class="related-card">
+      <div class="rtag">🧠 AI 认知</div>
+      <h4>AI 为什么总是一本正经地胡说八道</h4>
+      <p>大模型幻觉问题的成因和你能做什么</p>
+    </a>
+    <a href="blog-ai-jobs-reality.html" class="related-card">
+      <div class="rtag">💼 职场观察</div>
+      <h4>AI 真的在抢我们的工作吗？2026年的实际情况</h4>
+      <p>不那么危言耸听，也不那么无动于衷的观察</p>
+    </a>
+  </div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><div class="footer-disclaimer">⚠️ 本文为个人经验分享，不代表任何公司或机构立场。</div><div>© 2026 勇哥博客</div></div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
