@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WD0C6M8T40');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机场订阅链接导入完整指南 - 所有客户端都能用 - 勇哥博客</title>
+<meta name="description" content="从Clash、Shadowrocket、Surge到ClashX，详细讲解如何正确导入机场订阅链接。包含常见报错解决、最佳实践、安全注意事项。">
+<meta name="keywords" content="订阅链接,导入订阅,Clash,Shadowrocket,ClashX,机场配置,翻墙客户端,使用教程">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/wiki-airport-setup-guide.html">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "机场订阅链接导入完整指南",
+  "description": "详细的订阅导入教程，覆盖所有主流客户端",
+  "datePublished": "2026-07-09",
+  "dateModified": "2026-07-09",
+  "author": {"@type": "Organization", "name": "勇哥博客"},
+  "publisher": {"@type": "Organization", "name": "勇哥博客", "url": "https://yongjichang.com"}
+}
+</script>
+
+<style>
+.wiki-hero{padding:86px 0 40px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.wiki-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.wiki-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.wiki-sidebar h3{font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.wiki-nav a{display:block;padding:7px 10px;border-radius:var(--radius-sm);font-size:.86rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.wiki-nav a:hover{background:rgba(99,120,255,.08);color:var(--accent)}
+.article-body{padding-bottom:64px}
+.article-body h2{font-size:1.2rem;font-weight:800;margin:40px 0 14px;color:var(--text-primary);scroll-margin-top:90px}
+.article-body h3{font-size:1.02rem;font-weight:700;margin:26px 0 10px;color:var(--text-primary)}
+.article-body p{color:var(--text-secondary);line-height:1.95;font-size:.93rem;margin-bottom:16px}
+.article-body ul,ol{color:var(--text-secondary);line-height:1.9;font-size:.93rem;padding-left:20px;margin-bottom:16px}
+.article-body li{margin-bottom:7px}
+.article-body strong{color:var(--text-primary)}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.07);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 18px;margin:20px 0;font-size:.875rem;color:var(--text-secondary);line-height:1.8}
+.tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-sm);padding:14px 18px;margin:20px 0;font-size:.875rem;color:var(--text-secondary);line-height:1.8}
+.warn-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.step-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:18px 0;border-left:4px solid var(--accent)}
+.step-num{display:inline-block;background:var(--accent);color:white;width:28px;height:28px;border-radius:50%;text-align:center;line-height:28px;font-weight:700;margin-right:10px;font-size:.85rem}
+.code-block{background:var(--bg-code,#1a1a2e);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin:16px 0;font-family:'Courier New',monospace;font-size:.82rem;color:var(--text-secondary);overflow-x:auto}
+.error-list{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.15);border-radius:var(--radius);padding:18px;margin:18px 0}
+.error-item{padding:10px 0;border-bottom:1px solid rgba(239,68,68,.1)}
+.error-item:last-child{border-bottom:none}
+.error-code{font-weight:700;color:#ef4444;font-family:monospace;font-size:.85rem}
+.client-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
+.client-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;transition:var(--transition)}
+.client-card:hover{border-color:var(--border-hover)}
+.client-name{font-size:.95rem;font-weight:700;color:var(--text-primary);margin-bottom:6px}
+.client-platform{font-size:.8rem;color:var(--text-muted);margin-bottom:10px}
+.client-desc{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
+@media(max-width:768px){.wiki-layout{grid-template-columns:1fr}.wiki-sidebar{position:static}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html" class="active">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">🏆 机场推荐</a><a href="tutorials.html">📖 使用教程</a><a href="wiki.html">🔬 科普百科</a><a href="deals.html">🎁 优惠专区</a></div>
+
+<div class="wiki-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--text-muted);margin-bottom:14px;">
+      <a href="index.html" style="color:var(--text-muted);">首页</a><span>›</span>
+      <a href="wiki.html" style="color:var(--text-muted);">科普百科</a><span>›</span>
+      <span style="color:var(--text-primary);">订阅导入指南</span>
+    </div>
+    <div class="section-label" style="display:inline-flex;">📱 使用教程</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-top:12px;max-width:740px;">机场订阅链接导入完整指南<br>所有客户端都能用</h1>
+    <p style="color:var(--text-secondary);margin-top:12px;max-width:580px;font-size:.94rem;line-height:1.8;">一份覆盖 Clash、Shadowrocket、ClashX、Surge 的详细教程。包含常见报错解决、安全建议、最佳实践。</p>
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;font-size:.8rem;color:var(--text-muted);">
+      <span>📅 更新于 2026年7月9日</span>
+      <span>·</span><span>⏱ 快速阅读 8 分钟</span>
+      <span>·</span><span>✅ 适合：所有使用客户端的用户</span>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+<div class="container">
+<div class="wiki-layout">
+
+  <div class="wiki-sidebar">
+    <h3>目录</h3>
+    <div class="wiki-nav">
+      <a href="#before-start">前置知识</a>
+      <a href="#get-link">获取订阅链接</a>
+      <a href="#clash">Clash 导入</a>
+      <a href="#shadowrocket">Shadowrocket 导入</a>
+      <a href="#clashx">ClashX 导入</a>
+      <a href="#errors">常见错误</a>
+      <a href="#security">安全建议</a>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="before-start">前置知识：订阅链接是什么</h2>
+    <p>订阅链接是机场提供的一个特殊 URL，形如：</p>
+    <div class="code-block">
+https://api.example.com/link/abcd1234efgh5678?sub=clash
+    </div>
+    <p>它包含了你账户的所有节点信息。客户端通过这个链接定期获取最新的节点配置，所以你不用手动更新。</p>
+
+    <div class="warn-box">
+      <span class="warn-label">⚠️ 注意</span>
+      <div>订阅链接等同于你的账户密码，千万不要分享给别人，也不要贴在公共地方。</div>
+    </div>
+
+    <h2 id="get-link">第一步：从机场后台获取订阅链接</h2>
+    <p>所有主流机场都支持生成订阅链接。步骤都差不多：</p>
+
+    <div class="step-box">
+      <div><span class="step-num">1</span>登录机场官网账户</div>
+    </div>
+
+    <div class="step-box">
+      <div><span class="step-num">2</span>找到"订阅链接"、"Clash 订阅"或"配置链接"菜单（通常在用户面板 → 服务 → 订阅）</div>
+    </div>
+
+    <div class="step-box">
+      <div><span class="step-num">3</span>选择"Clash"格式（iOS Shadowrocket 也用 Clash 格式）</div>
+    </div>
+
+    <div class="step-box">
+      <div><span class="step-num">4</span>点击"复制"或"获取链接"</div>
+    </div>
+
+    <p>如果机场后台没有找到订阅选项，可以：</p>
+    <ul>
+      <li>查看机场的使用文档或 FAQ</li>
+      <li>联系机场客服问链接怎么获取</li>
+      <li>有些机场需要开通某个套餐才能获取订阅链接</li>
+    </ul>
+
+    <h2 id="clash">Clash / Clash Verge 客户端</h2>
+    <p>Windows / Mac 上最流行的客户端。</p>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">1</span>打开 Clash 客户端</div>
+      <div style="padding:4px 0;margin-left:48px;font-size:.9rem;color:var(--text-secondary);">在左侧找到"配置"或"Profiles"选项卡</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">2</span>点击右侧上方的"+"按钮或"Download"</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">3</span>粘贴你从机场后台复制的订阅链接</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">4</span>点击"下载"、"导入"或"Confirm"</div>
+    </div>
+
+    <div class="tip-box">
+      <span class="tip-label">💡 提示</span>
+      <div>Clash 导入成功后，会在配置列表中显示一条新项。点击激活后，状态栏会变绿表示已连接。</div>
+    </div>
+
+    <h2 id="shadowrocket">iOS Shadowrocket 客户端</h2>
+    <p>iPad / iPhone 上最常用的客户端。</p>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">1</span>打开 Shadowrocket 应用</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">2</span>点击底部"配置"标签</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">3</span>点击右上角的"+"按钮</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">4</span>选择"URL"，粘贴订阅链接</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">5</span>点击"完成"，然后点击配置项的"下载"图标更新</div>
+    </div>
+
+    <h2 id="clashx">ClashX（苹果 Mac）</h2>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">1</span>打开菜单栏的 ClashX 图标</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">2</span>选择"配置" → "管理"</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">3</span>点击左下角"+"，选择"从剪贴板导入"</div>
+      <div style="padding:4px 0;margin-left:48px;font-size:.9rem;color:var(--text-secondary);">（或者粘贴链接后点击"URL"）</div>
+    </div>
+
+    <div class="step-box">
+      <div style="padding:4px 0;"><span class="step-num">4</span>导入完成后点击"使用"激活</div>
+    </div>
+
+    <h2 id="errors">常见错误和解决方案</h2>
+
+    <div class="error-list">
+      <div class="error-item">
+        <div class="error-code">❌ "链接无效" / "配置错误"</div>
+        <div style="margin-top:6px;font-size:.9rem;color:var(--text-secondary);">
+          <strong>原因：</strong>链接复制有误，或者格式不对<br>
+          <strong>解决：</strong>重新从机场后台复制链接，确保没有多余空格。如果机场后台有多个格式（v2ray、Clash 等），一定要选 Clash 格式。
+        </div>
+      </div>
+
+      <div class="error-item">
+        <div class="error-code">❌ "节点为空" / "没有可用的节点"</div>
+        <div style="margin-top:6px;font-size:.9rem;color:var(--text-secondary);">
+          <strong>原因：</strong>账户过期了，或者套餐里确实没有节点<br>
+          <strong>解决：</strong>检查机场账户的套餐是否还活跃，流量是否用完。如果都没问题，可能是机场服务器故障，稍后重试。
+        </div>
+      </div>
+
+      <div class="error-item">
+        <div class="error-code">❌ "无法连接" / "连接超时"</div>
+        <div style="margin-top:6px;font-size:.9rem;color:var(--text-secondary);">
+          <strong>原因：</strong>节点被封禁，或者你的网络环境特殊<br>
+          <strong>解决：</strong>尝试换个节点，或者等待。如果一直不行，联系机场客服检查账户状态。
+        </div>
+      </div>
+
+      <div class="error-item">
+        <div class="error-code">❌ "订阅失败" / "无法更新"</div>
+        <div style="margin-top:6px;font-size:.9rem;color:var(--text-secondary);">
+          <strong>原因：</strong>客户端网络问题，或机场服务器暂时不可用<br>
+          <strong>解决：</strong>检查网络连接，重启客户端，或者手动点"更新订阅"按钮。通常过几分钟就能恢复。
+        </div>
+      </div>
+    </div>
+
+    <h2 id="security">安全建议</h2>
+
+    <h3>✅ 你应该做的</h3>
+    <ul>
+      <li><strong>定期更换订阅链接</strong>：机场通常允许重新生成链接。如果感觉账户可能被泄露，立刻生成新链接。</li>
+      <li><strong>在有网络的地方更新订阅</strong>：订阅更新时链接会被发送到机场服务器，确保你在自己信任的网络上操作。</li>
+      <li><strong>检查客户端权限</strong>：客户端会拦截所有网络流量，确保你用的是官方版本，不要从不明来源下载。</li>
+    </ul>
+
+    <h3>❌ 你不应该做的</h3>
+    <ul>
+      <li><strong>不要分享订阅链接</strong>：即使是最亲近的人，分享链接就等于分享账户密码。</li>
+      <li><strong>不要贴在社群里</strong>：即使脱敏处理（比如改成 xxx），聪明人也能破译。</li>
+      <li><strong>不要相信"转卖账户"</strong>：有些人会兜售他人账户的订阅链接，这是高风险行为。</li>
+    </ul>
+
+  </div>
+</div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p style="color:var(--text-muted);font-size:.85rem;line-height:1.8;margin:0;">
+      © 2026 勇哥博客 | <a href="about.html" style="color:var(--text-secondary);">关于我们</a>
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
