@@ -52,12 +52,12 @@ filterBtns.forEach(btn => {
 
 // ── AFF links (替换为你注册的真实推广链接) ──
 const affLinks = {
-  nexitally: '#',   // 奶昔机场 AFF 链接
+  nexitally: 'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 奶昔机场默认重定向至推荐机场
   dageyun:   'https://aff02.dgy02.com/#/register?code=PQdpFA0R',
   huanyuyun: 'https://vip3.huanyuyunbest.com/#/register?code=CPBmzXgk',
   '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
   shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
-  shanhai:   '#',   // 山海机场 AFF 链接
+  shanhai:   'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
   yifanyun:  'https://solmira.yifantztz2.xyz/#/register?code=TayPEIIF'
 };
 function goAff(name) {
