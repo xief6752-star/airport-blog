@@ -455,9 +455,9 @@ img { max-width: 100%; display: block; }
   background-color: #141929;
   border: 1px solid rgba(99, 120, 255, 0.2);
   border-radius: 12px;
-  min-width: 190px;
+  width: 220px; /* Explicit width to fix Safari/WebKit flexbox layout bug */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
+  padding: 8px 0;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
 }
@@ -468,6 +468,9 @@ img { max-width: 100%; display: block; }
 
 .nav-dropdown-menu a {
   display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important; /* Keep items vertically stacked on single lines */
   padding: 10px 20px !important;
   color: #8b9cc8 !important;
   font-size: 0.85rem !important;
@@ -484,4 +487,5 @@ img { max-width: 100%; display: block; }
   color: var(--accent) !important;
   padding-left: 24px !important;
 }
+
 
