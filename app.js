@@ -58,7 +58,8 @@ const affLinks = {
   '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
   shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
   shanhai:   'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
-  yifanyun:  'https://solmira.yifantztz2.xyz/#/register?code=TayPEIIF'
+  yifanyun:  'https://01.1flyunaff.cc/#/register?code=TayPEIIF',
+  jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13'
 };
 function goAff(name) {
   const url = affLinks[name] || '#';
@@ -75,7 +76,8 @@ function showDetail(name) {
     '69yun': { name: '69云', desc: '69云以"每日签到送流量"闻名，性价比极高，同时附带 Emby 影视库服务。中转优化线路晚高峰实测 400Mbps+，适合作为主力或备用机场。\n\n✅ 优点：签到送流量、有 Emby 影视库、价格亲民（¥15 起）\n⚠️ 缺点：非专线，高峰期速度不及专线机场' },
     shunyun: { name: '瞬云', desc: '瞬云节点覆盖丰富，套餐灵活，年付价格实惠，适合使用频率固定的用户。中转+专线混合线路，晚高峰实测 700Mbps+。新用户可使用优惠码 20off 享专属折扣。\n\n✅ 优点：节点多、套餐灵活、年付价格低、有新客优惠码\n⚠️ 缺点：非纯专线，高峰期偶有波动' },
     shanhai: { name: '山海机场', desc: '山海机场支持按量付费和不限时套餐，多协议支持（SS/V2Ray/Trojan），适合使用频率不规律的用户。入门价格最低，是备用机场的好选择。\n\n✅ 优点：按量付费灵活、入门价格低（¥10 起）、多协议支持\n⚠️ 缺点：速度表现一般，适合作为备用而非主力' },
-    yifanyun: { name: '一翻云', desc: '一翻云是性价比较高的直连+专线中转机场，节点数量多且覆盖全球多地区，晚高峰网络表现优异。支持 Netflix/Disney+/ChatGPT/Claude 解锁。\n\n✅ 优点：套餐性价比高、专线稳定、解锁功能完善\n⚠️ 缺点：新站点需要持续观察' }
+    yifanyun: { name: '一翻云', desc: '一翻云是性价比较高的直连+专线中转机场，节点数量多且覆盖全球多地区，晚高峰网络表现优异。支持 Netflix/Disney+/ChatGPT/Claude 解锁。\n\n✅ 优点：套餐性价比高、专线稳定、解锁功能完善\n⚠️ 缺点：新站点需要持续观察' },
+    jilianyun: { name: '极连云', desc: '极连云是一款全 IPLC 专线的优质机场，提供最高 2.5Gbps 带宽且晚高峰不限速，稳定性极佳。原生 IP 完美解锁 Netflix、ChatGPT、TikTok 等主流流媒体及 AI 服务。\n\n✅ 优点：全 IPLC 专线（最大 2.5Gbps）、流媒体与 AI 解锁极其稳定、性价比高（限时年付合 ¥8/月）、不限客户端数\n⚠️ 缺点：不接受退款，福建与新疆地区用户请谨慎下单' }
   };
   const d = details[name];
   if (!d) return;
