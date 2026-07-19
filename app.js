@@ -58,7 +58,7 @@ const affLinks = {
   '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
   shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
   shanhai:   'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
-  yifanyun:  'https://01.1flyunaff.cc/#/register?code=TayPEIIF',
+  yifanyun:  'https://wp01.yifanaff.com/#/register?code=TayPEIIF',
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13'
 };
 function goAff(name) {
