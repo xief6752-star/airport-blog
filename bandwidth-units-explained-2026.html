@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>big博客 · 独立评测</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans SC', sans-serif; background: #f7f6f2; color: #1a1a1a; font-size: 15px; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 1px solid #e0ddd5; background: #f7f6f2; position: sticky; top: 0; z-index: 10; }
+.nav-logo { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 500; }
+.nav-logo span { color: #888; font-weight: 400; margin-left: 8px; font-size: 12px; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 13px; color: #666; transition: color .2s; }
+.nav-links a:hover { color: #1a1a1a; }
+.nav-back { font-size: 13px; color: #888; } .nav-back:hover { color: #1a1a1a; }
+@media (max-width: 640px) { nav { padding: 16px 20px; } }
+</style>
+
+
+</head>
+<body>
+
+
+<style>
+.article { max-width: 720px; margin: 0 auto; padding: 56px 48px 80px; }
+.art-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+.rev-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #1a1a1a; color: #fff; padding: 3px 10px; border-radius: 3px; }
+.art-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #bbb; }
+.art-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -1px; line-height: 1.25; margin-bottom: 8px; }
+.art-subtitle { font-size: 15px; color: #888; margin-bottom: 28px; }
+.score-bar { display: flex; align-items: center; gap: 20px; padding: 20px 24px; background: #1a1a1a; border-radius: 10px; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+.score-main { color: #f7f6f2; }
+.score-num { font-family: 'IBM Plex Mono', monospace; font-size: 3rem; font-weight: 500; line-height: 1; }
+.score-label { font-size: 12px; color: #888; margin-top: 4px; }
+.score-divider { width: 1px; height: 48px; background: #333; }
+.score-items { display: flex; gap: 20px; flex-wrap: wrap; }
+.score-item { color: #f7f6f2; }
+.score-item-val { font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; font-weight: 500; }
+.score-item-label { font-size: 11px; color: #666; margin-top: 2px; }
+
+/* Article Content Styles */
+.article h2 { font-size: 1.1rem; font-weight: 700; margin: 40px 0 14px; padding-top: 40px; border-top: 1px solid #e0ddd5; }
+.article h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+.article p { font-size: 15px; color: #333; line-height: 1.9; margin-bottom: 14px; }
+.article table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+.article thead tr { border-bottom: 2px solid #1a1a1a; }
+.article tbody tr { border-bottom: 1px solid #e0ddd5; }
+.article th { font-weight: 600; text-align: left; padding: 10px 12px 10px 0; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+.article td { padding: 12px 12px 12px 0; color: #444; }
+.article td:first-child { font-weight: 600; color: #1a1a1a; }
+.article ul { margin: 12px 0 16px 20px; color: #555; font-size: 14px; line-height: 2; }
+.article .verdict { background: #fff; border: 1px solid #e0ddd5; border-radius: 10px; padding: 24px 26px; margin: 28px 0; }
+.article .verdict-title { font-weight: 700; margin-bottom: 12px; font-size: 15px; }
+.article .verdict-row { display: flex; gap: 10px; margin-bottom: 8px; font-size: 14px; color: #555; align-items: flex-start; }
+.article .verdict-row:last-child { margin-bottom: 0; }
+.article .lyric-block { background: #1a1a1a; color: #f7f6f2; border-radius: 8px; padding: 22px 24px; margin: 32px 0; font-size: 14px; line-height: 1.9; font-weight: 300; }
+.article .lyric-block cite { font-style: normal; font-size: 12px; color: #666; display: block; margin-top: 8px; }
+.article .tip { background: #fff; border: 1px solid #e0ddd5; border-left: 3px solid #1a1a1a; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #555; line-height: 1.8; }
+.article .tip strong { color: #1a1a1a; }
+.article .warn { background: #fffbf0; border: 1px solid #f0e0a0; border-left: 3px solid #d4a017; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #666; line-height: 1.8; }
+.article .danger { background: #fff5f5; border: 1px solid #f0b0b0; border-left: 3px solid #c0392b; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #555; line-height: 1.8; }
+.article .danger strong { color: #c0392b; }
+.article .steps { display: flex; flex-direction: column; counter-reset: step; }
+.article .step { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid #e0ddd5; counter-increment: step; }
+.article .step:last-child { border-bottom: none; }
+.article .step-num { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #bbb; min-width: 28px; margin-top: 2px; }
+.article .step-num::before { content: "0" counter(step); }
+.article .step-title { font-weight: 700; margin-bottom: 6px; }
+.article .step-desc { font-size: 14px; color: #555; line-height: 1.8; }
+.article code { font-family: 'IBM Plex Mono', monospace; background: #eee; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+.article .code-block { background: #1e1e1e; border-radius: 8px; padding: 16px 20px; margin: 12px 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #cdd3de; line-height: 1.8; overflow-x: auto; }
+.article .other-tuts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.article .tut-link { border: 1px solid #e0ddd5; border-radius: 8px; padding: 16px 18px; background: #fff; font-size: 13px; transition: border-color .2s; display: block; }
+.article .tut-link:hover { border-color: #aaa; }
+.article .tut-link-plat { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #aaa; margin-bottom: 4px; }
+.article .tut-link-name { font-weight: 700; }
+
+@media (max-width: 640px) { .article { padding: 36px 20px 60px; } .score-divider { display: none; } .other-tuts { grid-template-columns: 1fr; } }
+</style>
+
+<nav>
+  <div class="nav-logo">big博客<span>使用教程</span></div>
+  <a class="nav-back" href="/">← 返回首页</a>
+</nav>
+
+<article class="article">
+  <div class="art-eyebrow">
+    <span class="rev-tag" style="background: #2d3a2e">基础科普</span>
+    <span class="art-date">2026-07-07</span>
+  </div>
+  <h1 class="art-title">机场套餐里的"100Mbps限速"到底是多快？带宽单位完全科普</h1>
+  <div class="art-subtitle">买机场经常看到 100M/500M/不限速，但实际下载速度是多少？这些数字到底意味着什么？</div>
+
+
+
+  
+            <h2>Mbps 和 MB/s 傻傻分不清？</h2>
+            <p>很多新手在这里踩坑：机场宣传的 <strong>100Mbps</strong> 限速，在下载文件时只有 <strong>12.5MB/s</strong> 左右的速度。</p>
+            <p>原因很简单：<br>
+            <code>1 Byte = 8 bits</code><br>
+            <code>100 Mbps ÷ 8 = 12.5 MB/s</code></p>
+            <p>大写 <strong>B</strong> 是字节（Byte），小写 <strong>b</strong> 是比特（bit）。网络带宽用 bit 计量，文件大小用 Byte 计量。这个换算关系<strong>永远是除以8</strong>。</p>
+
+            <h2>100Mbps 够用吗？</h2>
+            <p>以下是常见场景的带宽需求：</p>
+            <ul>
+                <li>YouTube 1080p 流畅播放：约需 8-15Mbps</li>
+                <li>YouTube 4K HDR 流畅播放：约需 25-50Mbps</li>
+                <li>Netflix 4K：约需 25Mbps</li>
+                <li>视频会议（Zoom 高清）：约需 3-5Mbps</li>
+                <li>ChatGPT/网页浏览：1-5Mbps 绰绰有余</li>
+            </ul>
+            <p><strong>结论：100Mbps 对单人日常使用完全够用。</strong>如果你要下载大文件或多人同时使用，才需要考虑更高带宽。</p>
+
+            <h2>"不限速"是真的不限速吗？</h2>
+            <p>大部分机场宣传的"不限速"是指<strong>不设置人工速率上限</strong>，但实际速度取决于：</p>
+            <ul>
+                <li>服务器物理带宽上限（机场买的是多少带宽）</li>
+                <li>同时在线用户数量（超售比例）</li>
+                <li>你本地的运营商线路质量</li>
+            </ul>
+
+            <h2>流量和带宽是两回事</h2>
+            <p>机场套餐通常有两个维度的限制：<strong>月流量</strong>（比如 100GB/月）和<strong>峰值带宽</strong>（比如 500Mbps）。流量是总用量，带宽是速度上限。一个套餐可能"不限速但限流量"，也可能"限速但流量无限"——选购前要看清楚两者的区别。</p>
+
+            <div class="tip"><strong>实用建议：</strong>YouTube 4K 每小时约消耗 7-10GB 流量。如果你是重度视频用户，优先选流量充足的套餐，而不是追求高带宽。</div>
+        
+
+</article>
+
+<footer style="max-width:860px;margin:60px auto 0;padding:32px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e0ddd5;flex-wrap:wrap;gap:12px;">
+  <span style="font-size:13px;color:#999;">big博客评测 · <strong style="color:#555;">独立 · 无广</strong></span>
+  <a href="/" style="font-size:13px;color:#888;">← 返回首页</a>
+</footer>
+</body>
+</html>
+

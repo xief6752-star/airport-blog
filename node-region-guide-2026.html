@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>big博客 · 独立评测</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans SC', sans-serif; background: #f7f6f2; color: #1a1a1a; font-size: 15px; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 1px solid #e0ddd5; background: #f7f6f2; position: sticky; top: 0; z-index: 10; }
+.nav-logo { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 500; }
+.nav-logo span { color: #888; font-weight: 400; margin-left: 8px; font-size: 12px; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 13px; color: #666; transition: color .2s; }
+.nav-links a:hover { color: #1a1a1a; }
+.nav-back { font-size: 13px; color: #888; } .nav-back:hover { color: #1a1a1a; }
+@media (max-width: 640px) { nav { padding: 16px 20px; } }
+</style>
+
+
+</head>
+<body>
+
+
+<style>
+.article { max-width: 720px; margin: 0 auto; padding: 56px 48px 80px; }
+.art-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+.rev-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #1a1a1a; color: #fff; padding: 3px 10px; border-radius: 3px; }
+.art-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #bbb; }
+.art-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -1px; line-height: 1.25; margin-bottom: 8px; }
+.art-subtitle { font-size: 15px; color: #888; margin-bottom: 28px; }
+.score-bar { display: flex; align-items: center; gap: 20px; padding: 20px 24px; background: #1a1a1a; border-radius: 10px; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+.score-main { color: #f7f6f2; }
+.score-num { font-family: 'IBM Plex Mono', monospace; font-size: 3rem; font-weight: 500; line-height: 1; }
+.score-label { font-size: 12px; color: #888; margin-top: 4px; }
+.score-divider { width: 1px; height: 48px; background: #333; }
+.score-items { display: flex; gap: 20px; flex-wrap: wrap; }
+.score-item { color: #f7f6f2; }
+.score-item-val { font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; font-weight: 500; }
+.score-item-label { font-size: 11px; color: #666; margin-top: 2px; }
+
+/* Article Content Styles */
+.article h2 { font-size: 1.1rem; font-weight: 700; margin: 40px 0 14px; padding-top: 40px; border-top: 1px solid #e0ddd5; }
+.article h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+.article p { font-size: 15px; color: #333; line-height: 1.9; margin-bottom: 14px; }
+.article table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+.article thead tr { border-bottom: 2px solid #1a1a1a; }
+.article tbody tr { border-bottom: 1px solid #e0ddd5; }
+.article th { font-weight: 600; text-align: left; padding: 10px 12px 10px 0; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+.article td { padding: 12px 12px 12px 0; color: #444; }
+.article td:first-child { font-weight: 600; color: #1a1a1a; }
+.article ul { margin: 12px 0 16px 20px; color: #555; font-size: 14px; line-height: 2; }
+.article .verdict { background: #fff; border: 1px solid #e0ddd5; border-radius: 10px; padding: 24px 26px; margin: 28px 0; }
+.article .verdict-title { font-weight: 700; margin-bottom: 12px; font-size: 15px; }
+.article .verdict-row { display: flex; gap: 10px; margin-bottom: 8px; font-size: 14px; color: #555; align-items: flex-start; }
+.article .verdict-row:last-child { margin-bottom: 0; }
+.article .lyric-block { background: #1a1a1a; color: #f7f6f2; border-radius: 8px; padding: 22px 24px; margin: 32px 0; font-size: 14px; line-height: 1.9; font-weight: 300; }
+.article .lyric-block cite { font-style: normal; font-size: 12px; color: #666; display: block; margin-top: 8px; }
+.article .tip { background: #fff; border: 1px solid #e0ddd5; border-left: 3px solid #1a1a1a; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #555; line-height: 1.8; }
+.article .tip strong { color: #1a1a1a; }
+.article .warn { background: #fffbf0; border: 1px solid #f0e0a0; border-left: 3px solid #d4a017; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #666; line-height: 1.8; }
+.article .danger { background: #fff5f5; border: 1px solid #f0b0b0; border-left: 3px solid #c0392b; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-size: 13px; color: #555; line-height: 1.8; }
+.article .danger strong { color: #c0392b; }
+.article .steps { display: flex; flex-direction: column; counter-reset: step; }
+.article .step { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid #e0ddd5; counter-increment: step; }
+.article .step:last-child { border-bottom: none; }
+.article .step-num { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #bbb; min-width: 28px; margin-top: 2px; }
+.article .step-num::before { content: "0" counter(step); }
+.article .step-title { font-weight: 700; margin-bottom: 6px; }
+.article .step-desc { font-size: 14px; color: #555; line-height: 1.8; }
+.article code { font-family: 'IBM Plex Mono', monospace; background: #eee; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+.article .code-block { background: #1e1e1e; border-radius: 8px; padding: 16px 20px; margin: 12px 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #cdd3de; line-height: 1.8; overflow-x: auto; }
+.article .other-tuts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.article .tut-link { border: 1px solid #e0ddd5; border-radius: 8px; padding: 16px 18px; background: #fff; font-size: 13px; transition: border-color .2s; display: block; }
+.article .tut-link:hover { border-color: #aaa; }
+.article .tut-link-plat { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #aaa; margin-bottom: 4px; }
+.article .tut-link-name { font-weight: 700; }
+
+@media (max-width: 640px) { .article { padding: 36px 20px 60px; } .score-divider { display: none; } .other-tuts { grid-template-columns: 1fr; } }
+</style>
+
+<nav>
+  <div class="nav-logo">big博客<span>使用教程</span></div>
+  <a class="nav-back" href="/">← 返回首页</a>
+</nav>
+
+<article class="article">
+  <div class="art-eyebrow">
+    <span class="rev-tag" style="background: #2d3a2e">选购科普</span>
+    <span class="art-date">2026-07-15</span>
+  </div>
+  <h1 class="art-title">日本、香港、新加坡、美国节点哪个更好用？2026年地区选择指南</h1>
+  <div class="art-subtitle">面对眼花缭乱的节点城市，新手总是不知道该连哪个。这篇文章帮你建立选择框架。</div>
+
+
+
+  
+            <h2>为什么节点地区很重要？</h2>
+            <p>同样是机场，连香港节点和连美国节点，在延迟、解锁能力、速度峰值上的体验可能天差地别。了解各地区节点的特点，能帮你根据使用场景做出最优选择。</p>
+
+            <h2>🇯🇵 日本节点</h2>
+            <p><strong>延迟：</strong>40-80ms（中国大陆）<br>
+            <strong>优势：</strong>地理位置近，延迟低；日本 IP 对大部分流媒体（Netflix 日区、niconico）和游戏（日服 PS4/Switch）友好；带宽充裕。<br>
+            <strong>劣势：</strong>高峰期用的人多，容易拥堵；部分 ChatGPT 流量会被日本节点 IP 限速。<br>
+            <strong>适合：</strong>日常上网、流媒体、日服游戏</p>
+
+            <h2>🇭🇰 香港节点</h2>
+            <p><strong>延迟：</strong>20-50ms（华南地区更低）<br>
+            <strong>优势：</strong>距离最近、延迟最低；对微信、支付宝等国内服务基本无影响；网络环境相对宽松。<br>
+            <strong>劣势：</strong>Netflix 香港区内容较少；部分 AI 服务识别香港 IP 为"中国区代理"会拒绝访问。<br>
+            <strong>适合：</strong>追求低延迟、国内服务与翻墙并行使用</p>
+
+            <h2>🇸🇬 新加坡节点</h2>
+            <p><strong>延迟：</strong>60-120ms<br>
+            <strong>优势：</strong>东南亚网络枢纽，解锁能力强；对谷歌、YouTube 极其友好；AI 服务原生解锁率高。<br>
+            <strong>劣势：</strong>延迟比港日稍高；新加坡机房 IP 被 Cloudflare 标记为商业 IP。<br>
+            <strong>适合：</strong>AI 工具使用（ChatGPT/Claude）、YouTube、Google 系服务</p>
+
+            <h2>🇺🇸 美国节点</h2>
+            <p><strong>延迟：</strong>150-250ms<br>
+            <strong>优势：</strong>Netflix 美区片库最全；AI 服务（OpenAI、Anthropic 总部在美）访问最原生；GitHub、AWS 速度快。<br>
+            <strong>劣势：</strong>延迟高，不适合游戏；出口带宽成本高，大部分机场美国节点速度有限。<br>
+            <strong>适合：</strong>Netflix 美区、开发者工具、AI API 调用</p>
+
+            <div class="tip"><strong>终极建议：</strong>日常上网用日本/香港，用 ChatGPT/Claude 切换新加坡/美国，看 Netflix 美区专门切美国节点。多备几个节点，根据场景灵活切换，才是正确用法。</div>
+        
+
+</article>
+
+<footer style="max-width:860px;margin:60px auto 0;padding:32px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e0ddd5;flex-wrap:wrap;gap:12px;">
+  <span style="font-size:13px;color:#999;">big博客评测 · <strong style="color:#555;">独立 · 无广</strong></span>
+  <a href="/" style="font-size:13px;color:#888;">← 返回首页</a>
+</footer>
+</body>
+</html>
+
