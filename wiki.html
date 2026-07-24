@@ -109,6 +109,9 @@
         <a href="#mobile-client" class="wiki-nav-link">手机客户端横评</a>
         <a href="#residential-ip" class="wiki-nav-link">家宽 IP vs 机房 IP</a>
         <a href="#bandwidth" class="wiki-nav-link">带宽单位科普</a>
+        <a href="#test-speed" class="wiki-nav-link">机场测速完全指南</a>
+        <a href="#free-airport" class="wiki-nav-link">免费机场真相</a>
+        <a href="#privacy" class="wiki-nav-link">上网隐私与日志防护</a>
       </div>
       <div class="wiki-articles">
         <div class="wiki-article scroll-reveal" id="what">
@@ -371,6 +374,27 @@
           </table>
           <p><strong>流量 vs 带宽</strong>是两回事：流量是总用量限制（如 100GB/月），带宽是速度上限（如 500Mbps）。YouTube 4K 每小时约消耗 7–10GB 流量，重度视频用户优先选流量充足的套餐。</p>
           <div class="highlight-box">💡 <strong>「不限速」</strong>≠ 无限速，实际速度取决于机场物理带宽、同时在线用户数和你本地运营商线路质量。</div>
+        </div>
+
+        <div class="wiki-article scroll-reveal" id="test-speed">
+          <h2>⚡ 机场测速完全指南：延迟、晚高峰跑分与稳定性判断</h2>
+          <p>如何科学测试机场速度？许多新手只看单纯的 Ping 值或单次 Speedtest 跑分，容易被表面数据误导。测试机场的核心在于<strong>晚高峰（19:00–23:00）的综合表现</strong>以及<strong>长时连接的连续稳定性</strong>。</p>
+          <div class="highlight-box">💡 <strong>测速三要素：</strong>晚高峰时段测速 + 多区域节点抽测 + 连续测试丢包率。单一时段跑满带宽不代表整月稳定。</div>
+          <p style="margin-top:14px;"><a href="wiki-how-to-test-speed.html" target="_blank" style="color:var(--accent);font-weight:700;text-decoration:underline;">📄 阅读完整图文指南：机场测速方法与数据解读 →</a></p>
+        </div>
+
+        <div class="wiki-article scroll-reveal" id="free-airport">
+          <h2>⚠️ 免费机场的真相与风险：天下没有免费的午餐</h2>
+          <p>市面上许多宣传“永久免费”的 VPN 或机场背后隐藏着诸多陷阱：带宽流量成本极高，免费服务通常通过贩卖用户浏览日志、注入广告甚至中间人劫持攻击来盈利。</p>
+          <div class="highlight-box">⚠️ <strong>风险提醒：</strong>切勿使用来源不明的免费机场登录网银、支付软件或重要工作账号，避免隐私泄露。</div>
+          <p style="margin-top:14px;"><a href="wiki-free-airport-truth.html" target="_blank" style="color:var(--accent);font-weight:700;text-decoration:underline;">📄 阅读完整剖析文章：免费机场盈利套路与安全替代方案 →</a></p>
+        </div>
+
+        <div class="wiki-article scroll-reveal" id="privacy">
+          <h2>🔒 如何保护上网隐私：避免被机场日志追踪的完全指南</h2>
+          <p>使用代理服务时，机场节点处于中间人位置。虽然 HTTPS 保证了内容无法被解密，但目标域名（SNI）、访问时间与流量大小仍然可能被记录。本文详解如何防范 DNS 泄露并选择真正无日志的节点。</p>
+          <div class="highlight-box">💡 <strong>隐私建议：</strong>开启 Clash 的 Fake-IP 模式防范 DNS 泄露，高隐私需求场景可结合 DoH/DoT 加密 DNS 或 WARP 辅助。</div>
+          <p style="margin-top:14px;"><a href="wiki-privacy-protection.html" target="_blank" style="color:var(--accent);font-weight:700;text-decoration:underline;">📄 阅读完整隐私指南：DNS 泄露检测与日志安全防护策略 →</a></p>
         </div>
       </div>
     </div>

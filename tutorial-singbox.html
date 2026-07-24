@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sing-box 使用教程2026：Android/iOS 订阅配置完全指南 - 勇哥博客</title>
+    <meta name="description" content="sing-box完整配置教程：支持Hysteria2、VLESS+Reality、TUIC v5等最新协议，免费开源，Android直接从Google Play或GitHub下载，iOS从App Store搜索sing-box。">
+    <meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
+    <link rel="canonical" href="https://yongjichang.com/tutorial-singbox">
+    <link rel="stylesheet" href="index.css?v=2">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WD0C6M8T40');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "sing-box 使用教程2026：Android/iOS 订阅配置完全指南 - 勇哥博客",
+      "description": "sing-box完整配置教程：支持Hysteria2、VLESS+Reality、TUIC v5等最新协议，免费开源，Android直接从Google Play或GitHub下载，iOS从App Store搜索sing-box。",
+      "author": {
+        "@type": "Person",
+        "name": "勇哥"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "勇哥博客",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yongjichang.com/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yongjichang.com/tutorial-singbox"
+      },
+      "datePublished": "2026-07-25",
+      "dateModified": "2026-07-25"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+    <div class="nav-links">
+      <a href="index.html">机场推荐</a>
+      <div class="nav-dropdown">
+        <a href="reviews.html">机场评测</a>
+        <div class="nav-dropdown-menu">
+          <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
+          <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
+          <a href="reviews/review-jilianyun.html">⚡ 极连云评测</a>
+          <a href="reviews/review-yifanyun.html">☁️ 一翻云评测</a>
+          <a href="reviews/review-wgetcloud.html">☁️ WgetCloud评测</a>
+          <a href="reviews/review-tag.html">🏷️ TAG机场评测</a>
+          <a href="reviews/review-gladOS.html">🤖 GlaDOS 评测</a>
+          <a href="reviews/review-dageyun.html">👊 大哥云评测</a>
+          <a href="reviews/review-flyingbird.html">🐦 飞鸟机场评测</a>
+          <a href="reviews/review-nexitally.html">🥤 奶昔机场评测</a>
+          <a href="reviews/review-chaoyue.html">⚡ 超悦机场评测</a>
+          <a href="reviews/review-yiyuan.html">💰 一元机场评测</a>
+          <a href="reviews/review-fourks.html">🌐 4ksAPI 接口评测</a>
+          <a href="reviews/review-siliconflow.html">⚡ 硅基流动评测</a>
+        </div>
+      </div>
+      <a href="tutorials.html" class="active">使用教程</a>
+      <a href="wiki.html">科普百科</a>
+      <a href="deals.html">优惠专区</a>
+      <a href="about.html">关于我们</a>
+      <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="reviews.html">📋 机场评测</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+  <a href="deals.html">🎁 优惠专区</a>
+</div>
+
+    <main class="guide-layout">
+        <header class="guide-hero">
+            <h1>sing-box 使用教程2026：Android/iOS 订阅配置完全指南</h1>
+            <p>sing-box完整配置教程：支持Hysteria2、VLESS+Reality、TUIC v5等最新协议，免费开源，Android直接从Google Play或GitHub下载，iOS从App Store搜索sing-box。</p>
+        </header>
+
+        <div class="guide-content">
+            <aside class="guide-sidebar">
+                <ul>
+                    <li><a href="#section1">sing-box是什么</a></li>
+                    <li><a href="#section2">Android安装方法</a></li>
+                    <li><a href="#section3">iOS安装方法</a></li>
+                    <li><a href="#section4">导入机场订阅</a></li>
+                    <li><a href="#section5">基本使用</a></li>
+                    <li><a href="#section6">与Clash Meta的区别</a></li>
+                    <li><a href="#section7">常见问题</a></li>
+                </ul>
+            </aside>
+            <article class="guide-main">
+                <section id="section1">
+                    <h2>sing-box是什么</h2>
+                    <p>sing-box 是一个由 sing-project 开发的免费开源通用代理平台，支持极多的代理协议和规则。它被誉为新一代的瑞士军刀代理客户端。在 2026 年，它不仅支持了最新的 Hysteria2、VLESS+Reality、TUIC v5 等先进协议，还提供了跨平台的一致性体验。</p>
+                    <div class="tip-box">
+                        <span class="tip-label">💡 优势提示:</span>
+                        由于其免费开源的特性，sing-box 不需要像部分客户端那样付费购买，而且社区活跃，更新频率极高。
+                    </div>
+                </section>
+
+                <section id="section2">
+                    <h2>Android安装方法</h2>
+                    <div class="guide-step-card">
+                        <span class="step-badge">步骤 1</span>
+                        <p><strong>方式一：通过 Google Play 下载</strong>。这是最推荐的方式，支持自动更新。在 Google Play 中直接搜索 <code>sing-box</code> 即可安装。</p>
+                    </div>
+                    <div class="guide-step-card">
+                        <span class="step-badge">步骤 2</span>
+                        <p><strong>方式二：通过 GitHub 下载 APK</strong>。如果你没有 Google 服务框架，可以访问 <a href="https://github.com/SagerNet/sing-box/releases" target="_blank" rel="nofollow">sing-box GitHub Releases</a> 下载最新的 Android APK 进行安装。</p>
+                    </div>
+                </section>
+
+                <section id="section3">
+                    <h2>iOS安装方法</h2>
+                    <p>在 iOS 平台上，sing-box 同样提供了优秀的体验，而且完全免费！</p>
+                    <div class="warn-box">
+                        <span class="warn-label">⚠️ 注意:</span>
+                        由于中国大陆区 App Store 政策原因，你必须使用非国区（推荐美区）的 Apple ID 才能搜索和下载。
+                    </div>
+                    <div class="guide-step-card">
+                        <span class="step-badge">方法</span>
+                        <p>切换到美区 Apple ID 后，打开 App Store，搜索 <code>sing-box</code> 并下载。你也可以通过 TestFlight 获取测试版，但这通常需要等名额释放。</p>
+                    </div>
+                </section>
+
+                <section id="section4">
+                    <h2>导入机场订阅</h2>
+                    <p>配置订阅是使用的关键步骤。以下是导入机场订阅的完整流程：</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>操作步骤</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. 获取订阅</td>
+                                <td>登录你的机场后台，复制 sing-box 格式的订阅链接。</td>
+                            </tr>
+                            <tr>
+                                <td>2. 打开配置</td>
+                                <td>在应用底部导航栏点击 <code>Profiles</code>（配置）。</td>
+                            </tr>
+                            <tr>
+                                <td>3. 新建配置</td>
+                                <td>点击右上角的 <code>+</code> 号，选择 <code>New Profile</code>。</td>
+                            </tr>
+                            <tr>
+                                <td>4. 填写信息</td>
+                                <td>类型选择 <code>Remote</code>，在 <code>URL</code> 栏粘贴你刚才复制的订阅链接。</td>
+                            </tr>
+                            <tr>
+                                <td>5. 保存并更新</td>
+                                <td>点击右上角保存。长按新添加的配置，选择 <code>Update</code> 更新节点信息，然后点击选中它。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="section5">
+                    <h2>基本使用</h2>
+                    <p>配置好订阅后，回到 <code>Dashboard</code>（主页）。</p>
+                    <ul>
+                        <li><strong>选择节点：</strong> 在面板中可以看到各种节点组，点击即可切换节点。</li>
+                        <li><strong>切换模式：</strong> 你可以切换 <code>Rule</code>（规则模式，推荐）、<code>Global</code>（全局模式）和 <code>Direct</code>（直连模式）。</li>
+                        <li><strong>延迟测试：</strong> 点击测试按钮，可以查看各个节点的真实连通延迟，方便你挑选最快节点。</li>
+                    </ul>
+                </section>
+
+                <section id="section6">
+                    <h2>与Clash Meta的区别</h2>
+                    <p>很多人会纠结选择 sing-box 还是 Clash Meta（Mihomo）：</p>
+                    <div class="score-row">
+                        <div class="score-label">协议支持全度：sing-box</div>
+                        <div class="score-bar-wrap">
+                            <div class="score-bar-fill" style="width: 98%;"></div>
+                        </div>
+                        <span class="score-val">极高</span>
+                    </div>
+                    <div class="score-row">
+                        <div class="score-label">规则易用性：Clash Meta</div>
+                        <div class="score-bar-wrap">
+                            <div class="score-bar-fill" style="width: 90%;"></div>
+                        </div>
+                        <span class="score-val">高</span>
+                    </div>
+                    <p>sing-box 对最新协议（如 Reality 和 Hysteria2）的原生支持更好，且在 iOS 上完全免费；而 Clash Meta 拥有更广泛的用户基础和现成的规则生态，但其配置文件格式与 sing-box 并不互通。推荐追求最新协议和免费 iOS 客户端的用户使用 sing-box。</p>
+                </section>
+
+                <section id="section7">
+                    <h2>常见问题</h2>
+                    <div class="tip-box">
+                        <span class="tip-label">❓ VPN权限申请失败？</span>
+                        第一次启动并连接时，系统会提示创建 VPN 连接，请务必允许，否则无法拦截流量。如果误点拒绝，请在系统设置中删除相关 VPN 档案后重试。
+                    </div>
+                    <div class="tip-box">
+                        <span class="tip-label">❓ 订阅更新失败？</span>
+                        请检查你的网络连接，或者尝试关闭当前的 VPN 连接后再进行更新，因为某些机场屏蔽了国外的 IP 更新订阅。
+                    </div>
+                    <div class="tip-box">
+                        <span class="tip-label">❓ 节点全红（超时）？</span>
+                        首先尝试更新订阅。如果仍然不行，可能是你的本地时间与标准时间误差过大，请在系统设置中开启自动对时。
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <div class="footer-disclaimer">⚠️ 免责声明：本站所有内容仅供学习与技术研究参考，请遵守所在地区相关法律法规。</div>
+      <div>© 2026 勇哥博客 | <a href="about.html" style="color:var(--text-secondary);">关于我们</a></div>
+    </div>
+  </div>
+</footer>
+
+    <script src="analytics.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
