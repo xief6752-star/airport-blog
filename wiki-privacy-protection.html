@@ -1,36 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>如何保护上网隐私2026：避免被机场日志追踪的完全指南 - 勇哥博客</title>
-    <meta name="description" content="使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。">
-    <link rel="canonical" href="https://yongjichang.com/wiki-privacy-protection">
-    <meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
-    <link rel="stylesheet" href="index.css?v=2">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WD0C6M8T40');
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "如何保护上网隐私2026：避免被机场日志追踪的完全指南 - 勇哥博客",
-      "description": "使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。",
-      "author": {
-        "@type": "Organization",
-        "name": "勇哥博客"
-      }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WD0C6M8T40');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何保护上网隐私2026：避免被机场日志追踪的完全指南 - 勇哥博客</title>
+<meta name="description" content="使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/wiki-privacy-protection">
+<link rel="stylesheet" href="index.css?v=2">
+<link rel="icon" type="image/png" href="logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "如何保护上网隐私2026：避免被机场日志追踪的完全指南 - 勇哥博客",
+  "description": "使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "author": {"@type": "Organization", "name": "勇哥博客"},
+  "publisher": {"@type": "Organization", "name": "勇哥博客", "url": "https://yongjichang.com"}
+}
+</script>
+<style>
+.guide-hero{padding:90px 0 44px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-breadcrumb span{color:var(--text-secondary)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover,.guide-nav a.active{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-bottom:0}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px;color:var(--text-primary)}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.guide-step-card p:last-child{margin-bottom:0}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.danger-box{display:flex;gap:12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.danger-box .danger-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.data-table,.wiki-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.875rem}
+.data-table th,.wiki-table th{background:rgba(99,120,255,.1);color:var(--text-primary);padding:10px 14px;text-align:left;font-weight:700;border-bottom:1px solid var(--border)}
+.data-table td,.wiki-table td{padding:10px 14px;color:var(--text-secondary);border-bottom:1px solid rgba(255,255,255,.04)}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 0;text-decoration:none}
+.score-row{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.score-label{font-size:.875rem;color:var(--text-secondary);width:160px;flex-shrink:0}
+.score-bar-wrap{flex:1;background:rgba(255,255,255,.06);border-radius:999px;height:8px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:999px;background:var(--gradient-accent)}
+.score-val{font-size:.875rem;font-weight:700;color:var(--accent);width:40px;text-align:right}
+.highlight-box{background:rgba(99,120,255,.08);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:14px 18px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
 </head>
 <body>
-    <header class="navbar">
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+    <div class="nav-links">
+      <a href="index.html">机场推荐</a>
+      <div class="nav-dropdown">
+        <a href="reviews.html">机场评测</a>
         <div class="nav-dropdown-menu">
           <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
           <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
@@ -47,106 +90,68 @@
           <a href="reviews/review-fourks.html">🌐 4ksAPI 接口评测</a>
           <a href="reviews/review-siliconflow.html">⚡ 硅基流动评测</a>
         </div>
-        <div class="mobile-menu"></div>
-    </header>
+      </div>
+      <a href="tutorials.html">使用教程</a>
+      <a href="wiki.html">科普百科</a>
+      <a href="deals.html">优惠专区</a>
+      <a href="about.html">关于我们</a>
+      <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="reviews.html">📋 机场评测</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+  <a href="deals.html">🎁 优惠专区</a>
+</div>
 
-    <main class="guide-layout wiki-article">
-        <section class="guide-hero">
-            <h1>如何保护上网隐私2026：避免被机场日志追踪的完全指南</h1>
-            <p>使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。</p>
-        </section>
+<div class="guide-hero"><div class="container">
+  <div class="guide-breadcrumb">
+    <a href="index.html">首页</a><span>›</span>
+    <a href="wiki.html">科普百科</a><span>›</span>
+    <span style="color:var(--text-primary);">上网隐私保护</span>
+  </div>
+  <div class="article-meta" style="display:flex;gap:8px;margin-bottom:12px;">
+    <span class="tag" style="background:rgba(99,120,255,.15);color:var(--accent);padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600;">科普百科</span>
+    <span class="tag" style="background:rgba(34,211,160,.15);color:#22d3a0;padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600;">2026最新</span>
+  </div>
+  <h1 style="font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:800;margin:0;">如何保护上网隐私2026：避免被机场日志追踪的完全指南</h1>
+  <p style="color:var(--text-secondary);margin-top:14px;max-width:640px;font-size:.95rem;line-height:1.8;">使用机场翻墙时如何保护隐私？本文详解机场日志政策解读方法、如何选择无日志机场、DNS泄露检测与防护、TOR/WARP辅助隐私增强方案。</p>
+</div></div>
 
-        <section class="guide-sidebar">
-            <div class="guide-step-card">
-                <h2>1. 机场能看到什么数据</h2>
-                <div class="tip-box">
-                    <p>很多人担心使用机场会被看到密码等敏感信息，实际上并非如此。</p>
-                    <p><strong>机场能看到的数据：</strong> 你访问的目标域名（SNI）、连接发生的时间、传输流量的大小。</p>
-                    <p><strong>机场看不到的数据：</strong> 只要网站是 HTTPS 加密的（目前99%以上都是），机场就无法看到你发送的具体内容，比如账号密码、聊天记录、搜索关键词等。</p>
-                </div>
-            </div>
+<section class="section"><div class="container">
+<div class="guide-layout">
 
-            <div class="guide-step-card">
-                <h2>2. 什么是"无日志"政策</h2>
-                <p>无日志政策（No-Log Policy）是指服务商承诺不记录用户的连接日志、访问记录或 IP 地址。如何辨别真假无日志承诺？</p>
-                <ul>
-                    <li><strong>第三方审计：</strong> 大型 VPN 服务商通常会雇佣知名安全公司进行代码和服务器审计。</li>
-                    <li><strong>法律管辖区：</strong> 服务器位于如巴拿马、瑞士等没有强制数据保留法律的国家。</li>
-                    <li><strong>实际检验：</strong> 虽然机场很难有正规审计，但老牌、口碑好的机场往往更在乎声誉，较少存在随意泄露日志的情况。</li>
-                </ul>
-            </div>
+  <aside class="guide-sidebar">
+    <h3>目录导航</h3>
+    <nav class="guide-nav">
 
-            <div class="guide-step-card">
-                <h2>3. 实际隐私风险评估</h2>
-                <p>不同的用户面临不同的风险级别：</p>
-                <div class="warn-box">
-                    <p><strong>普通用户：</strong> 风险极低。日常看视频、刷推特、查资料，HTTPS 足以保护你的主要隐私。</p>
-                    <p><strong>高风险用户（记者/活动人士）：</strong> 如果你的行为非常敏感，单层机场代理并不能保证 100% 匿名，因为机场知道你的真实 IP 和访问时间，需要采取更强方案。</p>
-                </div>
-            </div>
+    </nav>
+  </aside>
 
-            <div class="guide-step-card">
-                <h2>4. DNS泄露是什么，如何检测</h2>
-                <p>DNS 泄露是指你的真实 IP 或本地 ISP 的 DNS 服务器在查询域名时被暴露，导致 ISP 知道你想访问什么网站。</p>
-                <p><strong>检测工具：</strong> 打开 <code>ipleak.net</code> 或 <code>dnsleaktest.com</code>，运行测试。如果结果中出现了你本地的网络提供商（如中国电信/联通），则说明发生了 DNS 泄露。</p>
-            </div>
+  <div class="guide-content">
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>5. 如何防止DNS泄露</h2>
-                <div class="highlight-box">
-                    <p><strong>在客户端防范：</strong> 在 Clash / v2ray 等软件中，启用 <code>fake-ip</code> 模式或者配置远端 DNS 解析，确保所有的 DNS 请求都通过代理通道发送。</p>
-                    <p><strong>在路由器防范：</strong> 如果在路由器翻墙，配置 DNS over HTTPS (DoH) 或 DNS over TLS (DoT) 可以有效加密本地 DNS 请求。</p>
-                </div>
-            </div>
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>6. 浏览器指纹防护</h2>
-                <p>除了 IP 和 DNS，网站还会通过浏览器指纹追踪你。推荐配置：</p>
-                <ul>
-                    <li>使用 <strong>Firefox</strong> 浏览器并开启严格的防追踪功能。</li>
-                    <li>安装 <strong>uBlock Origin</strong> 插件，阻止大部分追踪脚本。</li>
-                    <li>避免 Canvas 指纹追踪，可以通过安装相关的反指纹扩展来混淆。</li>
-                </ul>
-            </div>
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>7. 高隐私需求方案</h2>
-                <p>对于需要极高匿名性的用户：</p>
-                <ul>
-                    <li><strong>Tor over VPN：</strong> 先连接机场/VPN，然后再使用 Tor 浏览器，这样你的 ISP 不知道你在用 Tor，而 Tor 的出口节点不知道你的真实 IP。</li>
-                    <li><strong>Tails OS：</strong> 一个专注于隐私的操作系统，所有连接强制通过 Tor 网络，不留痕迹。</li>
-                </ul>
-            </div>
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>8. 总结建议</h2>
-                <table class="wiki-table data-table">
-                    <tr>
-                        <th>用户类型</th>
-                        <th>推荐方案</th>
-                        <th>核心要点</th>
-                    </tr>
-                    <tr>
-                        <td>普通用户</td>
-                        <td>靠谱付费机场 + 默认配置</td>
-                        <td>确保网站 HTTPS 加密，不要用未知免费节点。</td>
-                    </tr>
-                    <tr>
-                        <td>进阶用户</td>
-                        <td>优质机场 + 防 DNS 泄露</td>
-                        <td>开启 fake-ip，使用防追踪浏览器插件。</td>
-                    </tr>
-                    <tr>
-                        <td>高危用户</td>
-                        <td>Tor over VPN / Tails OS</td>
-                        <td>不信任任何单一代理，使用强加密匿名网络。</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-    </main>
+div class="guide-step-card"
 
-    <footer class="footer">
+div class="guide-step-card"
+
+div class="guide-step-card"
+  </div>
+
+</div>
+</div></section>
+
+<footer class="footer">
   <div class="container">
     <div class="footer-bottom" style="border-top:none;padding-top:0;">
       <div class="footer-disclaimer">⚠️ 免责声明：本站所有内容仅供学习与技术研究参考，请遵守所在地区相关法律法规。</div>
@@ -154,7 +159,9 @@
     </div>
   </div>
 </footer>
-    <script src="analytics.js"></script>
-    <script src="app.js"></script>
+<script src="analytics.js"></script>
+<script src="indexnow.js" defer></script>
+<script src="app.js"></script>
+
 </body>
 </html>

@@ -1,36 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法 - 勇哥博客</title>
-    <meta name="description" content="如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。">
-    <link rel="canonical" href="https://yongjichang.com/wiki-how-to-test-speed">
-    <meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
-    <link rel="stylesheet" href="index.css?v=2">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WD0C6M8T40');
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法 - 勇哥博客",
-      "description": "如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。",
-      "author": {
-        "@type": "Organization",
-        "name": "勇哥博客"
-      }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WD0C6M8T40');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法 - 勇哥博客</title>
+<meta name="description" content="如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/wiki-how-to-test-speed">
+<link rel="stylesheet" href="index.css?v=2">
+<link rel="icon" type="image/png" href="logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法 - 勇哥博客",
+  "description": "如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "author": {"@type": "Organization", "name": "勇哥博客"},
+  "publisher": {"@type": "Organization", "name": "勇哥博客", "url": "https://yongjichang.com"}
+}
+</script>
+<style>
+.guide-hero{padding:90px 0 44px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.guide-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.guide-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.guide-breadcrumb a:hover{color:var(--accent)}
+.guide-breadcrumb span{color:var(--text-secondary)}
+.guide-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.guide-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.guide-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.guide-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.guide-nav a:hover,.guide-nav a.active{background:rgba(99,120,255,.1);color:var(--accent)}
+.guide-content{display:flex;flex-direction:column;gap:28px}
+.guide-step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-bottom:0}
+.guide-step-card h2{font-size:1.2rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:12px;color:var(--text-primary)}
+.step-badge{width:32px;height:32px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:white;flex-shrink:0}
+.guide-step-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.guide-step-card p:last-child{margin-bottom:0}
+.tip-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.tip-box .tip-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+.danger-box{display:flex;gap:12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+.danger-box .danger-label{color:#ef4444;font-weight:700;white-space:nowrap}
+.data-table,.wiki-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.875rem}
+.data-table th,.wiki-table th{background:rgba(99,120,255,.1);color:var(--text-primary);padding:10px 14px;text-align:left;font-weight:700;border-bottom:1px solid var(--border)}
+.data-table td,.wiki-table td{padding:10px 14px;color:var(--text-secondary);border-bottom:1px solid rgba(255,255,255,.04)}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gradient-accent);color:white;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;transition:var(--transition);margin:8px 0;text-decoration:none}
+.score-row{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.score-label{font-size:.875rem;color:var(--text-secondary);width:160px;flex-shrink:0}
+.score-bar-wrap{flex:1;background:rgba(255,255,255,.06);border-radius:999px;height:8px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:999px;background:var(--gradient-accent)}
+.score-val{font-size:.875rem;font-weight:700;color:var(--accent);width:40px;text-align:right}
+.highlight-box{background:rgba(99,120,255,.08);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:14px 18px;margin:14px 0;font-size:.875rem;color:var(--text-secondary)}
+@media(max-width:768px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}}
+</style>
 </head>
 <body>
-    <header class="navbar">
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+    <div class="nav-links">
+      <a href="index.html">机场推荐</a>
+      <div class="nav-dropdown">
+        <a href="reviews.html">机场评测</a>
         <div class="nav-dropdown-menu">
           <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
           <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
@@ -47,152 +90,66 @@
           <a href="reviews/review-fourks.html">🌐 4ksAPI 接口评测</a>
           <a href="reviews/review-siliconflow.html">⚡ 硅基流动评测</a>
         </div>
-        <div class="mobile-menu"></div>
-    </header>
+      </div>
+      <a href="tutorials.html">使用教程</a>
+      <a href="wiki.html">科普百科</a>
+      <a href="deals.html">优惠专区</a>
+      <a href="about.html">关于我们</a>
+      <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="reviews.html">📋 机场评测</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+  <a href="deals.html">🎁 优惠专区</a>
+</div>
 
-    <main class="guide-layout wiki-article">
-        <section class="guide-hero">
-            <h1>机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法</h1>
-            <p>如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。</p>
-        </section>
+<div class="guide-hero"><div class="container">
+  <div class="guide-breadcrumb">
+    <a href="index.html">首页</a><span>›</span>
+    <a href="wiki.html">科普百科</a><span>›</span>
+    <span style="color:var(--text-primary);">机场测速指南</span>
+  </div>
+  <div class="article-meta" style="display:flex;gap:8px;margin-bottom:12px;">
+    <span class="tag" style="background:rgba(99,120,255,.15);color:var(--accent);padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600;">科普百科</span>
+    <span class="tag" style="background:rgba(34,211,160,.15);color:#22d3a0;padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600;">2026最新</span>
+  </div>
+  <h1 style="font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:800;margin:0;">机场测速完全指南2026：延迟测试、晚高峰跑分、稳定性判断方法</h1>
+  <p style="color:var(--text-secondary);margin-top:14px;max-width:640px;font-size:.95rem;line-height:1.8;">如何科学测试机场速度？本文详解延迟测试方法、Speedtest跑分技巧、晚高峰稳定性判断标准、YouTube缓冲速率解读。</p>
+</div></div>
 
-        <section class="guide-sidebar">
-            <div class="guide-step-card">
-                <h2>1. 为什么普通 Speedtest 骗不了行家</h2>
-                <div class="tip-box">
-                    <p>机场测速的正确打开方式：很多人在白天使用 Speedtest 测速，看着几百兆的带宽跑满觉得很满意。但这并不能反映真实情况。高峰期与低峰期的网络环境存在巨大差异。</p>
-                    <p>国际出口带宽在晚高峰（尤其是晚上 19:00 - 23:00）会非常拥挤，普通的测速根本无法体现机场线路在拥堵情况下的真实表现。只有在晚高峰时期进行测试，才能看出一款机场的真正实力，特别是专线机场和普通中转机场在这个时间段会有明显的差距。</p>
-                </div>
-            </div>
+<section class="section"><div class="container">
+<div class="guide-layout">
 
-            <div class="guide-step-card">
-                <h2>2. 延迟（Ping/RTT）怎么看</h2>
-                <p>延迟是决定网页打开速度和游戏体验的关键指标。以下是我们总结的延迟判断标准：</p>
-                <table class="wiki-table data-table">
-                    <tr>
-                        <th>延迟范围</th>
-                        <th>评价标准</th>
-                        <th>适用场景</th>
-                    </tr>
-                    <tr>
-                        <td>&lt; 20ms</td>
-                        <td>极佳</td>
-                        <td>顶级专线，适合电竞游戏、极速网页浏览</td>
-                    </tr>
-                    <tr>
-                        <td>20 - 50ms</td>
-                        <td>优秀</td>
-                        <td>高品质中转，适合流畅刷图、普通游戏</td>
-                    </tr>
-                    <tr>
-                        <td>50 - 100ms</td>
-                        <td>良好</td>
-                        <td>适合日常视频播放，不适合外服竞技游戏</td>
-                    </tr>
-                    <tr>
-                        <td>100 - 200ms</td>
-                        <td>可接受</td>
-                        <td>能看视频，网页加载稍有停顿</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 200ms</td>
-                        <td>较差</td>
-                        <td>直连较差线路，体验不佳</td>
-                    </tr>
-                </table>
-            </div>
+  <aside class="guide-sidebar">
+    <h3>目录导航</h3>
+    <nav class="guide-nav">
 
-            <div class="guide-step-card">
-                <h2>3. 晚高峰速度怎么测</h2>
-                <div class="highlight-box">
-                    <p><strong>时间窗口选择：</strong> 最佳测试时间是每晚的 <strong>19:00 - 23:00</strong>，这也是国内宽带的国际出口最拥堵的时段。</p>
-                    <p><strong>工具推荐：</strong></p>
-                    <ul>
-                        <li><span class="step-badge">1</span> <strong>Fast.com</strong>：由 Netflix 提供的测速工具，能真实反映看流媒体时的带宽。</li>
-                        <li><span class="step-badge">2</span> <strong>Speedtest.net</strong>：注意手动选择海外节点进行测速（如香港、东京、洛杉矶）。</li>
-                        <li><span class="step-badge">3</span> <strong>YouTube 4K缓冲</strong>：直接打开 YouTube 4K 视频，右键点击“详细统计信息(Stats for nerds)”，查看 Connection Speed，这是最真实的体验数据。</li>
-                    </ul>
-                </div>
-            </div>
+    </nav>
+  </aside>
 
-            <div class="guide-step-card">
-                <h2>4. 如何判断节点是否稳定</h2>
-                <p>仅仅看瞬间速度是不够的，稳定性更为重要。您可以使用 <code>ping</code> 命令对节点进行连续测试，至少发送 50 个数据包，观察丢包率：</p>
-                <table class="wiki-table data-table">
-                    <tr>
-                        <th>丢包率</th>
-                        <th>稳定性评价</th>
-                        <th>说明</th>
-                    </tr>
-                    <tr>
-                        <td>&lt; 1%</td>
-                        <td>优秀</td>
-                        <td>极其稳定，几乎无感，适合任何高要求应用。</td>
-                    </tr>
-                    <tr>
-                        <td>1% - 5%</td>
-                        <td>可接受</td>
-                        <td>偶尔卡顿，视频有一定容错，但游戏可能会有感知。</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 5%</td>
-                        <td>有问题</td>
-                        <td>线路可能存在断流问题，频繁掉线，建议更换节点。</td>
-                    </tr>
-                </table>
-            </div>
+  <div class="guide-content">
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>5. 各测速工具对比表</h2>
-                <table class="wiki-table">
-                    <tr>
-                        <th>工具</th>
-                        <th>测试侧重点</th>
-                        <th>优缺点</th>
-                    </tr>
-                    <tr>
-                        <td>Speedtest.net</td>
-                        <td>极限带宽吞吐量</td>
-                        <td>优点：能跑出极限带宽；缺点：存在测速作弊的可能，不能完全代表日常体验。</td>
-                    </tr>
-                    <tr>
-                        <td>Fast.com</td>
-                        <td>流媒体实际可用带宽</td>
-                        <td>优点：客观反映奈飞等视频网站的连通性；缺点：仅测试特定视频服务器。</td>
-                    </tr>
-                    <tr>
-                        <td>Clash 内置延迟测试</td>
-                        <td>HTTP 握手响应时间</td>
-                        <td>优点：快速筛选可用节点；缺点：并非真实 ICMP Ping，无法反映带宽大小。</td>
-                    </tr>
-                    <tr>
-                        <td>YouTube 缓冲速率</td>
-                        <td>真实应用表现</td>
-                        <td>优点：最接近真实体验；缺点：受设备性能和浏览器影响，不方便批量测。</td>
-                    </tr>
-                </table>
-            </div>
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>6. 看懂机场评测数据</h2>
-                <div class="warn-box">
-                    <p>为什么你看的评测数据和自己实测的不一样？</p>
-                    <ul>
-                        <li><strong>运营商差异：</strong> 电信、联通、移动的国际出口路由完全不同。比如有的机场对联通优化好，但电信表现拉跨。</li>
-                        <li><strong>时段差异：</strong> 评测图可能是在凌晨测试的，而你是在晚高峰使用。</li>
-                        <li><strong>测试地点差异：</strong> 沿海城市（如广州、上海）连香港/日本的延迟天然比内陆城市低几倍。</li>
-                    </ul>
-                </div>
-            </div>
+div class="guide-step-card"
 
-            <div class="guide-step-card">
-                <h2>7. 实用建议</h2>
-                <p>我们建议您每周或者每月在固定的晚高峰时段，记录一下常用节点的测速数据和延迟。通过长期的对比，您可以很容易判断该机场是否在超售、是否在暗中降质（线路被挤爆）。不要过分迷信一次的测速跑分，持续的稳定性才是王道。</p>
-            </div>
-        </section>
-    </main>
+div class="guide-step-card"
 
-    <footer class="footer">
+div class="guide-step-card"
+
+div class="guide-step-card"
+  </div>
+
+</div>
+</div></section>
+
+<footer class="footer">
   <div class="container">
     <div class="footer-bottom" style="border-top:none;padding-top:0;">
       <div class="footer-disclaimer">⚠️ 免责声明：本站所有内容仅供学习与技术研究参考，请遵守所在地区相关法律法规。</div>
@@ -200,7 +157,9 @@
     </div>
   </div>
 </footer>
-    <script src="analytics.js"></script>
-    <script src="app.js"></script>
+<script src="analytics.js"></script>
+<script src="indexnow.js" defer></script>
+<script src="app.js"></script>
+
 </body>
 </html>
