@@ -54,9 +54,9 @@ filterBtns.forEach(btn => {
 const affLinks = {
   nexitally: 'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 奶昔机场默认重定向至推荐机场
   dageyun:   'https://aff02.dgy02.com/#/register?code=PQdpFA0R',
-  huanyuyun: 'https://vip3.huanyuyunbest.com/#/register?code=CPBmzXgk',
+  huanyuyun: 'https://hyy.52kok.cn/#/register?code=CPBmzXgk',
   '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
-  shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
+  shunyun:   'https://hyy.52kok.cn/#/register?code=CPBmzXgk',  // 临时指向寰宇云；原链接：https://ccc.jichang.best/#/register?code=za8UKIYz
   jisuyun:   'https://ygbk.jsjc456789.com',
   shanhai:   'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13'
