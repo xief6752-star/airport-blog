@@ -56,9 +56,9 @@ const affLinks = {
   dageyun:   'https://aff02.dgy02.com/#/register?code=PQdpFA0R',
   huanyuyun: 'https://hyy.52kok.cn/#/register?code=CPBmzXgk',
   '69yun':   'https://jiajijiwjiqj21.337979.xyz/uuid/auth/register?code=gqTxn7',
-  shunyun:   'https://hyy.52kok.cn/#/register?code=CPBmzXgk',  // 临时指向寰宇云；原链接：https://ccc.jichang.best/#/register?code=za8UKIYz
+  shunyun:   'https://ccc.jichang.best/#/register?code=za8UKIYz',
   jisuyun:   'https://ygbk.jsjc456789.com',
-  shanhai:   'https://hyy.52kok.cn/#/register?code=CPBmzXgk',   // 临时指向寰宇云；原链接（重定向至瞬云）：https://ccc.jichang.best/#/register?code=za8UKIYz
+  shanhai:   'https://ccc.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13'
 };
 function goAff(name) {
