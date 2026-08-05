@@ -102,6 +102,7 @@
           <a href="reviews/review-siliconflow.html">⚡ 硅基流动评测</a>
         </div>
       </div>
+      <a href="compare.html">机场对比</a>
       <a href="tutorials.html">使用教程</a>
       <a href="wiki.html">科普百科</a>
       <a href="deals.html">优惠专区</a>
@@ -886,6 +887,96 @@
   </div>
 </section>
 
+
+<!-- ══ FAQ ══ -->
+<section class="section" style="padding:64px 0 56px;border-top:1px solid var(--border)" id="faq">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:36px;">
+      <div class="section-label">常见问题</div>
+      <h2 class="section-title">选机场前，先看这 6 个问题</h2>
+      <p class="section-sub">真实疑问，直接回答，不绕弯子。</p>
+    </div>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>机场和 VPN 有什么区别？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">VPN 通过加密隧道改变你的出口IP，通常由商业公司运营，有完整的账号系统和客户端。机场是基于 Shadowsocks / VMess / VLESS 等代理协议的订阅制服务，速度更快、延迟更低，但需要搭配 Clash、Shadowrocket 等客户端使用。两者目标一致，机场在速度和稳定性上通常优于传统VPN。</div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>2026 年最稳定的机场是哪个？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">根据勇哥博客实测，WgetCloud（AWS专线，99.8%可用率）、飞鸟机场（IEPL专线，99.8%）和奶昔机场（顶级IEPL，99.9%）是稳定性最高的三家。综合价格与稳定性，极速Cloud 和寰宇云是最佳平衡点，适合大多数用户。</div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>机场晚高峰为什么变慢？怎么避免？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">晚高峰（20:00-23:00）国际出口带宽被大量用户同时占用，中转机场的共享带宽会出现拥堵。IPLC/IEPL 专线是独享国际信道，不受高峰期影响。如果你经常在晚上用机场，建议选大哥云、极连云、飞鸟、极速Cloud 等专线机场。</div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>IEPL 和 IPLC 哪个更好？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">IEPL（国际以太网专线）是运营商级的跨境专线，延迟和稳定性略优于 IPLC（国际私用租用线路），但两者体验差距不大。对普通用户来说，有专线比没专线重要得多，不必纠结两者区别。详细对比可查看 <a href="wiki-iplc-vs-iepl.html" style="color:var(--accent)">IPLC vs IEPL 科普文章 →</a></div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>机场套餐流量不够用怎么办？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">① 升级到更大流量套餐（通常大套餐折算单价更低）。② 购买流量包加餐。③ 同时订阅两家机场，日常用性价比机场，高峰期切换到专线机场。勇哥建议：平时用瞬云 / 极连云扛日常流量，遇到视频会议或关键时刻切到专线机场。</div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">
+        <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:.9rem;color:var(--text-primary);gap:12px;" onclick="this.closest('.faq-item').classList.toggle('faq-open')">
+          <span>机场跑路了怎么办？怎么防范损失？</span>
+          <span style="color:var(--text-muted);font-size:.8rem;transition:transform .25s;flex-shrink:0" class="fq">▼</span>
+        </div>
+        <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.875rem;color:var(--text-secondary);line-height:1.8;padding:0 20px;">
+          <div style="padding-bottom:18px;">① <strong style="color:var(--text-primary)">坚持月付原则</strong>，单次充值不超过 ¥100。② 优先选运营 3 年以上的老牌机场（如大哥云 5 年+、WgetCloud）。③ 同时保有 1-2 家备用机场（超悦 ¥6.8/月 即可作为低成本备用）。④ 加入勇哥 TG 频道，跑路第一时间通知。</div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="compare.html" style="display:inline-flex;align-items:center;gap:8px;padding:11px 24px;background:rgba(99,120,255,.1);border:1px solid rgba(99,120,255,.3);border-radius:var(--radius-sm);color:var(--accent);font-weight:700;font-size:.875rem;transition:var(--transition);">⚖️ 查看完整机场横向对比表 →</a>
+    </div>
+  </div>
+</section>
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-item .faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const body = item.querySelector('.faq-body');
+    const arrow = q.querySelector('.fq');
+    const open = item.classList.toggle('faq-open');
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
+    if (arrow) arrow.style.transform = open ? 'rotate(180deg)' : '';
+  });
+});
+</script>
 
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
