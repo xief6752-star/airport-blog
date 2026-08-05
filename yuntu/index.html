@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>云图机场 · 金融级专线 · 全节点1倍率 · ¥25/月起</title>
+<meta name="description" content="云图机场正式上线：金融级跨境专线，全节点统一1倍率无扣费陷阱，完美解锁ChatGPT/Netflix/TikTok，支持5台设备，¥25/月起。开业优惠码：yt88">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/yuntu/">
+<link rel="icon" type="image/png" href="../logo.png">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WD0C6M8T40');
+</script>
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0812;
+  color: #f0eeff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0a0812; }
+::-webkit-scrollbar-thumb { background: #8b5cf6; border-radius: 3px; }
+
+/* ── Variables ── */
+:root {
+  --purple: #8b5cf6;
+  --purple-dark: #6d28d9;
+  --purple-light: #a78bfa;
+  --purple-glow: rgba(139,92,246,0.25);
+  --green: #22d3a0;
+  --orange: #fb923c;
+  --bg-card: rgba(139,92,246,0.06);
+  --border: rgba(139,92,246,0.2);
+  --text-muted: rgba(240,238,255,0.5);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+/* ── Layout ── */
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139,92,246,0.12);
+  border: 1px solid rgba(139,92,246,0.35);
+  color: var(--purple-light);
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  letter-spacing: .5px;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(1.3)}
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.hero h1 .grad {
+  background: linear-gradient(135deg, #c4b5fd, #8b5cf6, #6d28d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: clamp(.95rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.75;
+}
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 30px rgba(139,92,246,0.4);
+  transition: opacity .2s, transform .2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover { opacity: .88; transform: translateY(-2px); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--purple-light);
+  font-weight: 700;
+  font-size: .95rem;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(139,92,246,0.4);
+  transition: background .2s, border-color .2s;
+}
+.btn-ghost:hover { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.7); }
+
+/* ── Promo Banner ── */
+.promo-banner {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: rgba(139,92,246,0.1);
+  border: 1px dashed rgba(139,92,246,0.5);
+  border-radius: var(--radius-sm);
+  padding: 12px 24px;
+  font-size: .9rem;
+}
+.promo-banner .code {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(135deg,#8b5cf6,#6d28d9);
+  padding: 4px 16px;
+  border-radius: 999px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.promo-banner .code:hover { opacity: .85; }
+.promo-banner .code-tip {
+  font-size: .78rem;
+  color: var(--green);
+  display: none;
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  padding: 40px 20px;
+  background: rgba(139,92,246,0.04);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stats-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.stat-item {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+  padding: 16px 20px;
+  border-right: 1px solid var(--border);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--purple-light);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label { font-size: .8rem; color: var(--text-muted); }
+
+/* ── Features ── */
+.section { padding: 80px 20px; }
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: -.5px;
+}
+.section-sub {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .95rem;
+  margin-bottom: 48px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: border-color .25s, transform .25s;
+}
+.feature-card:hover {
+  border-color: rgba(139,92,246,0.5);
+  transform: translateY(-3px);
+}
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.feature-card p {
+  font-size: .865rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* ── Unlock Grid ── */
+.unlock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+.unlock-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  text-align: center;
+  font-size: .85rem;
+  font-weight: 600;
+}
+.unlock-item .check { color: var(--green); font-size: 1rem; display: block; margin-bottom: 4px; }
+
+/* ── Plans ── */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.plan-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  transition: border-color .25s, transform .25s;
+}
+.plan-card:hover { transform: translateY(-3px); }
+.plan-card.featured {
+  border-color: rgba(139,92,246,0.6);
+  background: rgba(139,92,246,0.1);
+  box-shadow: 0 0 40px rgba(139,92,246,0.15);
+}
+.plan-recommend {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg,#8b5cf6,#6d28d9);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  padding: 3px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.plan-name { font-size: .875rem; color: var(--text-muted); margin-bottom: 10px; }
+.plan-price {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--purple-light);
+  line-height: 1;
+}
+.plan-price sup { font-size: 1.2rem; font-weight: 700; vertical-align: top; margin-top: 8px; }
+.plan-unit { font-size: .8rem; color: var(--text-muted); margin: 6px 0 18px; }
+.plan-traffic {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.plan-device { font-size: .8rem; color: var(--text-muted); margin-bottom: 20px; }
+.plan-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+/* ── CTA Section ── */
+.cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.cta-section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  margin-bottom: 16px;
+  letter-spacing: -.5px;
+}
+.cta-section p {
+  color: var(--text-muted);
+  font-size: .975rem;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.75;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+  text-align: center;
+  font-size: .8rem;
+  color: var(--text-muted);
+  line-height: 2;
+}
+footer a { color: var(--purple-light); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .stat-item { min-width: 50%; border-bottom: 1px solid var(--border); }
+  .stat-item:nth-child(2n) { border-right: none; }
+  .hero h1 { letter-spacing: -.5px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    正式上线 · 8月开业特惠进行中
+  </div>
+  <h1>
+    <span class="grad">云图机场</span><br>
+    金融级专线，极速稳定
+  </h1>
+  <p class="hero-sub">
+    全节点统一 <strong>1 倍率</strong>，无扣费陷阱。金融级跨境专线，高峰期依然零丢包、低延迟。
+    完美解锁 ChatGPT、Netflix、TikTok 等主流服务。
+  </p>
+  <div class="hero-cta-group">
+    <a href="https://vip.ytjcok.org/#/register?code=iV8ahCNE" target="_blank" rel="noopener" class="btn-primary">
+      🚀 立即注册，¥25/月起
+    </a>
+    <a href="../reviews/review-yuntu.html" class="btn-ghost">
+      📋 查看深度评测
+    </a>
+  </div>
+  <div class="promo-banner">
+    <span>🎁 开业专属优惠码</span>
+    <span class="code" id="promoCode" onclick="copyCode()" title="点击复制">yt88</span>
+    <span id="codeTip" class="code-tip">✓ 已复制！</span>
+    <span style="color:var(--text-muted);font-size:.82rem;">截至 2026 年 11 月 4 日</span>
+  </div>
+</section>
+
+<!-- ── Stats Bar ── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">1×</div>
+      <div class="stat-label">全节点统一倍率</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">20ms</div>
+      <div class="stat-label">港节点平均延迟</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">200+</div>
+      <div class="stat-label">晚高峰 Mbps</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5台</div>
+      <div class="stat-label">设备同时在线</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24H</div>
+      <div class="stat-label">工单响应保障</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Features ── -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">为什么选择云图机场？</h2>
+    <p class="section-sub">金融级基础设施 · 透明计费 · 全面解锁</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>金融级专线传输</h3>
+        <p>全线采用高规格跨境专线，三网优化入口，晚高峰依然极速稳定，零丢包，告别公网拥堵。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🟢</div>
+        <h3>全节点 1 倍率</h3>
+        <p>所有节点统一 1 倍率计费，流量所见即所得，无高倍率扣费陷阱，套餐实实在在。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>冷门原生 IP 解锁</h3>
+        <p>覆盖 ChatGPT、Netflix、TikTok 等主流服务及冷门地区原生 IP，真正开箱即用。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>24H 工单保障</h3>
+        <p>专属客服团队，工单 24 小时内快速响应，遇到问题随时解决，无后顾之忧。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>多端多设备支持</h3>
+        <p>支持 Clash / Shadowrocket / Surge / sing-box 等主流客户端，5 台设备同时在线。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>透明高性价比</h3>
+        <p>入门套餐 ¥25/月，150GB 流量，无隐藏费用，开业限时优惠码 <strong>yt88</strong> 再享折扣。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Unlock ── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">全平台解锁覆盖</h2>
+    <p class="section-sub">主流流媒体 + AI 服务 + 冷门原生IP，一次搞定</p>
+    <div class="unlock-grid">
+      <div class="unlock-item"><span class="check">✓</span>ChatGPT</div>
+      <div class="unlock-item"><span class="check">✓</span>Netflix</div>
+      <div class="unlock-item"><span class="check">✓</span>TikTok</div>
+      <div class="unlock-item"><span class="check">✓</span>Disney+</div>
+      <div class="unlock-item"><span class="check">✓</span>YouTube</div>
+      <div class="unlock-item"><span class="check">✓</span>HBO Max</div>
+      <div class="unlock-item"><span class="check">✓</span>Spotify</div>
+      <div class="unlock-item"><span class="check">✓</span>Claude</div>
+      <div class="unlock-item"><span class="check">✓</span>Twitter/X</div>
+      <div class="unlock-item"><span class="check">✓</span>Instagram</div>
+      <div class="unlock-item"><span class="check">✓</span>Telegram</div>
+      <div class="unlock-item"><span class="check">✓</span>冷门原生IP</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Plans ── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">套餐选择</h2>
+    <p class="section-sub">月付灵活，透明定价，开业优惠码 <strong style="color:#a78bfa;">yt88</strong> 结账可用</p>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="plan-name">入门套餐</div>
+        <div class="plan-price"><sup>¥</sup>25</div>
+        <div class="plan-unit">/ 月付</div>
+        <div class="plan-traffic">150 GB 流量</div>
+        <div class="plan-device">5 台设备同时在线</div>
+        <hr class="plan-divider">
+        <a href="https://vip.ytjcok.org/#/register?code=iV8ahCNE" target="_blank" rel="noopener" class="btn-ghost" style="width:100%;justify-content:center;">立即选择</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-recommend">🔥 最多人选</div>
+        <div class="plan-name">标准套餐</div>
+        <div class="plan-price"><sup>¥</sup>49</div>
+        <div class="plan-unit">/ 月付</div>
+        <div class="plan-traffic">300 GB 流量</div>
+        <div class="plan-device">5 台设备同时在线</div>
+        <hr class="plan-divider">
+        <a href="https://vip.ytjcok.org/#/register?code=iV8ahCNE" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center;">立即选择</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">高流量套餐</div>
+        <div class="plan-price"><sup>¥</sup>99</div>
+        <div class="plan-unit">/ 月付</div>
+        <div class="plan-traffic">600 GB 流量</div>
+        <div class="plan-device">5 台设备同时在线</div>
+        <hr class="plan-divider">
+        <a href="https://vip.ytjcok.org/#/register?code=iV8ahCNE" target="_blank" rel="noopener" class="btn-ghost" style="width:100%;justify-content:center;">立即选择</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:.82rem;color:var(--text-muted);">
+      ⚠️ 新上线机场，建议先月付体验 1–2 周，满意后再选更高套餐。
+    </p>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <h2>现在注册，享开业专属折扣</h2>
+  <p>使用优惠码 <strong style="color:#a78bfa;font-size:1.1em;">yt88</strong> 结账立享折扣，有效期至 2026 年 11 月 4 日。金融级专线，1 倍率无陷阱，立即体验。</p>
+  <a href="https://vip.ytjcok.org/#/register?code=iV8ahCNE" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:16px 40px;">
+    🗺️ 立即前往云图机场注册 →
+  </a>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>© 2026 勇哥博客 · <a href="../reviews/review-yuntu.html">云图机场深度评测</a> · <a href="../index.html">返回首页</a></p>
+  <p style="margin-top:6px;">声明：本页为推广合作页面，内容基于实测数据，仅供参考。</p>
+</footer>
+
+<script>
+function copyCode() {
+  navigator.clipboard.writeText('yt88').catch(() => {
+    const el = document.createElement('textarea');
+    el.value = 'yt88';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  });
+  const tip = document.getElementById('codeTip');
+  tip.style.display = 'inline';
+  setTimeout(() => { tip.style.display = 'none'; }, 2200);
+}
+</script>
+</body>
+</html>
