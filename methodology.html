@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WD0C6M8T40');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>测评方法论 | 勇哥博客机场评测标准与流程说明</title>
+<meta name="description" content="勇哥博客机场测评标准完整说明：晚高峰实测时间、测速设备与网络环境、评分维度权重、流媒体解锁验证流程、数据采集周期，以及独立性声明。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/methodology">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yongjichang.com/methodology">
+<meta property="og:title" content="测评方法论 | 勇哥博客机场评测标准">
+<meta property="og:description" content="勇哥博客机场评测的完整方法论：测速环境、评分维度、更新周期及独立性声明。">
+<link rel="stylesheet" href="index.css?v=2">
+<link rel="icon" type="image/png" href="logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "勇哥博客机场测评方法论",
+  "author": {"@type": "Person", "name": "勇哥", "url": "https://yongjichang.com/about"},
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "publisher": {"@type": "Organization", "name": "勇哥博客", "url": "https://yongjichang.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://yongjichang.com/"},
+    {"@type": "ListItem", "position": 2, "name": "测评方法论", "item": "https://yongjichang.com/methodology"}
+  ]
+}
+</script>
+<style>
+.meth-hero{padding:100px 0 56px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}
+.meth-breadcrumb{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.meth-breadcrumb a{color:var(--text-muted);transition:var(--transition)}.meth-breadcrumb a:hover{color:var(--accent)}
+.meth-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:40px}
+.meth-sidebar{position:sticky;top:80px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.meth-sidebar h3{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.meth-nav a{display:block;padding:7px 12px;border-radius:var(--radius-sm);font-size:.875rem;color:var(--text-secondary);transition:var(--transition);margin-bottom:2px}
+.meth-nav a:hover{background:rgba(99,120,255,.1);color:var(--accent)}
+.meth-content{display:flex;flex-direction:column;gap:28px}
+.meth-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.meth-card h2{font-size:1.15rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.meth-card p{color:var(--text-secondary);line-height:1.85;font-size:.925rem;margin-bottom:12px}
+.meth-card p:last-child{margin-bottom:0}
+.dim-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.875rem}
+.dim-table th{background:rgba(99,120,255,.1);color:var(--text-primary);font-weight:700;padding:10px 14px;text-align:left}
+.dim-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-secondary)}
+.dim-table td:last-child{font-weight:700;color:var(--accent)}
+.notice-box{display:flex;gap:12px;background:rgba(34,211,160,.08);border:1px solid rgba(34,211,160,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:16px 0;font-size:.875rem;color:var(--text-secondary)}
+.notice-box .notice-label{color:#22d3a0;font-weight:700;white-space:nowrap}
+.warn-box{display:flex;gap:12px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.2);border-radius:var(--radius-sm);padding:14px 16px;margin:16px 0;font-size:.875rem;color:var(--text-secondary)}
+.warn-box .warn-label{color:#fb923c;font-weight:700;white-space:nowrap}
+@media(max-width:768px){.meth-layout{grid-template-columns:1fr}.meth-sidebar{display:none}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <div class="nav-dropdown">
+      <a href="reviews.html">机场评测</a>
+      <div class="nav-dropdown-menu">
+        <a href="reviews/review-yuntu.html">☁️ 云图机场评测</a>
+        <a href="reviews/review-jisuyun.html">⚡ 极速Cloud评测</a>
+        <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
+        <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
+        <a href="reviews/review-jilianyun.html">⚡ 极连云评测</a>
+      </div>
+    </div>
+    <a href="compare.html">机场对比</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="reviews.html">📋 机场评测</a>
+  <a href="compare.html">⚖️ 机场对比</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+</div>
+
+<div class="meth-hero"><div class="container">
+  <div class="meth-breadcrumb">
+    <a href="index.html">首页</a><span>›</span>
+    <span style="color:var(--text-primary)">测评方法论</span>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+    <span style="display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(99,120,255,.15);border:1px solid rgba(99,120,255,.3);color:var(--accent)">📊 方法透明</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(34,211,160,.1);border:1px solid rgba(34,211,160,.25);color:#22d3a0">🔒 独立评测</span>
+  </div>
+  <h1 style="font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:900;margin-bottom:14px;">测评方法论</h1>
+  <p style="color:var(--text-secondary);max-width:600px;font-size:.95rem;line-height:1.8;">勇哥博客的每一篇机场评测背后，都是遵循固定标准的亲测数据。本页完整说明测速环境、评分维度、数据采集周期，以及本站的独立性声明。</p>
+</div></div>
+
+<section class="section" style="padding:48px 0 80px"><div class="container">
+<div class="meth-layout">
+  <aside class="meth-sidebar">
+    <h3>目录</h3>
+    <nav class="meth-nav">
+      <a href="#env">一、测试环境</a>
+      <a href="#schedule">二、测试时间</a>
+      <a href="#dimensions">三、评分维度</a>
+      <a href="#streaming">四、流媒体验证</a>
+      <a href="#cycle">五、数据更新周期</a>
+      <a href="#independence">六、独立性声明</a>
+    </nav>
+  </aside>
+
+  <div class="meth-content">
+
+    <div class="meth-card" id="env">
+      <h2>🖥️ 一、测试环境</h2>
+      <p><strong>网络接入：</strong>中国大陆家庭宽带，电信/联通/移动三网分别测试（重点测试电信，因覆盖用户最多）。测试地点为广东省，晚高峰时段使用实际家宽环境，不使用VPS或云服务器。</p>
+      <p><strong>测速设备：</strong>MacBook Pro，使用 Clash Verge 客户端，代理模式为规则模式，测速工具为 fast.com 和 speedtest.net，多次取中位数。</p>
+      <p><strong>测速节点：</strong>重点测试香港、日本、新加坡、美国四个主流地区节点。每个地区选择延迟最低的3个节点取平均，排除极端值。</p>
+      <div class="notice-box"><span class="notice-label">💡 说明</span>机场测速受地区、时段、ISP差异影响较大。本站数据代表广东电信家宽用户的典型体验，其他地区用户仅供参考。</div>
+    </div>
+
+    <div class="meth-card" id="schedule">
+      <h2>🕐 二、测试时间</h2>
+      <p>机场速度在一天中的不同时段差异明显，晚高峰是最能暴露机场真实承载能力的时段。本站测试遵循以下时间规范：</p>
+      <table class="dim-table">
+        <thead><tr><th>测试类型</th><th>时间段</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>晚高峰速度</td><td>每晚 20:00–23:00</td><td>最关键测试，体现真实承压能力</td></tr>
+          <tr><td>日间稳定性</td><td>工作日 10:00–12:00</td><td>基准参考，排除晚高峰干扰</td></tr>
+          <tr><td>流媒体解锁</td><td>任意时段</td><td>解锁能力与时段无关，验证IP类型</td></tr>
+          <tr><td>可用率监控</td><td>持续7天</td><td>每2小时自动Ping，统计连通率</td></tr>
+        </tbody>
+      </table>
+      <p>初次评测通常需要持续观察 <strong>7-14天</strong>，才能发布正式评测结论。已发布评测每1-3个月复核更新一次。</p>
+    </div>
+
+    <div class="meth-card" id="dimensions">
+      <h2>⭐ 三、评分维度</h2>
+      <p>综合评分由以下6个维度加权计算，满分10分：</p>
+      <table class="dim-table">
+        <thead><tr><th>维度</th><th>说明</th><th>权重</th></tr></thead>
+        <tbody>
+          <tr><td>晚高峰速度</td><td>20:00-23:00 实测下载速率（Mbps）</td><td>30%</td></tr>
+          <tr><td>稳定性/可用率</td><td>7天连通率，连接成功率</td><td>25%</td></tr>
+          <tr><td>延迟</td><td>香港/日本节点平均延迟（ms）</td><td>15%</td></tr>
+          <tr><td>解锁能力</td><td>Netflix/Disney+/ChatGPT/TikTok原生IP验证</td><td>15%</td></tr>
+          <tr><td>性价比</td><td>价格/流量/速度综合比值</td><td>10%</td></tr>
+          <tr><td>用户体验</td><td>客户端兼容性、订阅稳定、客服响应</td><td>5%</td></tr>
+        </tbody>
+      </table>
+      <div class="warn-box"><span class="warn-label">⚠️ 注意</span>评分仅代表测评时的实测结论。机场服务质量会随运营策略、带宽采购和用户规模变化，勇哥建议以近3个月内的评测为参考。</div>
+    </div>
+
+    <div class="meth-card" id="streaming">
+      <h2>🎬 四、流媒体解锁验证</h2>
+      <p>流媒体解锁分为两类，本站均有明确区分：</p>
+      <p><strong>✅ 支持（非原生）：</strong>通过代理 IP 可正常播放 Netflix/Disney+ 等平台内容，但不保证 TikTok 发布等需要真实原生 IP 的场景。</p>
+      <p><strong>🔵 原生 IP（Native）：</strong>节点 IP 经工具验证为目标国家/地区的原生住宅 IP 或数据中心注册 IP，适合 TikTok 运营、AP 平台、跨境电商等需要"原生身份"的场景。</p>
+      <p>验证工具：<code style="background:rgba(99,120,255,.1);padding:2px 6px;border-radius:4px">https://ip.gs</code>、<code style="background:rgba(99,120,255,.1);padding:2px 6px;border-radius:4px">https://bgp.tools</code>，同时人工登录 Netflix 验证地区和内容库。</p>
+    </div>
+
+    <div class="meth-card" id="cycle">
+      <h2>🔄 五、数据更新周期</h2>
+      <p>不同类型的数据有不同的更新频率：</p>
+      <table class="dim-table">
+        <thead><tr><th>数据类型</th><th>更新周期</th></tr></thead>
+        <tbody>
+          <tr><td>套餐价格</td><td>有变动时即时更新（依官网公告）</td></tr>
+          <tr><td>速度/稳定性评分</td><td>每1-3个月复测</td></tr>
+          <tr><td>流媒体解锁状态</td><td>每月验证一次</td></tr>
+          <tr><td>跑路/停服预警</td><td>发现即更新，通常24小时内</td></tr>
+          <tr><td>首页推荐榜单</td><td>每月审核排序</td></tr>
+        </tbody>
+      </table>
+      <p>每篇评测页面顶部均标注"发布日期"和"最后更新日期"，可作为数据时效参考。</p>
+    </div>
+
+    <div class="meth-card" id="independence">
+      <h2>🔒 六、独立性声明</h2>
+      <p><strong>本站所有机场排名和评分完全基于实测数据，不接受任何形式的付费排名。</strong></p>
+      <p>本站部分链接为联盟推广链接（标注 → 前往官网），用户通过这些链接注册后，本站将获得少量佣金，用于维持服务器和测速环境的运营成本。<strong>联盟合作关系不影响评测评分和推荐排序。</strong></p>
+      <p>勇哥博客同时测评了多家并无合作关系的机场（如一元机场、TAG机场等），这些评测同样基于相同标准，给出客观结论。如某机场实测结果不佳，本站会直接降分或不推荐，不因为有联盟关系而调整。</p>
+      <div class="notice-box"><span class="notice-label">📮 问题反馈</span>如果你发现本站数据存在明显偏差，或有机场应当被纳入测评，欢迎通过 Telegram <a href="https://t.me/shinhuw" style="color:var(--accent)">@shinhuw</a> 联系勇哥。</div>
+    </div>
+
+  </div>
+</div>
+</div></section>
+
+<footer class="footer"><div class="container">
+  <p style="color:var(--text-muted);font-size:.85rem;line-height:1.8;margin:0;">
+    © 2026 勇哥博客 | <a href="about.html" style="color:var(--text-secondary);">关于我们</a> | <a href="reviews.html" style="color:var(--text-secondary);">机场评测</a>
+  </p>
+</div>
+<div style="text-align:center;padding:10px 0 0;font-size:12px;opacity:.65;margin-top:14px;border-top:1px solid rgba(128,128,128,.15)">
+  <a href="https://t.me/shinhuw" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">📱 联系我们：<strong>@shinhuw</strong></a>
+</div>
+</footer>
+<script>
+const btn=document.getElementById('menuToggle');
+const menu=document.getElementById('mobileMenu');
+if(btn&&menu) btn.addEventListener('click',()=>menu.classList.toggle('open'));
+</script>
+</body>
+</html>
