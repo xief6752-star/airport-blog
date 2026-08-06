@@ -43,6 +43,11 @@ const LINKS = {
   'haozevpn-mid': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13&utm_source=yongjichang&utm_medium=review&utm_campaign=haozevpn&utm_content=mid',
   'haozevpn-bot': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13&utm_source=yongjichang&utm_medium=review&utm_campaign=haozevpn&utm_content=bot',
 
+  // 云图机场
+  'yuntu-top': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=top',
+  'yuntu-mid': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=mid',
+  'yuntu-bot': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=bot',
+
   // 极速Cloud
   'jisucloud-top': 'https://ygbk.jsjc456789.com?utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=top',
   'jisucloud-mid': 'https://ygbk.jsjc456789.com?utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=mid',
