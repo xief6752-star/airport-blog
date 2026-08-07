@@ -49,9 +49,9 @@ const LINKS = {
   'yuntu-bot': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=bot',
 
   // 极速Cloud
-  'jisucloud-top': 'https://ygbk.jsjc456789.com?utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=top',
-  'jisucloud-mid': 'https://ygbk.jsjc456789.com?utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=mid',
-  'jisucloud-bot': 'https://ygbk.jsjc456789.com?utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=bot',
+  'jisucloud-top': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=top',
+  'jisucloud-mid': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=mid',
+  'jisucloud-bot': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=bot',
 
   // 瞬云
   'shunyun-top': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=top',
