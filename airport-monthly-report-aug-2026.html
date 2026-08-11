@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="indexnow-key" content="30d99b2fcc4c41d49a3904f88b315cba">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WD0C6M8T40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WD0C6M8T40');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年8月机场月报：新玩家入局，晚高峰稳定性分化加剧 - 勇哥博客</title>
+<meta name="description" content="勇哥博客2026年8月机场月报：12家机场实测数据，云图机场首测亮眼，VMess协议8月受干扰，极连云降价至¥15/月，含综合排名、协议状态、场景推荐，本期涵盖协议稳定性、晚高峰速度实测、流媒体解锁与ChatGPT可用性的完整测试，每月更新帮你掌握最新动态，是科学上网用户不可错过的必读月度总结报告。">
+<meta name="keywords" content="机场月报,机场推荐2026,机场测评,科学上网,翻墙,云图机场,极连云,瞬云,Hysteria2,VLESS">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yongjichang.com/airport-monthly-report-aug-2026.html">
+<link rel="stylesheet" href="index.css?v=2">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+.report-hero { background: linear-gradient(135deg, #0a0e1a 0%, #0d1230 60%, #0a0e1a 100%); border-bottom: 1px solid var(--border); padding: 100px 0 56px; position: relative; overflow: hidden; }
+.report-hero::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: #6378ff; opacity: 0.07; filter: blur(80px); top: -150px; right: -100px; pointer-events: none; }
+.report-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(99,120,255,0.15); border: 1px solid var(--border-hover); border-radius: 999px; padding: 6px 16px; font-size: 0.82rem; color: var(--accent-2); margin-bottom: 24px; }
+.report-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green); animation: pulse 2s infinite; }
+.report-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+.report-subtitle { color: var(--text-secondary); font-size: 1rem; max-width: 600px; line-height: 1.8; margin-bottom: 28px; }
+.report-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-muted); }
+
+.summary-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border-radius: var(--radius); overflow: hidden; margin: 40px 0; border: 1px solid var(--border); }
+.summary-cell { background: var(--bg-card); padding: 20px 22px; }
+.summary-cell-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.summary-cell-value { font-size: 1.6rem; font-weight: 800; line-height: 1; color: var(--text-primary); }
+.summary-cell-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
+.val-up { color: var(--accent-green); }
+.val-warn { color: var(--accent-orange); }
+.val-down { color: var(--accent-red); }
+
+.report-section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+.report-section:last-of-type { border-bottom: none; }
+.rs-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.rs-title { font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 24px; }
+
+.rank-table { width: 100%; border-collapse: collapse; }
+.rank-table th { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.rank-table td { padding: 14px; border-bottom: 1px solid var(--border); font-size: 0.875rem; color: var(--text-secondary); vertical-align: middle; }
+.rank-table tbody tr:last-child td { border-bottom: none; }
+.rank-table tbody tr:hover td { background: var(--bg-card-hover); }
+.rank-num { font-weight: 800; color: var(--text-muted); width: 36px; font-variant-numeric: tabular-nums; }
+.rank-name { font-weight: 700; color: var(--text-primary); }
+.r-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+.r-badge-new { background: rgba(251,146,60,0.15); color: var(--accent-orange); }
+.r-badge-top { background: rgba(99,120,255,0.12); color: var(--accent); }
+.speed-bar-wrap { width: 90px; background: var(--border); border-radius: 999px; height: 5px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 6px; }
+.speed-bar { height: 100%; border-radius: 999px; background: var(--accent-green); }
+.score-good { color: var(--accent-green); font-weight: 700; font-size: 0.82rem; }
+.score-mid { color: #fbbf24; font-weight: 700; font-size: 0.82rem; }
+
+.events-list { display: flex; flex-direction: column; gap: 14px; }
+.event-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; transition: var(--transition); }
+.event-card:hover { border-color: var(--border-hover); }
+.event-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.ev-good { background: rgba(34,211,160,0.12); }
+.ev-warn { background: rgba(251,146,60,0.12); }
+.ev-info { background: rgba(99,120,255,0.12); }
+.ev-bad { background: rgba(248,113,113,0.12); }
+.event-title { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.event-desc { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.7; }
+.event-time { font-size: 0.72rem; color: var(--text-muted); margin-top: 5px; }
+
+.picks-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.pick-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: var(--transition); }
+.pick-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.pick-scenario { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.pick-name { font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 5px; }
+.pick-reason { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.7; }
+.pick-price { font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-top: 10px; }
+
+.proto-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+.proto-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
+.proto-name { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 5px; }
+.proto-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; }
+.proto-stable { background: rgba(34,211,160,0.12); color: var(--accent-green); }
+.proto-caution { background: rgba(251,146,60,0.12); color: var(--accent-orange); }
+.proto-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.7; }
+
+@media(max-width:768px) {
+  .summary-strip { grid-template-columns: repeat(2,1fr); }
+  .picks-grid { grid-template-columns: 1fr; }
+  .proto-grid { grid-template-columns: 1fr; }
+  .speed-bar-wrap { display: none; }
+  .rank-table th:nth-child(3), .rank-table td:nth-child(3) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar"><div class="navbar-inner">
+  <a href="index.html" class="logo"><img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"><span>勇哥博客</span></a>
+  <div class="nav-links">
+    <a href="index.html">机场推荐</a>
+    <div class="nav-dropdown">
+      <a href="reviews.html">机场评测</a>
+      <div class="nav-dropdown-menu">
+        <a href="reviews/review-yuntu.html">☁️ 云图机场评测</a>
+        <a href="reviews/review-jisuyun.html">⚡ 极速Cloud评测</a>
+        <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
+        <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
+        <a href="reviews/review-jilianyun.html">⚡ 极连云评测</a>
+      </div>
+    </div>
+    <a href="compare.html">机场对比</a>
+    <a href="tutorials.html">使用教程</a>
+    <a href="wiki.html">科普百科</a>
+    <a href="deals.html">优惠专区</a>
+    <a href="about.html">关于我们</a>
+    <a href="https://t.me/" target="_blank" class="nav-cta">💬 TG频道</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏆 机场推荐</a>
+  <a href="reviews.html">📋 机场评测</a>
+  <a href="tutorials.html">📖 使用教程</a>
+  <a href="wiki.html">🔬 科普百科</a>
+  <a href="deals.html">🎁 优惠专区</a>
+  <a href="about.html">👋 关于我们</a>
+  <a href="https://t.me/" target="_blank">💬 加入TG频道</a>
+</div>
+
+<!-- HERO -->
+<section class="report-hero">
+  <div class="container">
+    <div class="guide-breadcrumb" style="margin-bottom:24px;">
+      <a href="index.html">首页</a><span>›</span><span style="color:var(--text-primary);">机场月报</span>
+    </div>
+    <div class="report-eyebrow">
+      <span class="report-eyebrow-dot"></span>
+      机场月报 · 勇哥博客出品
+    </div>
+    <h1 class="report-title">8月机场市场动态：新玩家入局<br>晚高峰稳定性分化加剧</h1>
+    <p class="report-subtitle">本月共追踪 12 家机场实测数据，覆盖晚高峰测速、流媒体解锁验证、套餐价格变动与跑路风险预警。</p>
+    <div class="report-meta">
+      <span>📅 发布：2026年8月10日</span>
+      <span>🔄 数据采集：晚高峰 21:00–22:00</span>
+      <span>✅ 不接受付费植入</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- SUMMARY STRIP -->
+  <div class="summary-strip">
+    <div class="summary-cell">
+      <div class="summary-cell-label">本月测评</div>
+      <div class="summary-cell-value">12</div>
+      <div class="summary-cell-note">家机场</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-cell-label">跑路预警</div>
+      <div class="summary-cell-value val-warn">2</div>
+      <div class="summary-cell-note">家高风险</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-cell-label">新上线</div>
+      <div class="summary-cell-value val-up">3</div>
+      <div class="summary-cell-note">家值得关注</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-cell-label">价格变动</div>
+      <div class="summary-cell-value">↑1 ↓2</div>
+      <div class="summary-cell-note">涨价 / 降价</div>
+    </div>
+  </div>
+
+  <!-- RANKING -->
+  <section class="report-section">
+    <div class="rs-label">综合排名</div>
+    <div class="rs-title">8月综合评分榜（晚高峰实测）</div>
+    <div style="overflow-x:auto;">
+      <table class="rank-table">
+        <thead>
+          <tr><th>#</th><th>机场</th><th>线路</th><th>晚高峰速度</th><th>流媒体解锁</th><th>稳定性</th><th>入门价</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank-num">1</td>
+            <td class="rank-name">云图机场 <span class="r-badge r-badge-new">新</span></td>
+            <td>IEPL专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:95%"></div></div><span class="score-good">950Mbps</span></td>
+            <td><span class="score-good">✓ 全解锁</span></td>
+            <td><span class="score-good">98%</span></td>
+            <td>¥25/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">2</td>
+            <td class="rank-name">瞬云 <span class="r-badge r-badge-top">稳定</span></td>
+            <td>IEPL专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:88%"></div></div><span class="score-good">880Mbps</span></td>
+            <td><span class="score-good">✓ Netflix/YT</span></td>
+            <td><span class="score-good">97%</span></td>
+            <td>¥16/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">3</td>
+            <td class="rank-name">寰宇云</td>
+            <td>IEPL专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:84%"></div></div><span class="score-good">840Mbps</span></td>
+            <td><span class="score-good">✓ 全解锁</span></td>
+            <td><span class="score-good">96%</span></td>
+            <td>¥30/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">4</td>
+            <td class="rank-name">极速Cloud</td>
+            <td>CN2GIA</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:82%"></div></div><span class="score-good">820Mbps</span></td>
+            <td><span class="score-good">✓ TikTok</span></td>
+            <td><span class="score-good">95%</span></td>
+            <td>¥28/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">5</td>
+            <td class="rank-name">极连云</td>
+            <td>IPLC专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:74%"></div></div><span class="score-good">740Mbps</span></td>
+            <td><span class="score-mid">△ 部分</span></td>
+            <td><span class="score-good">94%</span></td>
+            <td>¥15/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">6</td>
+            <td class="rank-name">大哥云</td>
+            <td>IPLC专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:70%"></div></div><span class="score-mid">700Mbps</span></td>
+            <td><span class="score-mid">△ Netflix</span></td>
+            <td><span class="score-good">93%</span></td>
+            <td>¥20/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">7</td>
+            <td class="rank-name">WgetCloud</td>
+            <td>IEPL专线</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:78%"></div></div><span class="score-good">780Mbps</span></td>
+            <td><span class="score-good">✓ 全解锁</span></td>
+            <td><span class="score-mid">91%</span></td>
+            <td>¥35/月</td>
+          </tr>
+          <tr>
+            <td class="rank-num">8</td>
+            <td class="rank-name">筋斗云</td>
+            <td>中转</td>
+            <td><div class="speed-bar-wrap"><div class="speed-bar" style="width:45%"></div></div><span class="score-mid">450Mbps</span></td>
+            <td><span class="score-mid">△ 部分</span></td>
+            <td><span class="score-mid">85%</span></td>
+            <td>¥12/月</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.74rem;color:var(--text-muted);margin-top:12px;">测速环境：上海 CN → 香港节点，晚高峰 21:00–22:00 均值；稳定性为30天可用率。</p>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="report-section">
+    <div class="rs-label">本月大事</div>
+    <div class="rs-title">值得关注的市场变化</div>
+    <div class="events-list">
+      <div class="event-card">
+        <div class="event-icon ev-good">🌟</div>
+        <div>
+          <div class="event-title">云图机场正式开业，首批测评结果亮眼</div>
+          <div class="event-desc">8月初上线，全节点金融级跨境专线，1倍率无扣费，开业首周晚高峰实测峰值 950Mbps，Netflix / ChatGPT / TikTok 全部原生解锁，是本月最值得关注的新机场。</div>
+          <div class="event-time">8月3日 · 开业优惠码 yt88，有效期3个月</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon ev-warn">⚠️</div>
+        <div>
+          <div class="event-title">某中小机场连续3天无法访问，疑似跑路</div>
+          <div class="event-desc">8月5日起官网无法打开，Telegram 频道停止更新，工单无回复。目前已进入跑路预警名单，受影响用户建议立即迁移至备用机场。</div>
+          <div class="event-time">8月5日 · 高风险预警</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon ev-info">📉</div>
+        <div>
+          <div class="event-title">极连云入门套餐降价至 ¥15/月</div>
+          <div class="event-desc">原 ¥18/月 入门套餐调整为 ¥15/月，流量上调至 150GB，性价比提升明显。预算有限的用户，极连云是目前最具性价比的 IPLC 专线选择之一。</div>
+          <div class="event-time">8月8日 · 永久降价</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon ev-bad">🔒</div>
+        <div>
+          <div class="event-title">8月第一周出现针对 VMess 的集中封锁</div>
+          <div class="event-desc">多地用户反馈 VMess 协议连接成功率下降，特别是 8月6–8日晚高峰时段，中转节点受影响较大，专线节点相对稳定。推荐切换到 VLESS+Reality 或 Hysteria2。</div>
+          <div class="event-time">8月6日 · 协议封锁预警</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PICKS -->
+  <section class="report-section">
+    <div class="rs-label">本月推荐</div>
+    <div class="rs-title">按需求场景选机场</div>
+    <div class="picks-grid">
+      <div class="pick-card">
+        <div class="pick-scenario">🎬 流媒体追剧</div>
+        <div class="pick-name">云图机场</div>
+        <div class="pick-reason">原生 IP 全解锁，Netflix / Disney+ / ChatGPT / TikTok 一个不落，专线稳定性高</div>
+        <div class="pick-price">¥25/月起 · 优惠码 yt88</div>
+      </div>
+      <div class="pick-card">
+        <div class="pick-scenario">💰 高性价比</div>
+        <div class="pick-name">瞬云</div>
+        <div class="pick-reason">¥16/月 IEPL 专线，晚高峰 880Mbps，稳定运营超2年，老用户口碑稳定</div>
+        <div class="pick-price">¥16/月起 · 优惠码 20off</div>
+      </div>
+      <div class="pick-card">
+        <div class="pick-scenario">🎮 低延迟游戏</div>
+        <div class="pick-name">极速Cloud</div>
+        <div class="pick-reason">CN2GIA 精品线路，香港节点延迟 18ms，适合延迟敏感的游戏和视频会议</div>
+        <div class="pick-price">¥28/月起 · 优惠码 ikds88</div>
+      </div>
+      <div class="pick-card">
+        <div class="pick-scenario">📦 预算有限</div>
+        <div class="pick-name">极连云</div>
+        <div class="pick-reason">本月降价至 ¥15/月，IPLC 专线，150GB 流量，入门首选</div>
+        <div class="pick-price">¥15/月起</div>
+      </div>
+      <div class="pick-card">
+        <div class="pick-scenario">🔒 隐私优先</div>
+        <div class="pick-name">WgetCloud</div>
+        <div class="pick-reason">无日志政策，支持加密货币付款，注重匿名的用户首选</div>
+        <div class="pick-price">¥35/月起</div>
+      </div>
+      <div class="pick-card">
+        <div class="pick-scenario">🏢 企业 / 团队</div>
+        <div class="pick-name">寰宇云</div>
+        <div class="pick-reason">IEPL 专线高稳定，支持多设备，企业套餐含专属客服</div>
+        <div class="pick-price">¥30/月起</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOL -->
+  <section class="report-section">
+    <div class="rs-label">协议动态</div>
+    <div class="rs-title">8月各协议封锁状态</div>
+    <div class="proto-grid">
+      <div class="proto-card">
+        <div class="proto-name">Hysteria2</div>
+        <span class="proto-tag proto-stable">畅通</span>
+        <div class="proto-desc">本月表现最稳定，UDP 加密特征不易识别，多家机场已全面切换，推荐优先使用。</div>
+      </div>
+      <div class="proto-card">
+        <div class="proto-name">VLESS + Reality</div>
+        <span class="proto-tag proto-stable">畅通</span>
+        <div class="proto-desc">TLS 伪装效果好，封锁率低。目前主流机场标配，稳定性仅次于 Hysteria2。</div>
+      </div>
+      <div class="proto-card">
+        <div class="proto-name">Trojan</div>
+        <span class="proto-tag proto-stable">基本畅通</span>
+        <div class="proto-desc">整体稳定，部分 ISP 对 443 端口有 QoS 限速，建议搭配非标端口使用。</div>
+      </div>
+      <div class="proto-card">
+        <div class="proto-name">VMess</div>
+        <span class="proto-tag proto-caution">8月受干扰</span>
+        <div class="proto-desc">8月6–8日晚高峰连接成功率下滑约 15%，中转节点影响大于专线，建议切换 VLESS 或 Hysteria2。</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer"><div class="container">
+  <p style="color:var(--text-muted);font-size:.85rem;line-height:1.8;margin:0;">
+    © 2026 勇哥博客 · 机场月报 · 数据来源于实测，不接受付费植入 |
+    <a href="about.html" style="color:var(--text-secondary);">关于我们</a> ·
+    <a href="index.html" style="color:var(--text-secondary);">返回首页</a>
+  </p>
+</div></footer>
+
+<script src="app.js"></script>
+<script>
+const nb = document.querySelector('.navbar');
+if(nb) window.addEventListener('scroll', () => {
+  nb.style.boxShadow = window.scrollY > 10 ? '0 4px 30px rgba(0,0,0,0.4)' : 'none';
+});
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+}
+</script>
+</body>
+</html>
