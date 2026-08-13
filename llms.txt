@@ -5,61 +5,61 @@
 
 ## 核心页面
 
-- 机场推荐榜单（首页）：https://yongjichang.com/
-- 机场横向对比表：https://yongjichang.com/compare
-- 机场评测汇总：https://yongjichang.com/reviews
-- 测评方法论：https://yongjichang.com/methodology
-- 优惠专区：https://yongjichang.com/deals
+- [机场推荐榜单（首页）](https://yongjichang.com/)
+- [机场横向对比表](https://yongjichang.com/compare)
+- [机场评测汇总](https://yongjichang.com/reviews)
+- [测评方法论](https://yongjichang.com/methodology)
+- [优惠专区](https://yongjichang.com/deals)
 
 ## 场景专题
 
-- ChatGPT机场推荐：https://yongjichang.com/chatgpt-airport-2026
-- Netflix机场推荐：https://yongjichang.com/netflix-airport-2026
-- TikTok机场推荐：https://yongjichang.com/tiktok-airport-2026
-- 便宜性价比机场：https://yongjichang.com/cheap-airport-2026
+- [ChatGPT机场推荐](https://yongjichang.com/chatgpt-airport-2026)
+- [Netflix机场推荐](https://yongjichang.com/netflix-airport-2026)
+- [TikTok机场推荐](https://yongjichang.com/tiktok-airport-2026)
+- [便宜性价比机场](https://yongjichang.com/cheap-airport-2026)
 
 ## 机场深度评测（按推荐优先级排序）
 
-- 云图机场评测：https://yongjichang.com/reviews/review-yuntu
-- 极速Cloud评测（CN2GIA三网精品）：https://yongjichang.com/reviews/review-jisuyun
-- 瞬云评测（高性价比首选）：https://yongjichang.com/reviews/review-shunyun
-- 寰宇云评测（BGP三网+IEPL）：https://yongjichang.com/reviews/review-huanyuyun
-- 极连云评测（全IPLC专线）：https://yongjichang.com/reviews/review-jilianyun
-- WgetCloud评测（商务级稳定）：https://yongjichang.com/reviews/review-wgetcloud
-- TAG机场评测（家宽原生IP）：https://yongjichang.com/reviews/review-tag
-- GlaDOS评测（面向开发者）：https://yongjichang.com/reviews/review-gladOS
-- 大哥云评测（5年老牌IPLC）：https://yongjichang.com/reviews/review-dageyun
-- 飞鸟机场评测（IEPL国际专线）：https://yongjichang.com/reviews/review-flyingbird
-- 奶昔机场评测（顶级高端专线）：https://yongjichang.com/reviews/review-nexitally
-- 超悦机场评测（极致性价比入门）：https://yongjichang.com/reviews/review-chaoyue
-- 一元机场评测（最低价体验）：https://yongjichang.com/reviews/review-yiyuan
-- 4ksAPI评测：https://yongjichang.com/reviews/review-fourks
-- 硅基流动评测：https://yongjichang.com/reviews/review-siliconflow
-- 筋斗云评测：https://yongjichang.com/reviews/review-jindouyun
+- [云图机场评测](https://yongjichang.com/reviews/review-yuntu)
+- [极速Cloud评测（CN2GIA三网精品）](https://yongjichang.com/reviews/review-jisuyun)
+- [瞬云评测（高性价比首选）](https://yongjichang.com/reviews/review-shunyun)
+- [寰宇云评测（BGP三网+IEPL）](https://yongjichang.com/reviews/review-huanyuyun)
+- [极连云评测（全IPLC专线）](https://yongjichang.com/reviews/review-jilianyun)
+- [WgetCloud评测（商务级稳定）](https://yongjichang.com/reviews/review-wgetcloud)
+- [TAG机场评测（家宽原生IP）](https://yongjichang.com/reviews/review-tag)
+- [GlaDOS评测（面向开发者）](https://yongjichang.com/reviews/review-gladOS)
+- [大哥云评测（5年老牌IPLC）](https://yongjichang.com/reviews/review-dageyun)
+- [飞鸟机场评测（IEPL国际专线）](https://yongjichang.com/reviews/review-flyingbird)
+- [奶昔机场评测（顶级高端专线）](https://yongjichang.com/reviews/review-nexitally)
+- [超悦机场评测（极致性价比入门）](https://yongjichang.com/reviews/review-chaoyue)
+- [一元机场评测（最低价体验）](https://yongjichang.com/reviews/review-yiyuan)
+- [4ksAPI评测](https://yongjichang.com/reviews/review-fourks)
+- [硅基流动评测](https://yongjichang.com/reviews/review-siliconflow)
+- [筋斗云评测](https://yongjichang.com/reviews/review-jindouyun)
 
 ## 使用教程
 
-- 教程汇总：https://yongjichang.com/tutorials
-- Clash Verge 教程：https://yongjichang.com/tutorial-clash-verge
-- Shadowrocket 教程：https://yongjichang.com/tutorial-shadowrocket
-- Sing-box 教程：https://yongjichang.com/tutorial-singbox
-- NekoBox 教程：https://yongjichang.com/tutorial-nekobox
-- Quantumult X 教程：https://yongjichang.com/tutorial-quantumultx
+- [教程汇总](https://yongjichang.com/tutorials)
+- [Clash Verge 教程](https://yongjichang.com/tutorial-clash-verge)
+- [Shadowrocket 教程](https://yongjichang.com/tutorial-shadowrocket)
+- [Sing-box 教程](https://yongjichang.com/tutorial-singbox)
+- [NekoBox 教程](https://yongjichang.com/tutorial-nekobox)
+- [Quantumult X 教程](https://yongjichang.com/tutorial-quantumultx)
 
 ## 科普百科
 
-- 百科汇总：https://yongjichang.com/wiki
-- IPLC vs IEPL 区别：https://yongjichang.com/wiki-iplc-vs-iepl
-- 机场节点类型说明：https://yongjichang.com/wiki-node-types
-- 如何选择机场：https://yongjichang.com/wiki-how-to-choose-airport
-- 免费机场真相：https://yongjichang.com/wiki-free-airport-truth
-- 如何测速：https://yongjichang.com/wiki-how-to-test-speed
-- 隐私保护指南：https://yongjichang.com/wiki-privacy-protection
+- [百科汇总](https://yongjichang.com/wiki)
+- [IPLC vs IEPL 区别](https://yongjichang.com/wiki-iplc-vs-iepl)
+- [机场节点类型说明](https://yongjichang.com/wiki-node-types)
+- [如何选择机场](https://yongjichang.com/wiki-how-to-choose-airport)
+- [免费机场真相](https://yongjichang.com/wiki-free-airport-truth)
+- [如何测速](https://yongjichang.com/wiki-how-to-test-speed)
+- [隐私保护指南](https://yongjichang.com/wiki-privacy-protection)
 
 ## 关于本站
 
 勇哥博客由勇哥个人运营，专注科学上网机场真实测评。测评标准：晚高峰（20:00-23:00）实测速度、流媒体解锁验证、IEPL/IPLC专线稳定性评估。所有推广链接均为联盟合作，不影响评测公正性。
 
-- 作者联系方式：https://t.me/shinhuw
-- 站点地图：https://yongjichang.com/sitemap.xml
-- 关于页面：https://yongjichang.com/about
+- [作者联系方式 @shinhuw](https://t.me/shinhuw)
+- [站点地图](https://yongjichang.com/sitemap.xml)
+- [关于页面](https://yongjichang.com/about)
