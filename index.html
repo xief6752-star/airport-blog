@@ -67,8 +67,11 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
 <link rel="stylesheet" href="index.css?v=2">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="logo.webp">
 </head>
 <body>
 
@@ -76,7 +79,7 @@
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">
-      <img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+      <img src="logo.webp" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
       <span>勇哥博客</span>
     </a>
     <div class="nav-links" id="navLinks">
@@ -102,7 +105,7 @@
   </div>
 </nav>
 
-<!-- Mobile Menu -->
+<main><!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#recommend">🏆 机场推荐</a><a href="reviews.html">📋 机场评测</a>
   <a href="tutorials.html">📖 使用教程</a>
@@ -172,7 +175,7 @@
   <div class="container">
     <div class="announce-grid">
       <div class="announce-col">
-        <h3>🔔 最新公告</h3>
+        <h2 style="font-size:1rem;font-weight:700;color:var(--text-primary);margin:0 0 12px;">🔔 最新公告</h2>
         <div class="announce-list">
           <div class="announce-item" style="border-left:3px solid #8b5cf6;padding-left:12px;background:rgba(139,92,246,.06);">
             <span class="announce-dot" style="background:#8b5cf6;animation:pulse 1.5s infinite;"></span>
@@ -223,7 +226,7 @@
       </div>
 
       <div class="announce-col">
-        <h3>⚠️ 跑路预警</h3>
+        <h2 style="font-size:1rem;font-weight:700;color:var(--text-primary);margin:0 0 12px;">⚠️ 跑路预警</h2>
         <div class="announce-list">
           <div class="announce-item">
             <span class="announce-dot dot-red"></span>
@@ -1031,18 +1034,20 @@ document.querySelectorAll('.faq-item .faq-q').forEach(q => {
 </script>
 
 <!-- ══ FOOTER ══ -->
+</main>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="logo.png" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+          <img src="logo.webp" alt="勇哥博客" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
           <span>勇哥博客</span>
         </a>
         <p>专注真实机场测评，帮助用户找到最稳定、最高性价比的科学上网工具。数据持续更新，从不接受付费植入。</p>
       </div>
       <div class="footer-col">
-        <h4>机场推荐</h4>
+        <h3>机场推荐</h3>
         <ul>
           <li><a href="#recommend">综合榜单</a></li>
           <li><a href="compare.html">横向对比表</a></li>
@@ -1053,7 +1058,7 @@ document.querySelectorAll('.faq-item .faq-q').forEach(q => {
         </ul>
       </div>
       <div class="footer-col">
-        <h4>使用教程</h4>
+        <h3>使用教程</h3>
         <ul>
           <li><a href="tutorials.html">Windows教程</a></li>
           <li><a href="tutorials.html">Mac教程</a></li>
@@ -1062,7 +1067,7 @@ document.querySelectorAll('.faq-item .faq-q').forEach(q => {
         </ul>
       </div>
       <div class="footer-col">
-        <h4>更多</h4>
+        <h3>更多</h3>
         <ul>
           <li><a href="wiki.html">科普百科</a></li>
           <li><a href="deals.html">优惠专区</a></li>
