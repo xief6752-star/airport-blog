@@ -37,6 +37,19 @@
 .wiki-table tr:last-child td { border-bottom: none; }
 .wiki-table tr:hover td { background: rgba(99,120,255,0.04); }
 .highlight-box { background: rgba(99,120,255,0.08); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 14px 18px; margin: 14px 0; font-size: 0.875rem; color: var(--text-secondary); }
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 32px}
+.filter-btn{padding:7px 18px;border-radius:999px;font-size:.85rem;font-weight:600;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);cursor:pointer;transition:var(--transition)}
+.filter-btn:hover{background:rgba(99,120,255,.12);border-color:rgba(99,120,255,.4);color:var(--accent)}
+.section-heading{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.section-heading h2{font-size:1.2rem;font-weight:800}
+.section-sub{color:var(--text-muted);font-size:.87rem;margin-bottom:16px}
+.wiki-cat-section{margin-bottom:36px}
+.wiki-cat-list{display:flex;flex-direction:column;gap:2px}
+.wiki-cat-item{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--radius-sm);background:var(--bg-card);border:1px solid var(--border);font-size:.9rem;color:var(--text-secondary);transition:var(--transition)}
+.wiki-cat-item:hover{border-color:var(--border-hover);color:var(--accent)}
+.wiki-cat-item .wcat-arrow{margin-left:auto;color:var(--text-muted);flex-shrink:0}
+.wiki-cat-item[hidden]{display:none}
+.wiki-cat-more{font-size:.82rem;color:var(--accent);cursor:pointer;padding:10px 16px;font-weight:600}
 @media (max-width:768px) { .wiki-grid { grid-template-columns: 1fr; } .wiki-sidebar { position: static; } }
 </style>
 <meta name="keywords" content="机场是什么,Clash,SS,Shadowsocks,VMess,Trojan,Hysteria2,IEPL,IPLC,科学上网教程">
@@ -91,7 +104,90 @@
   </div>
 </div>
 
-<section class="section">
+<section class="section" style="padding-bottom:8px;">
+  <div class="container">
+    <div class="filter-bar">
+      <a href="#cat-basics" class="filter-btn">🧭 新手入门</a>
+      <a href="#cat-practical" class="filter-btn">📶 客户端与实战</a>
+      <a href="#cat-advanced" class="filter-btn">🔒 隐私安全与前沿技术</a>
+      <a href="#cat-market" class="filter-btn">📊 机场市场观察</a>
+      <a href="#cat-ai" class="filter-btn">🤖 AI科技前沿</a>
+    </div>
+
+    <div class="wiki-cat-section scroll-reveal" id="cat-basics">
+      <div class="section-heading"><h2>🧭 新手入门必读</h2></div>
+      <p class="section-sub">刚接触机场？先看这几篇，少走弯路</p>
+      <div class="wiki-cat-list">
+        <a href="#what" class="wiki-cat-item">✈️ 什么是机场？<span class="wcat-arrow">→</span></a>
+        <a href="#iplc-iepl" class="wiki-cat-item">⚡ IPLC vs IEPL：专线有什么区别？<span class="wcat-arrow">→</span></a>
+        <a href="#protocols" class="wiki-cat-item">🔐 主流代理协议详解（8种）<span class="wcat-arrow">→</span></a>
+        <a href="#avoid" class="wiki-cat-item">🛡️ 防跑路指南：如何降低机场跑路损失<span class="wcat-arrow">→</span></a>
+        <a href="#node-region" class="wiki-cat-item">🗺️ 日本、香港、新加坡、美国节点怎么选？<span class="wcat-arrow">→</span></a>
+        <a href="wiki-how-to-choose-airport.html" class="wiki-cat-item" hidden>🛡️ 2026年机场选购避坑指南<span class="wcat-arrow">→</span></a>
+      </div>
+      <div class="wiki-cat-more">展开全部 6 篇 →</div>
+    </div>
+
+    <div class="wiki-cat-section scroll-reveal" id="cat-practical">
+      <div class="section-heading"><h2>📶 客户端与实战技巧</h2></div>
+      <p class="section-sub">选好机场之后，如何用好它</p>
+      <div class="wiki-cat-list">
+        <a href="#mobile-client" class="wiki-cat-item">📱 Shadowrocket vs Quantumult X vs sing-box 横评<span class="wcat-arrow">→</span></a>
+        <a href="#bandwidth" class="wiki-cat-item">📊 100Mbps限速到底多快？带宽单位完全科普<span class="wcat-arrow">→</span></a>
+        <a href="#test-speed" class="wiki-cat-item">⚡ 机场测速完全指南<span class="wcat-arrow">→</span></a>
+        <a href="#residential-ip" class="wiki-cat-item">🏠 家宽IP和机房IP有什么区别？<span class="wcat-arrow">→</span></a>
+        <a href="#free-airport" class="wiki-cat-item">⚠️ 免费机场的真相与风险<span class="wcat-arrow">→</span></a>
+        <a href="wiki-airport-setup-guide.html" class="wiki-cat-item" hidden>📱 机场订阅链接导入完整指南<span class="wcat-arrow">→</span></a>
+      </div>
+      <div class="wiki-cat-more">展开全部 6 篇 →</div>
+    </div>
+
+    <div class="wiki-cat-section scroll-reveal" id="cat-advanced">
+      <div class="section-heading"><h2>🔒 隐私安全与前沿技术</h2></div>
+      <p class="section-sub">进阶用户关心的隐私防护与最新封锁对抗技术</p>
+      <div class="wiki-cat-list">
+        <a href="#privacy" class="wiki-cat-item">🔒 如何保护上网隐私<span class="wcat-arrow">→</span></a>
+        <a href="#gfw-tls-2026" class="wiki-cat-item">🔥 GFW新一轮TLS指纹封锁<span class="wcat-arrow">→</span></a>
+        <a href="#proxy-tech" class="wiki-cat-item">🌐 深入浅出解析网络代理技术<span class="wcat-arrow">→</span></a>
+        <a href="#encryption-tech" class="wiki-cat-item">🔐 零信任时代的加密通信<span class="wcat-arrow">→</span></a>
+        <a href="#warp" class="wiki-cat-item">🌐 WARP翻墙真相<span class="wcat-arrow">→</span></a>
+        <a href="#icloud-relay" class="wiki-cat-item" hidden>🍎 iCloud+私人中继能替代机场吗？<span class="wcat-arrow">→</span></a>
+        <a href="#ai-antiproxy" class="wiki-cat-item" hidden>🤖 AI反代理检测升级解析<span class="wcat-arrow">→</span></a>
+        <a href="#ipv6-nodes" class="wiki-cat-item" hidden>🌐 IPv6节点是不是"未来"？<span class="wcat-arrow">→</span></a>
+        <a href="wiki-iplc-vs-iepl.html" class="wiki-cat-item" hidden>⚡ IPLC和IEPL专线区别（深度图文版）<span class="wcat-arrow">→</span></a>
+        <a href="wiki-node-types.html" class="wiki-cat-item" hidden>🌏 香港/日本/美国节点怎么选（深度图文版）<span class="wcat-arrow">→</span></a>
+      </div>
+      <div class="wiki-cat-more">展开全部 10 篇 →</div>
+    </div>
+
+    <div class="wiki-cat-section scroll-reveal" id="cat-market">
+      <div class="section-heading"><h2>📊 机场市场观察</h2></div>
+      <p class="section-sub">行业动态、晚高峰实测与市场分析</p>
+      <div class="wiki-cat-list">
+        <a href="airport-monthly-report-aug-2026.html" class="wiki-cat-item">📡 2026年8月机场月报：新玩家入局，晚高峰分化加剧<span class="wcat-arrow">→</span></a>
+        <a href="blog-airport-2026-analysis.html" class="wiki-cat-item">📊 2026年机场市场分析：谁在统治、谁在衰落<span class="wcat-arrow">→</span></a>
+        <a href="blog-airport-speed-2026.html" class="wiki-cat-item">⚡ 2026年机场晚高峰速度实测对比<span class="wcat-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="wiki-cat-section scroll-reveal" id="cat-ai">
+      <div class="section-heading"><h2>🤖 AI科技前沿</h2></div>
+      <p class="section-sub">AI大模型、Agent与前沿科技热点科普</p>
+      <div class="wiki-cat-list">
+        <a href="blog-ai-model-comparison-2026.html" class="wiki-cat-item">🤖 2026年8月AI模型选择指南：Claude Opus 5 vs GPT-5.6 Sol<span class="wcat-arrow">→</span></a>
+        <a href="blog-ai-agent-2026.html" class="wiki-cat-item">🤖 AI Agent时代来临：从聊天机器人到自主行动的智能体<span class="wcat-arrow">→</span></a>
+        <a href="blog-ai-coding-honest.html" class="wiki-cat-item">💻 我用AI写代码用了将近一年，说几句实在话<span class="wcat-arrow">→</span></a>
+        <a href="blog-ai-hallucination-truth.html" class="wiki-cat-item">🧠 AI为什么总是一本正经地胡说八道<span class="wcat-arrow">→</span></a>
+        <a href="blog-ai-jobs-reality.html" class="wiki-cat-item">💼 AI真的在抢我们的工作吗？2026年实际情况<span class="wcat-arrow">→</span></a>
+        <a href="blog-ar-glasses-2026.html" class="wiki-cat-item" hidden>🥽 AR眼镜的2026：第三代计算平台正式起跑<span class="wcat-arrow">→</span></a>
+        <a href="blog-quantum-computing-2026.html" class="wiki-cat-item" hidden>⚛️ 量子计算落地元年：混合架构如何改变企业未来<span class="wcat-arrow">→</span></a>
+      </div>
+      <div class="wiki-cat-more">展开全部 7 篇 →</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
   <div class="container">
     <div class="wiki-grid">
       <div class="wiki-sidebar scroll-reveal">
@@ -491,5 +587,14 @@
 <script src="analytics.js"></script>
 <script src="indexnow.js" defer></script>
 <script src="app.js"></script>
+<script>
+document.querySelectorAll('.wiki-cat-more').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var list = this.previousElementSibling;
+    list.querySelectorAll('[hidden]').forEach(function(el){ el.removeAttribute('hidden'); });
+    this.style.display = 'none';
+  });
+});
+</script>
 </body>
 </html>
