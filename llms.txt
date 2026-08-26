@@ -13,6 +13,7 @@
 
 ## 场景专题
 
+- [2026年8月AI模型选择指南：Claude Opus 5 vs GPT-5.6 Sol](https://yongjichang.com/blog-ai-model-comparison-2026)
 - [ChatGPT机场推荐](https://yongjichang.com/chatgpt-airport-2026)
 - [Netflix机场推荐](https://yongjichang.com/netflix-airport-2026)
 - [TikTok机场推荐](https://yongjichang.com/tiktok-airport-2026)
