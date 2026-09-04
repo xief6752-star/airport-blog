@@ -22,31 +22,31 @@
     <loc>https://yongjichang.com/blog-ai-agent-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-ai-model-comparison-2026</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-ai-coding-honest</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-ai-hallucination-truth</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-ai-jobs-reality</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-airport-2026-analysis</loc>
@@ -64,13 +64,19 @@
     <loc>https://yongjichang.com/blog-ar-glasses-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yongjichang.com/blog-ai-security-incidents-2026</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-quantum-computing-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/cloudflare-warp-truth-2026</loc>
@@ -106,7 +112,7 @@
     <loc>https://yongjichang.com/reviews</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
 
   <url>
@@ -221,7 +227,7 @@
     <loc>https://yongjichang.com/compare</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/methodology</loc>
