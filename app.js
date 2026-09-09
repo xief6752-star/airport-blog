@@ -62,7 +62,12 @@ const affLinks = {
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
   yuntu:     'https://vip.ytjcok.org/#/register?code=iV8ahCNE',
-  jiuyun:    'https://888.jiuyundl.com/#/register?code=SDsIO7kq'
+  jiuyun:    'https://888.jiuyundl.com/#/register?code=SDsIO7kq',
+  miaomiaoyun: 'https://m2.mouhiojl.com:8888/#/register?code=6u2dHtD4',
+  shanshuiyun: 'https://sldm1.ssyylf.com/#/register?code=4WTXbMwy',
+  jinyun:    'https://jybdw1.wanhlj.com:8888/#/register?code=0xeLRRWB',
+  liyun:     'https://ly888.liydl.com:8888/#/register?code=ihbhLNee',
+  cailuyun:  'https://cl888.cailudl.com:9999/#/register?code=d4UTPba8'
 };
 function goAff(name) {
   const url = affLinks[name] || '#';
@@ -83,7 +88,12 @@ function showDetail(name) {
     jilianyun: { name: '极连云', desc: '极连云是一款全 IPLC 专线的优质机场，提供最高 2.5Gbps 带宽且晚高峰不限速，稳定性极佳。原生 IP 完美解锁 Netflix、ChatGPT、TikTok 等主流流媒体及 AI 服务。\n\n✅ 优点：全 IPLC 专线（最大 2.5Gbps）、流媒体与 AI 解锁极其稳定、性价比高（限时年付合 ¥8/月）、不限客户端数\n⚠️ 缺点：不接受退款，福建与新疆地区用户请谨慎下单' },
     jindouyun: { name: '筋斗云', desc: '筋斗云是一家专注 IEPL/IPLC 专线的老牌优质机场，采用三网优化线路，晚高峰实测稳定 600Mbps+。全节点原生 IP 解锁 Netflix、ChatGPT、TikTok、Disney+，套餐灵活，年付性价比出色。\n\n✅ 优点：IEPL/IPLC 专线、三网优化、原生 IP 解锁全、套餐档位丰富、7×24 客服在线\n⚠️ 缺点：欧美节点数量略少，年付需先月付试用后再锁定' },
     yuntu: { name: '云图机场 (CloudMap)', desc: '云图机场全面采用金融级专线传输，依托高规格跨境专线与优质节点拓扑，保障高峰期低延迟、零丢包。全节点 1 倍率，无扣费陷阱，ChatGPT/Netflix/TikTok 等主流服务完美解锁，工单 24 小时内响应。\n\n套餐：¥25/月（150G）· ¥49/月（300G）· ¥99/月（600G），均支持 5 设备同时在线。\n开业优惠码：yt88（3 个月内有效，截至 2026-11-04）\n\n✅ 优点：金融级专线稳定、全节点 1 倍率无陷阱、原生 IP 解锁全面、24H 工单保障\n⚠️ 注意：新上线机场，建议先月付体验后再选长期套餐' },
-    jiuyun: { name: '九云机场', desc: '九云机场是一家主打超低价格的海外中转线路机场，采用 VLESS 协议，抗封锁能力较强。节点覆盖香港、日本、台湾、新加坡、美国，支持 Netflix、ChatGPT、Gemini 等主流流媒体及 AI 服务解锁。晚高峰 YouTube 4K 流畅播放，入门价格仅 ¥6/月。\n\n✅ 优点：价格极低（¥6 起）、VLESS 协议、AI 服务解锁全面、流媒体解锁良好\n⚠️ 缺点：新晋机场运营时间短、海外中转晚高峰速度不及专线、建议坚持月付' }
+    jiuyun: { name: '九云机场', desc: '九云机场是一家主打超低价格的海外中转线路机场，采用 VLESS 协议，抗封锁能力较强。节点覆盖香港、日本、台湾、新加坡、美国，支持 Netflix、ChatGPT、Gemini 等主流流媒体及 AI 服务解锁。晚高峰 YouTube 4K 流畅播放，入门价格仅 ¥6/月。\n\n✅ 优点：价格极低（¥6 起）、VLESS 协议、AI 服务解锁全面、流媒体解锁良好\n⚠️ 缺点：新晋机场运营时间短、海外中转晚高峰速度不及专线、建议坚持月付' },
+    miaomiaoyun: { name: '秒秒云机场', desc: '秒秒云是一家主打性价比的海外中转线路机场，采用 VLESS 协议。套餐灵活多样，从 128GB 到不限时 100GB 都有覆盖。节点覆盖香港、日本、新加坡、美国，支持 Netflix、ChatGPT、Disney+ 等主流服务解锁。晚高峰 YouTube 4K 流畅播放。\n\n✅ 优点：套餐丰富（128GB 起）、VLESS 协议、流媒体解锁良好、性价比高（¥14 起）\n⚠️ 缺点：新晋机场运营时间短、海外中转晚高峰速度不及专线、建议坚持月付' },
+    shanshuiyun: { name: '山水云机场', desc: '山水云是一家主打灵活计费的优质中转线路机场，最大亮点是提供不限时套餐。节点覆盖香港、日本、台湾、新加坡、美国，支持 Netflix、ChatGPT、Disney+ 等服务解锁。速度稳定，晚高峰 YouTube 4K 流畅播放。\n\n✅ 优点：不限时套餐灵活、速度稳定、流媒体解锁全面、性价比不错（¥15 起）\n⚠️ 缺点：入门价格略高于超低价机场、新晋机场建议月付观察' },
+    jinyun: { name: '锦云机场', desc: '锦云是一家极致性价比的入门级机场，主打小流量超低价。50GB 仅 ¥6/月，是市面上最便宜的机场之一。节点覆盖香港、日本、新加坡、美国，支持 Netflix、ChatGPT、YouTube 等基本服务解锁。\n\n✅ 优点：价格极低（¥6 起）、套餐灵活、入门友好、基本解锁良好\n⚠️ 缺点：流量偏少不适合看视频、速度表现一般、新晋机场建议月付' },
+    liyun: { name: '鲤云机场', desc: '鲤云是一家套餐灵活、性价比不错的中转机场。从 50GB 到 8200GB 的套餐选择，满足从轻度到重度的各种需求。特别是 8200GB 超大流量套餐仅 ¥17/月，性价比极高。支持 Netflix、ChatGPT、Disney+ 等服务解锁。\n\n✅ 优点：套餐灵活（50GB-8200GB）、超大流量性价比高、流媒体解锁良好\n⚠️ 缺点：非专线晚高峰速度不及专线、新晋机场建议月付观察' },
+    cailuyun: { name: '财路云机场', desc: '财路云是一家套餐灵活、价格实惠的轻度机场。从 50GB 到 200GB 的套餐选择，按需计费。节点覆盖香港、日本、新加坡、美国，支持 Netflix、ChatGPT、Disney+ 等主流服务解锁。\n\n✅ 优点：套餐灵活、价格实惠（¥7 起）、流媒体解锁良好、按需选择\n⚠️ 缺点：非专线晚高峰速度会波动、新晋机场建议月付观察' }
   };
   const d = details[name];
   if (!d) return;
