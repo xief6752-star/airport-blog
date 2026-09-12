@@ -58,6 +58,11 @@ const LINKS = {
   'shunyun-mid': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=mid',
   'shunyun-bot': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=bot',
 
+  // 宝云
+  'baoyun-top': 'https://888by.baoyundl.com/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=top',
+  'baoyun-mid': 'https://888by.baoyundl.com/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=mid',
+  'baoyun-bot': 'https://888by.baoyundl.com/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=bot',
+
   // 超悦机场 → 云图
   'chaoyue-top': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=chaoyue&utm_content=top',
   'chaoyue-mid': 'https://vip.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=chaoyue&utm_content=mid',

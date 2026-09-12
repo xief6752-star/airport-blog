@@ -26,6 +26,7 @@
 - [瞬云评测（高性价比首选）](https://yongjichang.com/reviews/review-shunyun)
 - [寰宇云评测（BGP三网+IEPL）](https://yongjichang.com/reviews/review-huanyuyun)
 - [极连云评测（全IPLC专线）](https://yongjichang.com/reviews/review-jilianyun)
+- [宝云评测（海外中转+VLESS协议）](https://yongjichang.com/reviews/review-baoyun)
 - [WgetCloud评测（商务级稳定）](https://yongjichang.com/reviews/review-wgetcloud)
 - [TAG机场评测（家宽原生IP）](https://yongjichang.com/reviews/review-tag)
 - [GlaDOS评测（面向开发者）](https://yongjichang.com/reviews/review-gladOS)
