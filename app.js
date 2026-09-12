@@ -102,13 +102,14 @@ function showDetail(name) {
   const d = details[name];
   if (!d) return;
   const overlay = document.createElement('div');
+  overlay.className = 'detail-overlay';
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;';
   overlay.innerHTML = `
     <div style="background:#141929;border:1px solid rgba(99,120,255,.3);border-radius:20px;max-width:480px;width:100%;padding:32px;position:relative;animation:fadeInUp .3s ease;">
-      <button onclick="this.closest('[style]').remove()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#8b9cc8;font-size:1.4rem;cursor:pointer;">✕</button>
+      <button onclick="this.closest('.detail-overlay').remove()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#8b9cc8;font-size:1.4rem;cursor:pointer;">✕</button>
       <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:16px;">${d.name} · 测评详情</h3>
       <p style="color:#8b9cc8;line-height:1.8;white-space:pre-line;">${d.desc}</p>
-      <button onclick="goAff('${name}');this.closest('[style]').remove()" style="margin-top:24px;width:100%;padding:12px;border-radius:999px;background:linear-gradient(135deg,#6378ff,#a78bfa);color:white;font-weight:700;border:none;cursor:pointer;font-size:.95rem;font-family:inherit;">
+      <button onclick="goAff('${name}');this.closest('.detail-overlay').remove()" style="margin-top:24px;width:100%;padding:12px;border-radius:999px;background:linear-gradient(135deg,#6378ff,#a78bfa);color:white;font-weight:700;border:none;cursor:pointer;font-size:.95rem;font-family:inherit;">
         查看套餐详情 →
       </button>
     </div>`;
