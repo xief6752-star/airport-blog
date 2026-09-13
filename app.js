@@ -28,6 +28,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+setTimeout(() => {
+  document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.add('visible'));
+}, 500);
 
 // ── Filter ──
 const filterBtns = document.querySelectorAll('.filter-btn');

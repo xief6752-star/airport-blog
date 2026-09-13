@@ -58,8 +58,8 @@
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"瞬云","url":"https://yongjichang.com/"},
     {"@type":"ListItem","position":2,"name":"寰宇云","url":"https://yongjichang.com/"},
-    {"@type":"ListItem","position":3,"name":"极连云","url":"https://yongjichang.com/reviews/review-jilianyun.html"},
-    {"@type":"ListItem","position":4,"name":"筋斗云","url":"https://yongjichang.com/reviews/review-jindouyun.html"},
+    {"@type":"ListItem","position":3,"name":"筋斗云","url":"https://yongjichang.com/reviews/review-jindouyun.html"},
+    {"@type":"ListItem","position":4,"name":"极连云","url":"https://yongjichang.com/reviews/review-jilianyun.html"},
     {"@type":"ListItem","position":5,"name":"秒秒云","url":"https://yongjichang.com/reviews/review-miaomiaoyun.html"},
     {"@type":"ListItem","position":6,"name":"山水云","url":"https://yongjichang.com/reviews/review-shanshuiyun.html"},
     {"@type":"ListItem","position":7,"name":"锦云","url":"https://yongjichang.com/reviews/review-jinyun.html"},
@@ -463,7 +463,7 @@
 
       <!-- 极连云 #3 -->
       <div class="airport-card scroll-reveal" data-tags="iepl stream budget">
-        <div class="card-rank">推荐 #3</div>
+        <div class="card-rank">推荐 #8</div>
         <div class="card-header">
           <div class="card-logo-wrap">
             <div class="card-logo" style="background:linear-gradient(135deg,#6366f1,#a855f7);">⚡</div>
@@ -1368,6 +1368,19 @@ document.querySelectorAll('.faq-item .faq-q').forEach(q => {
 
 <script src="analytics.js" defer></script>
 <script src="indexnow.js" defer></script>
+<script>
+  const cardsGrid = document.getElementById('cardsGrid');
+  const cardItems = [...cardsGrid.querySelectorAll('.airport-card')];
+  const jilianyunCard = cardItems.find(card => card.querySelector('.card-name')?.textContent.trim() === '极连云');
+  const jindouyunCard = cardItems.find(card => card.querySelector('.card-name')?.textContent.trim() === '筋斗云');
+  if (jilianyunCard && jindouyunCard) {
+    const marker = document.createComment('swap-cards');
+    cardsGrid.insertBefore(marker, jilianyunCard);
+    cardsGrid.insertBefore(jilianyunCard, jindouyunCard);
+    cardsGrid.insertBefore(jindouyunCard, marker);
+    marker.remove();
+  }
+</script>
 <script src="app.js" defer></script>
 
 <div id="bookmark-toast"></div>
