@@ -1,7 +1,7 @@
 # 勇哥博客 — 机场真实测评专栏
 > 专注中国大陆用户的机场推荐与深度测评，覆盖晚高峰实测速度、流媒体解锁验证（Netflix/ChatGPT/TikTok）、IPLC/IEPL 专线稳定性评估、跑路风险追踪，所有数据来自勇哥亲测，不接受付费植入，只推荐真正用过的优质机场。
 > 网站地址：https://yongjichang.com
-> 最后更新：2026-08-13
+> 最后更新：2026-09-19
 
 ## 核心页面
 
@@ -10,6 +10,7 @@
 - [机场评测汇总](https://yongjichang.com/reviews)
 - [测评方法论](https://yongjichang.com/methodology)
 - [优惠专区](https://yongjichang.com/deals)
+- [2026年9月机场月报：低价中转扩容，专线与中转继续分化](https://yongjichang.com/airport-monthly-report-sep-2026)
 
 ## 场景专题
 
@@ -57,6 +58,11 @@
 - [免费机场真相](https://yongjichang.com/wiki-free-airport-truth)
 - [如何测速](https://yongjichang.com/wiki-how-to-test-speed)
 - [隐私保护指南](https://yongjichang.com/wiki-privacy-protection)
+- [带宽单位与 Mbps 解释](https://yongjichang.com/bandwidth-units-explained-2026)
+- [Cloudflare WARP 能否翻墙](https://yongjichang.com/cloudflare-warp-truth-2026)
+- [手机代理客户端横向对比](https://yongjichang.com/mobile-client-comparison-2026)
+- [节点地区选择指南](https://yongjichang.com/node-region-guide-2026)
+- [家宽 IP 与机房 IP 区别](https://yongjichang.com/residential-ip-vs-datacenter-ip-2026)
 
 ## 关于本站
 

@@ -17,6 +17,17 @@
 <meta name="keywords" content="AI幻觉,大模型幻觉,hallucination,LLM幻觉,AI错误,RAG,AI可靠性">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://yongjichang.com/blog-ai-hallucination-truth">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yongjichang.com/blog-ai-hallucination-truth">
+<meta property="og:title" content="AI为什么总是一本正经地胡说八道 - 勇哥博客">
+<meta property="og:description" content="AI 为什么总是一本正经地胡说八道？本文解释大模型幻觉的根本成因、高发场景与常见表现，分析为什么简单事实题也可能得到貌似合理的错误答案，并整理检索增强、交叉验证、引用核对和分步提问等方法，帮助你判断 ChatGPT、Claude 等 AI 输出的可信度，在写作、编程和决策中减少被误导的风险，建立可靠的人机协作流程。">
+<meta property="og:site_name" content="勇哥博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yongjichang.com/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI为什么总是一本正经地胡说八道 - 勇哥博客">
+<meta name="twitter:description" content="AI 为什么总是一本正经地胡说八道？本文解释大模型幻觉的根本成因、高发场景与常见表现，分析为什么简单事实题也可能得到貌似合理的错误答案，并整理检索增强、交叉验证、引用核对和分步提问等方法，帮助你判断 ChatGPT、Claude 等 AI 输出的可信度，在写作、编程和决策中减少被误导的风险，建立可靠的人机协作流程。">
+<meta name="twitter:image" content="https://yongjichang.com/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
@@ -47,6 +58,10 @@
 .related-card h4{font-size:.88rem;font-weight:700;margin-bottom:3px;color:var(--text-primary)}
 .related-card p{font-size:.78rem;color:var(--text-muted);margin:0}
 </style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"AI为什么总是一本正经地胡说八道 - 勇哥博客","description":"AI 为什么总是一本正经地胡说八道？本文解释大模型幻觉的根本成因、高发场景与常见表现，分析为什么简单事实题也可能得到貌似合理的错误答案，并整理检索增强、交叉验证、引用核对和分步提问等方法，帮助你判断 ChatGPT、Claude 等 AI 输出的可信度，在写作、编程和决策中减少被误导的风险，建立可靠的人机协作流程。","inLanguage":"zh-CN","author":{"@type":"Person","name":"勇哥","url":"https://yongjichang.com/about"},"publisher":{"@type":"Organization","name":"勇哥博客","url":"https://yongjichang.com"},"mainEntityOfPage":"https://yongjichang.com/blog-ai-hallucination-truth"}
+</script>
 </head>
 <body>
 <nav class="navbar"><div class="navbar-inner">

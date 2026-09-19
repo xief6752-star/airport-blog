@@ -5,7 +5,18 @@
 <title>机场连不上怎么办？2026年订阅失效排查清单 - 勇哥博客</title>
 <meta name="description" content="机场订阅突然连不上、节点全部超时或只有部分网站打不开怎么办？2026年完整故障排查指南，按订阅链接、客户端状态、DNS代理、系统时间、端口冲突和线路故障逐层诊断，整理常见错误代码、测速方法与客服沟通要点，帮助你快速判断是本地配置、订阅失效还是机场线路异常，减少盲目换机场和重复购买的损失，适合 Clash、Shadowrocket 等客户端用户参考。">
 <meta name="keywords" content="机场连不上,机场订阅失效,节点超时,Clash排查,机场故障排查">
-<meta name="robots" content="index, follow"><link rel="canonical" href="https://yongjichang.com/airport-connection-troubleshooting-2026"><link rel="stylesheet" href="index.css?v=3"><link rel="icon" type="image/png" href="logo.webp">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://yongjichang.com/airport-connection-troubleshooting-2026">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yongjichang.com/airport-connection-troubleshooting-2026">
+<meta property="og:title" content="机场连不上怎么办？2026年订阅失效排查清单 - 勇哥博客">
+<meta property="og:description" content="机场订阅突然连不上、节点全部超时或只有部分网站打不开怎么办？2026年完整故障排查指南，按订阅链接、客户端状态、DNS代理、系统时间、端口冲突和线路故障逐层诊断，整理常见错误代码、测速方法与客服沟通要点，帮助你快速判断是本地配置、订阅失效还是机场线路异常，减少盲目换机场和重复购买的损失，适合 Clash、Shadowrocket 等客户端用户参考。">
+<meta property="og:site_name" content="勇哥博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yongjichang.com/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="机场连不上怎么办？2026年订阅失效排查清单 - 勇哥博客">
+<meta name="twitter:description" content="机场订阅突然连不上、节点全部超时或只有部分网站打不开怎么办？2026年完整故障排查指南，按订阅链接、客户端状态、DNS代理、系统时间、端口冲突和线路故障逐层诊断，整理常见错误代码、测速方法与客服沟通要点，帮助你快速判断是本地配置、订阅失效还是机场线路异常，减少盲目换机场和重复购买的损失，适合 Clash、Shadowrocket 等客户端用户参考。">
+<meta name="twitter:image" content="https://yongjichang.com/logo.webp"><link rel="stylesheet" href="index.css?v=3"><link rel="icon" type="image/png" href="logo.webp">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"机场连不上怎么办？2026年订阅失效排查清单","description":"按订阅、客户端、系统代理和线路逐步排查机场连接问题。","datePublished":"2026-09-05","dateModified":"2026-09-05","author":{"@type":"Organization","name":"勇哥博客"},"publisher":{"@type":"Organization","name":"勇哥博客","url":"https://yongjichang.com"}}</script>
 <style>.article-hero{padding:100px 0 48px;background:var(--gradient-hero);border-bottom:1px solid var(--border)}.article-body{max-width:780px;margin:0 auto;padding:44px 0 64px}.article-body h2{font-size:1.3rem;margin:36px 0 12px}.article-body p,.article-body li{color:var(--text-secondary);line-height:1.9;font-size:.95rem}.article-body p{margin-bottom:16px}.article-body ol,.article-body ul{padding-left:22px;margin-bottom:18px}.article-body li{margin-bottom:8px}.article-body strong{color:var(--text-primary)}.check{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 18px;margin:18px 0;color:var(--text-secondary);line-height:1.9}.check strong{color:#22d3a0}.tag{background:rgba(99,120,255,.12);color:var(--accent);padding:3px 10px;border-radius:999px;font-weight:700}.article-meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--text-muted);font-size:.82rem;margin:16px 0}</style>
 </head>
@@ -16,4 +27,4 @@
 <h2>第三步：区分 DNS、代理与线路问题</h2><p>如果客户端显示已连接，但网页打不开，先测试多个不同域名。只有某个域名打不开，可能是目标服务或规则问题；所有域名都打不开，重点检查系统代理、DNS 和节点连接状态。</p><p>可以先切换同一地区的另一个节点。如果同地区多个节点都失败，再切换到另一个地区。不要在故障期间反复点击更新订阅，以免触发服务商的频率限制。</p>
 <h2>第四步：判断是否是服务商侧故障</h2><ul><li>官网、面板和订阅地址都无法打开：可能是域名、服务器或服务商侧故障。</li><li>面板正常但所有节点超时：可能是线路维护、配置发布错误或临时限制。</li><li>只有一个客户端失败：优先怀疑客户端配置，不要马上判定机场跑路。</li><li>客服长时间不回复且公告消失：保存付款和套餐记录，停止续费并准备备用方案。</li></ul>
 <h2>哪些做法容易让问题更复杂</h2><ul><li>同时安装多个代理客户端，让系统代理端口互相冲突。</li><li>在不确认来源的情况下下载别人分享的配置文件。</li><li>连接异常时直接购买年付套餐或重复付款。</li><li>把完整订阅链接、账号信息和面板截图公开发布。</li></ul>
-<h2>最后的处理建议</h2><p>把错误提示、发生时间、客户端版本、节点名称和是否能打开面板整理成一条信息发给客服，通常比只说“不能用”更容易获得有效回复。长期使用时，保留一个月付备用机场，并定期导出不含隐私信息的故障记录。</p><p>客户端导入方式可参考<a href="wiki-airport-setup-guide.html" style="color:var(--accent)">机场订阅链接导入指南</a>，测速方法可参考<a href="wiki-how-to-test-speed.html" style="color:var(--accent)">机场速度测试教程</a>。</p></article></div></section></main><footer class="footer"><div class="container"><p style="color:var(--text-muted);font-size:.85rem">© 2026 勇哥博客 | <a href="about.html">关于我们</a> | <a href="#">隐私政策</a></p></div></footer><script src="app.js"></script></body></html>
+<h2>最后的处理建议</h2><p>把错误提示、发生时间、客户端版本、节点名称和是否能打开面板整理成一条信息发给客服，通常比只说“不能用”更容易获得有效回复。长期使用时，保留一个月付备用机场，并定期导出不含隐私信息的故障记录。</p><p>客户端导入方式可参考<a href="wiki-airport-setup-guide.html" style="color:var(--accent)">机场订阅链接导入指南</a>，测速方法可参考<a href="wiki-how-to-test-speed.html" style="color:var(--accent)">机场速度测试教程</a>。</p></article></div></section></main><footer class="footer"><div class="container"><p style="color:var(--text-muted);font-size:.85rem">© 2026 勇哥博客 | <a href="about.html">关于我们</a> | <a href="about.html#disclaimer">隐私与免责声明</g/a></p></div></footer><script src="app.js"></script></body></html>
