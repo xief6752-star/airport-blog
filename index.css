@@ -219,9 +219,10 @@ img { max-width: 100%; display: block; }
 .airport-card:hover::before { opacity: 0.04; }
 .card-header {
   display: flex; align-items: flex-start; justify-content: space-between;
-  margin-bottom: 18px; position: relative;
+  gap: 12px; margin-bottom: 18px; position: relative; min-width: 0;
 }
-.card-logo-wrap { display: flex; align-items: center; gap: 14px; }
+.card-logo-wrap { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.card-logo-wrap > div:last-child { min-width: 0; }
 .card-logo {
   width: 52px; height: 52px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
@@ -231,6 +232,7 @@ img { max-width: 100%; display: block; }
 .card-subtitle { font-size: 0.82rem; color: var(--text-muted); }
 .card-badge {
   display: flex; align-items: center; gap: 6px;
+  flex-shrink: 0; white-space: nowrap;
   padding: 5px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 600;
 }
 .badge-online { background: rgba(34,211,160,0.15); color: var(--accent-green); }
@@ -271,7 +273,7 @@ img { max-width: 100%; display: block; }
 .price-unit { font-size: 0.8rem; color: var(--text-muted); }
 .price-original { font-size: 0.8rem; color: var(--text-muted); text-decoration: line-through; }
 .card-cta {
-  display: flex; gap: 8px;
+  display: flex; gap: 8px; flex-shrink: 0;
 }
 .btn-card {
   padding: 8px 18px; border-radius: 999px; font-size: 0.85rem;
@@ -486,5 +488,4 @@ img { max-width: 100%; display: block; }
   color: var(--accent) !important;
   padding-left: 24px !important;
 }
-
 
