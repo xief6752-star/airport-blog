@@ -66,7 +66,7 @@ const affLinks = {
   baoyun:    'https://888by.baoyundl.com/#/register?code=089ta958',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
   yuntu:     'https://vip.ytjcok.org/#/register?code=iV8ahCNE',
-  jiuyun:    'https://888.jiuyundl.com/#/register?code=SDsIO7kq',
+  jiuyun:    'https://yong.jiuyyq.com',
   speedworld: 'http://yongjichang.speedworldaff.com/#/?code=GPjugEyt',
   miaomiaoyun: 'https://m2.mouhiojl.com:8888/#/register?code=6u2dHtD4',
   shanshuiyun: 'https://sldm1.ssyylf.com/#/register?code=4WTXbMwy',
