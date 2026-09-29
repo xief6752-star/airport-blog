@@ -85,12 +85,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://yongjichang.com/airport-monthly-report-oct-2026</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://yongjichang.com/airport-connection-troubleshooting-2026</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -101,12 +95,6 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yongjichang.com/bandwidth-units-explained-2026</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/blog-ai-agent-2026</loc>
@@ -169,34 +157,10 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yongjichang.com/cloudflare-warp-truth-2026</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://yongjichang.com/deals</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yongjichang.com/mobile-client-comparison-2026</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yongjichang.com/node-region-guide-2026</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yongjichang.com/residential-ip-vs-datacenter-ip-2026</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yongjichang.com/reviews</loc>
@@ -496,6 +460,18 @@
   <url>
     <loc>https://yongjichang.com/reviews/review-yiyuan</loc>
     <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://yongjichang.com/reviews/review-andycloud</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://yongjichang.com/reviews/review-xinghuayun</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
