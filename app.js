@@ -65,7 +65,7 @@ const affLinks = {
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
   baoyun:    'https://888by.baoyundl.com/#/register?code=089ta958',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
-  yuntu:     'https://vip.ytjcok.org/#/register?code=iV8ahCNE',
+  yuntu:     'https://super.ytjcok.org/#/register?code=iV8ahCNE',
   jiuyun:    'https://yong.jiuyyq.com',
   speedworld: 'http://yongjichang.speedworldaff.com/#/?code=GPjugEyt',
   miaomiaoyun: 'https://m2.mouhiojl.com:8888/#/register?code=6u2dHtD4',
@@ -74,7 +74,7 @@ const affLinks = {
   liyun:     'https://ly888.liydl.com:8888/#/register?code=ihbhLNee',
   cailuyun:  'https://cl888.cailudl.com:9999/#/register?code=d4UTPba8',
   kunpeng:   'https://kunpengjiasu.com/#/register?code=SaP1pCTB',
-  andycloud: 'https://sss.andycloud.cc/#/register?code=mPfoyHTr',
+  andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
   xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD'
 };
 function goAff(name) {
