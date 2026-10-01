@@ -34,9 +34,9 @@ const LINKS = {
   'huanyuyun-bot': 'https://huanyuyun.cc/#/register?code=CPBmzXgk&utm_source=yongjichang&utm_medium=review&utm_campaign=huanyuyun&utm_content=bot',
 
   // 极联云
-  'jilianyun-top': 'https://ccc.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=top',
-  'jilianyun-mid': 'https://ccc.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=mid',
-  'jilianyun-bot': 'https://ccc.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=bot',
+  'jilianyun-top': 'https://ddd.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=top',
+  'jilianyun-mid': 'https://ddd.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=mid',
+  'jilianyun-bot': 'https://ddd.jichang.best/#/register?code=za8UKIYz&utm_source=yongjichang&utm_medium=review&utm_campaign=jilianyun&utm_content=bot',
 
   // 好泽VPN
   'haozevpn-top': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13&utm_source=yongjichang&utm_medium=review&utm_campaign=haozevpn&utm_content=top',
@@ -54,9 +54,9 @@ const LINKS = {
   'jisucloud-bot': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=bot',
 
   // 瞬云
-  'shunyun-top': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=top',
-  'shunyun-mid': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=mid',
-  'shunyun-bot': 'https://ccc.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=bot',
+  'shunyun-top': 'https://ddd.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=top',
+  'shunyun-mid': 'https://ddd.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=mid',
+  'shunyun-bot': 'https://ddd.jichang.best/#/register?code=MhKYAnsG&utm_source=yongjichang&utm_medium=review&utm_campaign=shunyun&utm_content=bot',
 
   // 宝云
   'baoyun-top': 'https://888by.baoyundl.com/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=top',
