@@ -73,7 +73,7 @@ const affLinks = {
   jinyun:    'https://jybdw1.wanhlj.com:8888/#/register?code=0xeLRRWB',
   liyun:     'https://ly888.liydl.com:8888/#/register?code=ihbhLNee',
   cailuyun:  'https://cl888.cailudl.com:9999/#/register?code=d4UTPba8',
-  kunpeng:   'https://kunpengjiasu.com/#/register?code=SaP1pCTB',
+  kunpeng:   'https://kunpengjiasu.com/#/register?code=GQzYysG0',
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
   xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD'
 };
