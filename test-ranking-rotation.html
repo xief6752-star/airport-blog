@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>排行榜轮换测试 - 勇哥博客</title>
+<link rel="stylesheet" href="index.css">
+<style>
+  .test-container { max-width: 1200px; margin: 40px auto; padding: 20px; }
+  .test-section { margin: 30px 0; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+  .test-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; color: var(--text-primary); }
+  .test-info { display: grid; gap: 12px; margin-bottom: 20px; font-size: 0.95rem; }
+  .test-info-item { display: flex; align-items: center; gap: 8px; padding: 10px; background: rgba(99,120,255,.06); border-radius: 6px; }
+  .test-info-item strong { color: var(--accent); min-width: 120px; }
+  .week-preview { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+  .week-card { padding: 12px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; text-align: center; cursor: pointer; transition: var(--transition); }
+  .week-card:hover { background: rgba(99,120,255,.08); border-color: var(--accent); }
+  .week-card.active { background: var(--gradient-accent); color: white; border-color: transparent; }
+  .ranking-preview { margin-top: 20px; }
+  .ranking-list { display: grid; gap: 8px; }
+  .ranking-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; transition: var(--transition); }
+  .ranking-item:hover { background: rgba(99,120,255,.06); }
+  .ranking-rank { font-size: 1.2rem; font-weight: 900; width: 40px; text-align: center; }
+  .ranking-rank.top-1 { color: #fbbf24; }
+  .ranking-rank.top-2 { color: #94a3b8; }
+  .ranking-rank.top-3 { color: #fb923c; }
+  .ranking-rank.regular { color: var(--accent); }
+  .ranking-name { font-weight: 700; flex: 1; color: var(--text-primary); }
+  .ranking-score { font-weight: 800; color: var(--accent); }
+  .tier-label { display: inline-block; padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; margin-left: 8px; }
+  .tier-top { background: rgba(251,191,36,.15); color: #fbbf24; }
+  .tier-bottom { background: rgba(99,120,255,.12); color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="test-container">
+  <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">🔄 排行榜自动轮换系统测试</h1>
+  <p style="color: var(--text-secondary); margin-bottom: 40px;">每周一自动变化排名，前6名和后10名分别循环轮换</p>
+
+  <!-- 当前周信息 -->
+  <div class="test-section">
+    <div class="test-title">📅 当前周信息</div>
+    <div class="test-info" id="currentWeekInfo"></div>
+  </div>
+
+  <!-- 当前排名 -->
+  <div class="test-section">
+    <div class="test-title">🏆 当前排名（2026年第 <span id="currentWeek"></span> 周）</div>
+    <div class="ranking-preview">
+      <div class="ranking-list" id="currentRankingList"></div>
+    </div>
+  </div>
+
+  <!-- 未来4周预览 -->
+  <div class="test-section">
+    <div class="test-title">🔮 未来4周排名预览</div>
+    <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.9rem;">点击周数查看该周的排名</p>
+    <div class="week-preview" id="weekPreview"></div>
+    <div class="ranking-preview">
+      <div class="ranking-list" id="previewRankingList"></div>
+    </div>
+  </div>
+
+  <!-- 轮换规则说明 -->
+  <div class="test-section">
+    <div class="test-title">📖 轮换规则说明</div>
+    <div style="line-height: 1.8; color: var(--text-secondary);">
+      <p><strong style="color: var(--text-primary);">前6名池（固定在1-6位，但顺序每周轮换）：</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 16px;">
+        <li>云图、鲲鹏加速、瞬云、极速Cloud、九云、寰宇云</li>
+      </ul>
+      <p><strong style="color: var(--text-primary);">后10名池（固定在7-16位，但顺序每周轮换）：</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 16px;">
+        <li>速界、宝云、筋斗云、秒秒云、山水云、Andy Cloud、杏花云、熊猫cloud、锦云、极连云</li>
+      </ul>
+      <p><strong style="color: var(--text-primary);">轮换算法：</strong></p>
+      <ul style="margin-left: 20px;">
+        <li>基于 ISO 8601 周数（每年第1-53周）</li>
+        <li>每周一自动变化（周数 % 池大小 = 偏移量）</li>
+        <li>完全自动化，无需手动更新</li>
+        <li>前6名和后10名分别独立轮换</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="js/ranking-rotator.js"></script>
+<script>
+  // 渲染当前周信息
+  function renderCurrentWeekInfo() {
+    const data = RankingRotator.getCurrentRankings();
+    const html = `
+      <div class="test-info-item">
+        <strong>当前日期：</strong>
+        <span>${RankingRotator.formatDateCN(data.updateDate)}</span>
+      </div>
+      <div class="test-info-item">
+        <strong>ISO 周数：</strong>
+        <span>${data.year}年第 ${data.weekNumber} 周</span>
+      </div>
+      <div class="test-info-item">
+        <strong>下次更新：</strong>
+        <span>${RankingRotator.formatDateCN(data.nextUpdate)}（每周一）</span>
+      </div>
+      <div class="test-info-item">
+        <strong>前6名偏移量：</strong>
+        <span>${data.weekNumber % 6}</span>
+      </div>
+      <div class="test-info-item">
+        <strong>后10名偏移量：</strong>
+        <span>${data.weekNumber % 10}</span>
+      </div>
+    `;
+    document.getElementById('currentWeekInfo').innerHTML = html;
+    document.getElementById('currentWeek').textContent = data.weekNumber;
+  }
+
+  // 渲染排名列表
+  function renderRankingList(rankings, containerId) {
+    const html = rankings.map(item => `
+      <div class="ranking-item">
+        <div class="ranking-rank ${RankingRotator.getRankClass(item.rank)}">
+          ${RankingRotator.getRankIcon(item.rank)}
+        </div>
+        <div class="ranking-name">
+          ${item.name}
+          <span class="tier-label tier-${item.tier}">
+            ${item.tier === 'top' ? '前6名池' : '后10名池'}
+          </span>
+        </div>
+        <div class="ranking-score">${item.score}</div>
+      </div>
+    `).join('');
+    document.getElementById(containerId).innerHTML = html;
+  }
+
+  // 渲染当前排名
+  function renderCurrentRanking() {
+    const data = RankingRotator.getCurrentRankings();
+    renderRankingList(data.rankings, 'currentRankingList');
+  }
+
+  // 渲染未来4周预览
+  function renderWeekPreview() {
+    const currentWeek = RankingRotator.getISOWeek();
+    const html = [];
+
+    for (let i = 0; i <= 4; i++) {
+      const weekNum = currentWeek + i;
+      const label = i === 0 ? '本周' : `+${i}周`;
+      html.push(`
+        <div class="week-card ${i === 0 ? 'active' : ''}" onclick="showWeekRanking(${weekNum})" data-week="${weekNum}">
+          <div style="font-size: 0.8rem; color: inherit; opacity: 0.8; margin-bottom: 4px;">${label}</div>
+          <div style="font-size: 1.2rem; font-weight: 800;">第${weekNum}周</div>
+        </div>
+      `);
+    }
+
+    document.getElementById('weekPreview').innerHTML = html.join('');
+
+    // 默认显示本周
+    showWeekRanking(currentWeek);
+  }
+
+  // 显示指定周的排名
+  window.showWeekRanking = function(weekNumber) {
+    // 更新激活状态
+    document.querySelectorAll('.week-card').forEach(card => {
+      if (parseInt(card.dataset.week) === weekNumber) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // 计算该周的排名
+    const top6Pool = RankingRotator.TOP_6_POOL;
+    const bottom10Pool = RankingRotator.BOTTOM_10_POOL;
+
+    const offset6 = weekNumber % 6;
+    const offset10 = weekNumber % 10;
+
+    const rotatedTop6 = [...top6Pool.slice(offset6), ...top6Pool.slice(0, offset6)];
+    const rotatedBottom10 = [...bottom10Pool.slice(offset10), ...bottom10Pool.slice(0, offset10)];
+
+    const rankings = [
+      ...rotatedTop6.map((item, idx) => ({ rank: idx + 1, tier: 'top', ...item })),
+      ...rotatedBottom10.map((item, idx) => ({ rank: idx + 7, tier: 'bottom', ...item }))
+    ];
+
+    renderRankingList(rankings, 'previewRankingList');
+  };
+
+  // 初始化
+  renderCurrentWeekInfo();
+  renderCurrentRanking();
+  renderWeekPreview();
+</script>
+
+</body>
+</html>
