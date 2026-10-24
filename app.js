@@ -63,7 +63,7 @@ const affLinks = {
   jisuyun:   'https://ygbk.jsjc456789.com/#/register?code=EocII8EW',
   shanhai:   'https://ddd.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
-  baoyun:    'https://888by.baoyundl.com/#/register?code=089ta958',
+  baoyun:    'https://141.11.77.85:8888/#/register?code=089ta958',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
   yuntu:     'https://super.ytjcok.org/#/register?code=iV8ahCNE',
   jiuyun:    'https://yong.jiuyyq.com',
