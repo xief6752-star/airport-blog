@@ -1,7 +1,7 @@
 # 勇哥博客 — 机场真实测评专栏
-> 专注中国大陆用户的机场推荐与深度测评，覆盖晚高峰实测速度、流媒体解锁验证（Netflix/ChatGPT/TikTok）、IPLC/IEPL 专线稳定性评估、跑路风险追踪，所有数据来自勇哥亲测，不接受付费植入，只推荐真正用过的优质机场。
+> 面向中文读者的机场服务评测、网络基础知识和客户端教程。评测结论受测试地点、运营商、日期、节点及服务商套餐变化影响；请以每篇页面标明的测试条件和官网当前信息为准。部分链接可能产生联盟佣金，合作关系见测评方法论。
 > 网站地址：https://yongjichang.com
-> 最后更新：2026-09-19
+> 最后更新：2026-11-03
 
 ## 核心页面
 
@@ -11,6 +11,7 @@
 - [测评方法论](https://yongjichang.com/methodology)
 - [优惠专区](https://yongjichang.com/deals)
 - [2026年9月机场月报：低价中转扩容，专线与中转继续分化](https://yongjichang.com/airport-monthly-report-sep-2026)
+- [2026年10月机场月报：极低价套餐内卷，1元档批量出现](https://yongjichang.com/airport-monthly-report-oct-2026)
 
 ## 场景专题
 
@@ -35,6 +36,9 @@
 - [飞鸟机场评测（IEPL国际专线）](https://yongjichang.com/reviews/review-flyingbird)
 - [奶昔机场评测（顶级高端专线）](https://yongjichang.com/reviews/review-nexitally)
 - [超悦机场评测（极致性价比入门）](https://yongjichang.com/reviews/review-chaoyue)
+- [鲲鹏加速评测（1元试用与低价套餐）](https://yongjichang.com/reviews/review-kunpeng)
+- [Andy Cloud评测（大流量低价套餐）](https://yongjichang.com/reviews/review-andycloud)
+- [杏花云评测（低价年付套餐）](https://yongjichang.com/reviews/review-xinghuayun)
 - [一元机场评测（最低价体验）](https://yongjichang.com/reviews/review-yiyuan)
 - [4ksAPI评测](https://yongjichang.com/reviews/review-fourks)
 - [硅基流动评测](https://yongjichang.com/reviews/review-siliconflow)
