@@ -63,7 +63,7 @@ const affLinks = {
   jisuyun:   'https://ygbk.jsjc456789.com/#/register?code=EocII8EW',
   shanhai:   'https://ddd.jichang.best/#/register?code=za8UKIYz',   // 山海机场重定向至瞬云以防空白弹窗
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
-  baoyun:    'https://888by.baoyundl.com/#/register?code=089ta958',
+  baoyun:    'https://141.11.77.85:8888/#/register?code=089ta958',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
   yuntu:     'https://super.ytjcok.org/#/register?code=iV8ahCNE',
   jiuyun:    'https://yong.jiuyyq.com',
@@ -73,9 +73,11 @@ const affLinks = {
   jinyun:    'https://jybdw1.wanhlj.com:8888/#/register?code=0xeLRRWB',
   liyun:     'https://ly888.liydl.com:8888/#/register?code=ihbhLNee',
   cailuyun:  'https://cl888.cailudl.com:9999/#/register?code=d4UTPba8',
-  kunpeng:   'https://kunpengjiasu.com/#/register?code=SaP1pCTB',
+  kunpeng:   'https://kunpengjiasu.com/#/register?code=GQzYysG0',
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
-  xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD'
+  xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD',
+  jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32',
+  lumo: 'https://s1.lumo-invite.com/sign-up/?code=sbEOqdwH'
 };
 function goAff(name) {
   const url = affLinks[name] || '#';
@@ -93,7 +95,8 @@ function showDetail(name) {
     shunyun: { name: '瞬云', desc: '瞬云节点覆盖丰富，套餐灵活，年付价格实惠，适合使用频率固定的用户。中转+专线混合线路，晚高峰实测 700Mbps+。新用户可使用优惠码 20off 享专属折扣。\n\n✅ 优点：节点多、套餐灵活、年付价格低、有新客优惠码\n⚠️ 缺点：非纯专线，高峰期偶有波动' },
     jisuyun: { name: '极速Cloud', desc: 'CN2GIA三网精品优化线路，VLess协议，晚高峰无视拥堵。28+国家节点，原生IP完美解锁TikTok、AP平台、Netflix、ChatGPT，跨境电商与TikTok运营首选。\n\n✅ 优点：CN2GIA+AS9929+CMIN2三网精品、VLess高抗封锁、TikTok/AP原生解锁\n⚠️ 缺点：价格略高于普通机场' },
     shanhai: { name: '山海机场', desc: '山海机场支持按量付费和不限时套餐，多协议支持（SS/V2Ray/Trojan），适合使用频率不规律的用户。入门价格最低，是备用机场的好选择。\n\n✅ 优点：按量付费灵活、入门价格低（¥10 起）、多协议支持\n⚠️ 缺点：速度表现一般，适合作为备用而非主力' },
-    jilianyun: { name: '极连云', desc: '极连云是一款全 IPLC 专线的优质机场，提供最高 2.5Gbps 带宽且晚高峰不限速，稳定性极佳。原生 IP 完美解锁 Netflix、ChatGPT、TikTok 等主流流媒体及 AI 服务。\n\n✅ 优点：全 IPLC 专线（最大 2.5Gbps）、流媒体与 AI 解锁极其稳定、性价比高（限时年付合 ¥8/月）、不限客户端数\n⚠️ 缺点：不接受退款，福建与新疆地区用户请谨慎下单' },
+    jilianyun: { name: '极连云', desc: '极连云采用高性能 IEPL 专线与优质 BGP 中转，覆盖香港、日本、台湾、美国、新加坡等热门地区。全面支持 ChatGPT、Netflix、Disney+、HBO Max 等流媒体解锁，晚高峰稳定性出色，不限设备数。\n\n✅ 优点：IEPL 专线稳定性好、全流媒体解锁、ChatGPT 原生 IP、晚高峰速度420Mbps+、不限设备数\n⚠️ 注意：价格相对海外中转略高，建议先从月付套餐开始验证本地运营商兼容性' },
+    jielianyun: { name: '极连云', desc: '极连云采用高性能 IEPL 专线与优质 BGP 中转，覆盖香港、日本、台湾、美国、新加坡等热门地区。全面支持 ChatGPT、Netflix、Disney+、HBO Max 等流媒体解锁，晚高峰稳定性出色，不限设备数。\n\n✅ 优点：IEPL 专线稳定性好、全流媒体解锁、ChatGPT 原生 IP、晚高峰速度420Mbps+、不限设备数\n⚠️ 注意：价格相对海外中转略高，建议先从月付套餐开始验证本地运营商兼容性' },
     baoyun: { name: '宝云', desc: '宝云主打海外中转线路，采用 VLESS 协议，节点覆盖香港、日本、台湾、新加坡、美国。支持常规流媒体解锁以及 ChatGPT、Gemini 等 AI 服务，套餐从 ¥4/月起。\n\n✅ 优点：入门价格低、节点覆盖亚洲与美国、VLESS 协议、AI 与 YouTube 4K 使用场景明确\n⚠️ 注意：速度与可用率为参考值，建议先月付验证本地晚高峰体验' },
     jindouyun: { name: '筋斗云', desc: '筋斗云是一家专注 IEPL/IPLC 专线的老牌优质机场，采用三网优化线路，晚高峰实测稳定 600Mbps+。全节点原生 IP 解锁 Netflix、ChatGPT、TikTok、Disney+，套餐灵活，年付性价比出色。\n\n✅ 优点：IEPL/IPLC 专线、三网优化、原生 IP 解锁全、套餐档位丰富、7×24 客服在线\n⚠️ 缺点：欧美节点数量略少，年付需先月付试用后再锁定' },
     yuntu: { name: '云图机场 (CloudMap)', desc: '云图机场全面采用金融级专线传输，依托高规格跨境专线与优质节点拓扑，保障高峰期低延迟、零丢包。全节点 1 倍率，无扣费陷阱，ChatGPT/Netflix/TikTok 等主流服务完美解锁，工单 24 小时内响应。\n\n套餐：¥20/月（150G）· ¥49/月（300G）· ¥99/月（600G），均支持 5 设备同时在线。\n开业优惠码：yt88（3 个月内有效，截至 2026-11-04）\n\n✅ 优点：金融级专线稳定、全节点 1 倍率无陷阱、原生 IP 解锁全面、24H 工单保障\n⚠️ 注意：新上线机场，建议先月付体验后再选长期套餐' },
@@ -106,7 +109,8 @@ function showDetail(name) {
     cailuyun: { name: '财路云机场', desc: '财路云是一家套餐灵活、价格实惠的轻度机场。从 50GB 到 200GB 的套餐选择，按需计费。节点覆盖香港、日本、新加坡、美国，支持 Netflix、ChatGPT、Disney+ 等主流服务解锁。\n\n✅ 优点：套餐灵活、价格实惠（¥7 起）、流媒体解锁良好、按需选择\n⚠️ 缺点：非专线晚高峰速度会波动、新晋机场建议月付观察' },
     kunpeng: { name: '鲲鹏加速', desc: '鲲鹏加速以「1元试用计划」为亮点，1元购买1GB全速体验流量，试错成本极低。满意后升级12元/月99GB主力套餐，每天仅4毛钱。全站1.0倍率无暗扣，支持5台设备同时在线，覆盖香港、新加坡、台湾、日本、美国5大地区。\n\n✅ 优点：1元试用门槛极低、12元/月高性价比、全站1.0倍率计费透明、流媒体ChatGPT解锁支持\n⚠️ 缺点：节点延迟偏高（香港约134ms）、不适合延迟敏感场景、非专线中转线路' },
     andycloud: { name: 'Andy Cloud', desc: 'Andy Cloud 是一家主打大流量低价的机场，套餐从 100GB 到 1TB 覆盖全面。100GB 仅需 ¥5，1TB 仅需 ¥25，还提供一次性 1TB 流量包（¥100）。节点覆盖主流地区，支持 Netflix 等流媒体解锁，适合流量需求大的用户。\n\n✅ 优点：价格极低（¥5 起）、大流量套餐性价比高、一次性流量包灵活\n⚠️ 缺点：新上线机场，建议先月付试用' },
-    xinghuayun: { name: '杏花云', desc: '杏花云提供月付和年付两种方案，年付性价比极高。年付 50GB 仅 ¥12（月均 ¥1），年付 100GB 仅 ¥24（月均 ¥2）。月付套餐从 200GB/¥3 起，还提供一次性 1TB 流量包（¥20）。支持 ChatGPT、Netflix 等主流服务解锁。\n\n✅ 优点：年付价格极低、月付套餐灵活、一次性流量包便宜、流媒体解锁良好\n⚠️ 缺点：新上线机场，建议先月付试用再考虑年付' }
+    xinghuayun: { name: '杏花云', desc: '杏花云提供月付和年付两种方案，年付性价比极高。年付 50GB 仅 ¥12（月均 ¥1），年付 100GB 仅 ¥24（月均 ¥2）。月付套餐从 200GB/¥3 起，还提供一次性 1TB 流量包（¥20）。支持 ChatGPT、Netflix 等主流服务解锁。\n\n✅ 优点：年付价格极低、月付套餐灵活、一次性流量包便宜、流媒体解锁良好\n⚠️ 缺点：新上线机场，建议先月付试用再考虑年付' },
+    lumo: { name: 'Lumo机场', desc: 'Lumo 是 2026 年新成立的创新型机场，采用动态倍率设计：平峰时段（01:00-19:00）流量按 0.6 倍率计算，高峰时段（19:00-01:00）按 1.0 倍率计算。线路包含标准节点（优化直连）和高级节点（Gomami、DMIT 三网精品），成本均摊模式让所有套餐都能使用全部节点。覆盖香港、台湾、新加坡、日本、美国等10+地区，约40个节点。\n\n主推套餐：Plus ¥29/月 150GB，支持 Netflix、ChatGPT、Gemini 等流媒体和 AI 服务全解锁。新用户免费试用，优惠码 hellolumo 立减¥10。\n\n✅ 优点：动态倍率省流（平峰 0.6x）、三网精品线路（Gomami/DMIT）、成本均摊所有用户可用高级节点、免费试用、客户端兼容性好\n⚠️ 缺点：2026 年新站长期稳定性待观察、建议先月付试用' }
   };
   const d = details[name];
   if (!d) return;

@@ -65,6 +65,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Cursor 代码编辑器完美接入自定义中转 API 详细教程：无限制调用 Claude 3.5 & DeepSeek - 勇哥博客","description":"本站为广大开发者精心编写了 Cursor 编辑器接入第三方自定义中转 API 的保姆级图文教程。教您如何省下 $20/月订阅费，低成本无限调用 Claude 3.5 Sonnet 和 DeepSeek V3 满血版大模型，让智能编程畅通无阻。含机场推荐配置、代理规则设置与常见连接错误排查指南，推荐使用。","inLanguage":"zh-CN","author":{"@type":"Person","name":"勇哥","url":"https://yongjichang.com/about"},"publisher":{"@type":"Organization","name":"勇哥博客","url":"https://yongjichang.com"},"mainEntityOfPage":"https://yongjichang.com/tutorial-cursor"}
 </script>
+<!-- Clarity tracking code for https://yongjichang.com/ -->
+<script>
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "yqx34swycg");
+</script>
 </head>
 <body>
 <nav class="navbar"><div class="navbar-inner">
@@ -78,7 +86,6 @@
           <a href="reviews/review-jisuyun.html">⚡ 极速Cloud评测</a>
           <a href="reviews/review-shunyun.html">⚡ 瞬云评测</a>
           <a href="reviews/review-huanyuyun.html">🌏 寰宇云评测</a>
-          <a href="reviews/review-jilianyun.html">⚡ 极连云评测</a>
         </div>
       </div>
     <a href="tutorials.html" class="active">使用教程</a>
@@ -126,11 +133,12 @@
 
         <div class="guide-step-card scroll-reveal" id="step1">
           <h2><div class="step-badge">1</div>配置前的准备工作</h2>
-          <p>在进行配置前，您需要从您所信任的中转站（如我们的合作伙伴：<strong>4ksAPI</strong> 或 <strong>硅基流动</strong>）后台获取以下两个关键凭证：</p>
+          <p>在进行配置前，您需要从 <strong>KuaiAI 中转站</strong> 后台获取以下两个关键凭证：</p>
           <ol style="color:var(--text-secondary);font-size:.925rem;line-height:2;padding-left:20px;margin-bottom:12px;">
             <li><strong>API Key：</strong> 格式通常为 <span class="code-inline">sk-</span> 开头的一长串乱码。</li>
-            <li><strong>接口代理地址 (Endpoint)：</strong> 例如 <span class="code-inline">https://api.4ksapi.com/v1</span>（特别提醒：必须以 <span class="code-inline">https://</span> 开头，且末尾千万不要漏掉 <span class="code-inline">/v1</span>）。</li>
+            <li><strong>接口代理地址 (Endpoint)：</strong> 例如 <span class="code-inline">https://www.kuaiaiapi.com/v1</span>（特别提醒：必须以 <span class="code-inline">https://</span> 开头，且末尾千万不要漏掉 <span class="code-inline">/v1</span>）。</li>
           </ol>
+          <div class="tip-box"><span class="tip-label">💡 推荐</span><strong>KuaiAI 中转站</strong>支持 Claude Fable 5、Opus 5、Sonnet 5、GPT-5.5、GPT-6、DeepSeek V3 等最新模型，价格实惠，支持 Passkey、Email、Telegram 多种登录方式。立即注册：<a href="https://www.kuaiaiapi.com/register?aff=WW6X" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline;">www.kuaiaiapi.com/register?aff=WW6X</a></div>
         </div>
 
         <div class="guide-step-card scroll-reveal" id="step2">
@@ -147,7 +155,7 @@
           <p>② 将右侧的开关切换为 <strong>“已启用 (ON)”</strong>。</p>
           <p>③ 在 <strong>“OpenAI API Key”</strong> 输入框中，填入您的中转 API 密钥。</p>
           <p>④ 点击下方的 <strong>“Configure (配置)”</strong> 或 <strong>“Override (覆盖)”</strong> 展开高级选项。</p>
-          <p>⑤ 在 <strong>“Override OpenAI Base URL (覆盖 OpenAI API 代理地址)”</strong> 输入框中，准确填入刚才获取的代理地址，例如：<span class="code-inline">https://api.4ksapi.com/v1</span>。</p>
+          <p>⑤ 在 <strong>”Override OpenAI Base URL (覆盖 OpenAI API 代理地址)”</strong> 输入框中，准确填入刚才获取的代理地址，例如：<span class=”code-inline”>https://www.kuaiaiapi.com/v1</span>。</p>
           <p>⑥ 点击 <strong>“Save (保存)”</strong> 确认修改。</p>
         </div>
 
