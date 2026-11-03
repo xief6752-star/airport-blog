@@ -76,7 +76,8 @@ const affLinks = {
   kunpeng:   'https://kunpengjiasu.com/#/register?code=GQzYysG0',
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
   xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD',
-  jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32'
+  jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32',
+  lumo: 'https://s1.lumo-invite.com/sign-up/?code=sbEOqdwH'
 };
 function goAff(name) {
   const url = affLinks[name] || '#';
@@ -108,7 +109,8 @@ function showDetail(name) {
     cailuyun: { name: '财路云机场', desc: '财路云是一家套餐灵活、价格实惠的轻度机场。从 50GB 到 200GB 的套餐选择，按需计费。节点覆盖香港、日本、新加坡、美国，支持 Netflix、ChatGPT、Disney+ 等主流服务解锁。\n\n✅ 优点：套餐灵活、价格实惠（¥7 起）、流媒体解锁良好、按需选择\n⚠️ 缺点：非专线晚高峰速度会波动、新晋机场建议月付观察' },
     kunpeng: { name: '鲲鹏加速', desc: '鲲鹏加速以「1元试用计划」为亮点，1元购买1GB全速体验流量，试错成本极低。满意后升级12元/月99GB主力套餐，每天仅4毛钱。全站1.0倍率无暗扣，支持5台设备同时在线，覆盖香港、新加坡、台湾、日本、美国5大地区。\n\n✅ 优点：1元试用门槛极低、12元/月高性价比、全站1.0倍率计费透明、流媒体ChatGPT解锁支持\n⚠️ 缺点：节点延迟偏高（香港约134ms）、不适合延迟敏感场景、非专线中转线路' },
     andycloud: { name: 'Andy Cloud', desc: 'Andy Cloud 是一家主打大流量低价的机场，套餐从 100GB 到 1TB 覆盖全面。100GB 仅需 ¥5，1TB 仅需 ¥25，还提供一次性 1TB 流量包（¥100）。节点覆盖主流地区，支持 Netflix 等流媒体解锁，适合流量需求大的用户。\n\n✅ 优点：价格极低（¥5 起）、大流量套餐性价比高、一次性流量包灵活\n⚠️ 缺点：新上线机场，建议先月付试用' },
-    xinghuayun: { name: '杏花云', desc: '杏花云提供月付和年付两种方案，年付性价比极高。年付 50GB 仅 ¥12（月均 ¥1），年付 100GB 仅 ¥24（月均 ¥2）。月付套餐从 200GB/¥3 起，还提供一次性 1TB 流量包（¥20）。支持 ChatGPT、Netflix 等主流服务解锁。\n\n✅ 优点：年付价格极低、月付套餐灵活、一次性流量包便宜、流媒体解锁良好\n⚠️ 缺点：新上线机场，建议先月付试用再考虑年付' }
+    xinghuayun: { name: '杏花云', desc: '杏花云提供月付和年付两种方案，年付性价比极高。年付 50GB 仅 ¥12（月均 ¥1），年付 100GB 仅 ¥24（月均 ¥2）。月付套餐从 200GB/¥3 起，还提供一次性 1TB 流量包（¥20）。支持 ChatGPT、Netflix 等主流服务解锁。\n\n✅ 优点：年付价格极低、月付套餐灵活、一次性流量包便宜、流媒体解锁良好\n⚠️ 缺点：新上线机场，建议先月付试用再考虑年付' },
+    lumo: { name: 'Lumo机场', desc: 'Lumo 是 2026 年新成立的创新型机场，采用动态倍率设计：平峰时段（01:00-19:00）流量按 0.6 倍率计算，高峰时段（19:00-01:00）按 1.0 倍率计算。线路包含标准节点（优化直连）和高级节点（Gomami、DMIT 三网精品），成本均摊模式让所有套餐都能使用全部节点。覆盖香港、台湾、新加坡、日本、美国等10+地区，约40个节点。\n\n主推套餐：Plus ¥29/月 150GB，支持 Netflix、ChatGPT、Gemini 等流媒体和 AI 服务全解锁。新用户免费试用，优惠码 hellolumo 立减¥10。\n\n✅ 优点：动态倍率省流（平峰 0.6x）、三网精品线路（Gomami/DMIT）、成本均摊所有用户可用高级节点、免费试用、客户端兼容性好\n⚠️ 缺点：2026 年新站长期稳定性待观察、建议先月付试用' }
   };
   const d = details[name];
   if (!d) return;
