@@ -77,7 +77,7 @@ const affLinks = {
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
   xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD',
   jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32',
-  lumo: 'https://s1.lumo-invite.com/sign-up/?code=sbEOqdwH'
+  lumo: 'https://lumo.52kok.cn/sign-up/?code=sbEOqdwH'
 };
 function goAff(name) {
   const url = affLinks[name] || '#';
