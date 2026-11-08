@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>排名轮换测试</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #0a0e1a;
+      color: #f0f4ff;
+    }
+    h1 {
+      color: #6378ff;
+    }
+    .info {
+      background: rgba(99,120,255,0.1);
+      border: 1px solid rgba(99,120,255,0.3);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .ranking-item {
+      background: #141929;
+      border: 1px solid rgba(99,120,255,0.15);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .rank {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #6378ff;
+      min-width: 40px;
+    }
+    .name {
+      flex: 1;
+      font-weight: 600;
+    }
+    .desc {
+      color: #8b9cc8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔄 机场排名轮换系统测试</h1>
+
+  <div class="info">
+    <p><strong>当前天数:</strong> <span id="current-day">-</span></p>
+    <p><strong>轮换周期:</strong> 每天0点自动轮换</p>
+    <p><strong>下次更新:</strong> <span id="next-update">-</span></p>
+  </div>
+
+  <h2>今日前6名排名</h2>
+  <div id="rankings-container"></div>
+
+  <script src="js/ranking-rotator.js"></script>
+  <script>
+    // 显示当前排名
+    const rankings = RankingRotator.getTop6Rankings();
+    const dayNumber = RankingRotator.getCurrentDayNumber();
+    const tomorrow = RankingRotator.getTomorrow();
+
+    document.getElementById('current-day').textContent = `第 ${dayNumber} 天（从2026-01-01起）`;
+    document.getElementById('next-update').textContent = `${tomorrow} 00:00`;
+
+    const container = document.getElementById('rankings-container');
+    rankings.forEach(airport => {
+      const div = document.createElement('div');
+      div.className = 'ranking-item';
+      div.innerHTML = `
+        <div class="rank">#${airport.rank}</div>
+        <div style="flex:1">
+          <div class="name">${airport.icon} ${airport.name}</div>
+          <div class="desc">${airport.desc} · ${airport.price}</div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
