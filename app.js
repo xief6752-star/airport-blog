@@ -77,6 +77,7 @@ const affLinks = {
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
   xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD',
   jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32',
+  guangnianti: 'https://rumors.gntaff.com/#/?code=Mclks3w5',
   lumo: 'https://lumo.52kok.cn/sign-up/?code=sbEOqdwH'
 };
 function goAff(name) {
@@ -96,6 +97,7 @@ function showDetail(name) {
     shanhai: { name: '山海机场', desc: '山海机场支持按量付费和不限时套餐，多协议支持（SS/V2Ray/Trojan），适合使用频率不规律的用户。入门价格最低，是备用机场的好选择。\n\n✅ 优点：按量付费灵活、入门价格低（¥10 起）、多协议支持\n⚠️ 缺点：速度表现一般，适合作为备用而非主力' },
     jilianyun: { name: '极连云', desc: '极连云采用高性能 IEPL 专线与优质 BGP 中转，覆盖香港、日本、台湾、美国、新加坡等热门地区。全面支持 ChatGPT、Netflix、Disney+、HBO Max 等流媒体解锁，晚高峰稳定性出色，不限设备数。\n\n✅ 优点：IEPL 专线稳定性好、全流媒体解锁、ChatGPT 原生 IP、晚高峰速度420Mbps+、不限设备数\n⚠️ 注意：价格相对海外中转略高，建议先从月付套餐开始验证本地运营商兼容性' },
     jielianyun: { name: '极连云', desc: '极连云采用高性能 IEPL 专线与优质 BGP 中转，覆盖香港、日本、台湾、美国、新加坡等热门地区。全面支持 ChatGPT、Netflix、Disney+、HBO Max 等流媒体解锁，晚高峰稳定性出色，不限设备数。\n\n✅ 优点：IEPL 专线稳定性好、全流媒体解锁、ChatGPT 原生 IP、晚高峰速度420Mbps+、不限设备数\n⚠️ 注意：价格相对海外中转略高，建议先从月付套餐开始验证本地运营商兼容性' },
+    guangnianti: { name: '光年梯', desc: '光年梯采用全程 IPLC 专线，支持智能分流，覆盖香港、日本、台湾、美国、新加坡等热门节点。全面支持 ChatGPT、Netflix、Disney+、TikTok 等解锁，最高速率可达 2.5Gbps，适合追求高速稳定的日常学习、影音娱乐与远程办公用户。\n\n✅ 优点：全程 IPLC 专线、智能分流技术、最高速率 2.5Gbps、全流媒体解锁、多地节点覆盖\n⚠️ 注意：价格相对中转略高，建议先月付体验后再选长期套餐' },
     baoyun: { name: '宝云', desc: '宝云主打海外中转线路，采用 VLESS 协议，节点覆盖香港、日本、台湾、新加坡、美国。支持常规流媒体解锁以及 ChatGPT、Gemini 等 AI 服务，套餐从 ¥4/月起。\n\n✅ 优点：入门价格低、节点覆盖亚洲与美国、VLESS 协议、AI 与 YouTube 4K 使用场景明确\n⚠️ 注意：速度与可用率为参考值，建议先月付验证本地晚高峰体验' },
     jindouyun: { name: '筋斗云', desc: '筋斗云是一家专注 IEPL/IPLC 专线的老牌优质机场，采用三网优化线路，晚高峰实测稳定 600Mbps+。全节点原生 IP 解锁 Netflix、ChatGPT、TikTok、Disney+，套餐灵活，年付性价比出色。\n\n✅ 优点：IEPL/IPLC 专线、三网优化、原生 IP 解锁全、套餐档位丰富、7×24 客服在线\n⚠️ 缺点：欧美节点数量略少，年付需先月付试用后再锁定' },
     yuntu: { name: '云图机场 (CloudMap)', desc: '云图机场全面采用金融级专线传输，依托高规格跨境专线与优质节点拓扑，保障高峰期低延迟、零丢包。全节点 1 倍率，无扣费陷阱，ChatGPT/Netflix/TikTok 等主流服务完美解锁，工单 24 小时内响应。\n\n套餐：¥20/月（150G）· ¥49/月（300G）· ¥99/月（600G），均支持 5 设备同时在线。\n开业优惠码：yt88（3 个月内有效，截至 2026-11-04）\n\n✅ 优点：金融级专线稳定、全节点 1 倍率无陷阱、原生 IP 解锁全面、24H 工单保障\n⚠️ 注意：新上线机场，建议先月付体验后再选长期套餐' },
