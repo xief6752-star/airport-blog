@@ -87,11 +87,11 @@ function getTagsForAirport(airportId) {
       { text: '节点丰富', class: 'tag-purple' },
       { text: '年付低价', class: 'tag-orange' }
     ],
-    jindouyun: [
-      { text: 'IEPL专线', class: 'tag-blue' },
-      { text: 'Netflix', class: 'tag-green' },
-      { text: 'ChatGPT', class: 'tag-green' },
-      { text: '三网优化', class: 'tag-orange' }
+    jisuyun: [
+      { text: 'CN2GIA三网精品', class: 'tag-orange' },
+      { text: 'TikTok原生', class: 'tag-green' },
+      { text: 'VLess协议', class: 'tag-blue' },
+      { text: '28+地区', class: 'tag-purple' }
     ],
     huanyuyun: [
       { text: 'IPLC专线', class: 'tag-blue' },
@@ -134,10 +134,10 @@ function getStatsForAirport(airportId) {
       { value: '700+', label: '晚高峰Mbps' },
       { value: '99.2%', label: '30日可用率' }
     ],
-    jindouyun: [
-      { value: '22ms', label: '平均延迟', color: '#22d3a0' },
-      { value: '600+', label: '晚高峰Mbps' },
-      { value: '99.4%', label: '30日可用率' }
+    jisuyun: [
+      { value: '28ms', label: '平均延迟', color: '#22d3a0' },
+      { value: '900+', label: '晚高峰Mbps' },
+      { value: '99.5%', label: '30日可用率' }
     ],
     huanyuyun: [
       { value: '12ms', label: '参考延迟', color: '#22d3a0' },

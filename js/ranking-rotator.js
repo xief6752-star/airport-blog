@@ -9,7 +9,7 @@ const TOP_6_POOL = [
   { id: 'yuntu', name: '云图机场', icon: '🗺️', price: '¥20/月起', score: 9.2, desc: '金融级专线·1倍率无陷阱', tags: ['iepl', 'stream', 'budget'], badge: '强烈推荐', gradient: 'linear-gradient(135deg,#8b5cf6,#6d28d9)' },
   { id: 'kunpeng', name: '鲲鹏加速', icon: '🦅', price: '¥1起', score: 9.1, desc: '1元套餐·全站极速1倍率', tags: ['budget', 'stream'], badge: '性价比 #1', gradient: 'linear-gradient(135deg,#f59e0b,#d97706)' },
   { id: 'shunyun', name: '瞬云', icon: '⚡', price: '¥16/月起', score: 9.0, desc: 'IEPL专线·套餐灵活·年付实惠', tags: ['budget'], badge: '正常运行', gradient: 'linear-gradient(135deg,#4facfe,#00f2fe)' },
-  { id: 'jindouyun', name: '筋斗云', icon: '☁️', price: '¥16/月起', score: 8.9, desc: 'IEPL/IPLC专线·三网优化·原生IP', tags: ['iepl', 'stream', 'budget'], badge: '正常运行', gradient: 'linear-gradient(135deg,#f59e0b,#fbbf24)' },
+  { id: 'jisuyun', name: '极速Cloud', icon: '⚡', price: '¥30/月起', score: 8.9, desc: '三网CN2GIA精品·VLess协议', tags: ['premium', 'speed'], badge: '正常运行', gradient: 'linear-gradient(135deg,#c2410c,#ea580c)' },
   { id: 'huanyuyun', name: '寰宇云', icon: '🌏', price: '¥28/月起', score: 8.8, desc: 'IPLC专线·不限时套餐', tags: ['iepl', 'budget'], badge: '新测评', gradient: 'linear-gradient(135deg,#667eea,#764ba2)' },
   { id: 'jiuyun', name: '九云', icon: '☁️', price: '¥6/月起', score: 8.7, desc: '海外中转·VLESS协议·超低价', tags: ['budget', 'beginner', 'stream'], badge: '正常运行', gradient: 'linear-gradient(135deg,#22d3a0,#10b981)' }
 ];
