@@ -75,7 +75,7 @@ const affLinks = {
   cailuyun:  'https://cl888.cailudl.com:9999/#/register?code=d4UTPba8',
   kunpeng:   'https://kunpengjiasu.com/#/register?code=GQzYysG0',
   andycloud: 'https://yg.andygg.com/#/register?code=mPfoyHTr',
-  xinghuayun: 'https://xh.xinghuajichang.com/#/register?code=IKKg2MhD',
+  xinghuayun: 'https://yg.xinghuatg.com',
   jielianyun: 'https://ydto01.jlyvipaff.com#/?code=NRrSjo32',
   guangnianti: 'https://rumors.gntaff.com/#/?code=Mclks3w5',
   lumo: 'https://lumo.52kok.cn/sign-up/?code=sbEOqdwH'
