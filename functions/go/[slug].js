@@ -44,9 +44,9 @@ const LINKS = {
   'haozevpn-bot': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13&utm_source=yongjichang&utm_medium=review&utm_campaign=haozevpn&utm_content=bot',
 
   // 云图机场
-  'yuntu-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=top',
-  'yuntu-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=mid',
-  'yuntu-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yuntu&utm_content=bot',
+  'yuntu-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yuntu-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yuntu-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 
   // 极速Cloud
   'jisucloud-top': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=top',
@@ -64,29 +64,29 @@ const LINKS = {
   'baoyun-bot': 'https://141.11.77.85:8888/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=bot',
 
   // 超悦机场 → 云图
-  'chaoyue-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=chaoyue&utm_content=top',
-  'chaoyue-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=chaoyue&utm_content=mid',
-  'chaoyue-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=chaoyue&utm_content=bot',
+  'chaoyue-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'chaoyue-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'chaoyue-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 
   // 一元机场 → 云图
-  'yiyuan-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yiyuan&utm_content=top',
-  'yiyuan-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yiyuan&utm_content=mid',
-  'yiyuan-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=yiyuan&utm_content=bot',
+  'yiyuan-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yiyuan-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yiyuan-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 
   // TAG机场 → 云图
-  'tag-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=tag&utm_content=top',
-  'tag-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=tag&utm_content=mid',
-  'tag-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=tag&utm_content=bot',
+  'tag-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'tag-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'tag-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 
   // GlaDOS → 云图
-  'glados-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=glados&utm_content=top',
-  'glados-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=glados&utm_content=mid',
-  'glados-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=glados&utm_content=bot',
+  'glados-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'glados-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'glados-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 
   // 硅基流动 → 云图
-  'siliconflow-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=siliconflow&utm_content=top',
-  'siliconflow-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=siliconflow&utm_content=mid',
-  'siliconflow-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE&utm_source=yongjichang&utm_medium=review&utm_campaign=siliconflow&utm_content=bot',
+  'siliconflow-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'siliconflow-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'siliconflow-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
 };
 
 export async function onRequest(context) {
