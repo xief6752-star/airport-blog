@@ -65,7 +65,7 @@ const affLinks = {
   jilianyun: 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
   baoyun:    'https://141.11.77.85:8888/#/register?code=089ta958',
   jindouyun: 'https://jdy.52kok.cn/#/register?code=wUKiwosG',
-  yuntu:     'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  yuntu:     'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
   jiuyun:    'https://yong.jiuyyq.com',
   speedworld: 'http://yongjichang.speedworldaff.com/#/?code=GPjugEyt',
   miaomiaoyun: 'https://m2.mouhiojl.com:8888/#/register?code=6u2dHtD4',

@@ -44,9 +44,9 @@ const LINKS = {
   'haozevpn-bot': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13&utm_source=yongjichang&utm_medium=review&utm_campaign=haozevpn&utm_content=bot',
 
   // 云图机场
-  'yuntu-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'yuntu-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'yuntu-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yuntu-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'yuntu-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'yuntu-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 
   // 极速Cloud
   'jisucloud-top': 'https://ygbk.jsjc456789.com/#/register?code=EocII8EW&utm_source=yongjichang&utm_medium=review&utm_campaign=jisucloud&utm_content=top',
@@ -64,29 +64,29 @@ const LINKS = {
   'baoyun-bot': 'https://141.11.77.85:8888/#/register?code=089ta958&utm_source=yongjichang&utm_medium=review&utm_campaign=baoyun&utm_content=bot',
 
   // 超悦机场 → 云图
-  'chaoyue-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'chaoyue-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'chaoyue-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'chaoyue-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'chaoyue-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'chaoyue-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 
   // 一元机场 → 云图
-  'yiyuan-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'yiyuan-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'yiyuan-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'yiyuan-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'yiyuan-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'yiyuan-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 
   // TAG机场 → 云图
-  'tag-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'tag-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'tag-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'tag-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'tag-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'tag-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 
   // GlaDOS → 云图
-  'glados-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'glados-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'glados-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'glados-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'glados-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'glados-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 
   // 硅基流动 → 云图
-  'siliconflow-top': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'siliconflow-mid': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
-  'siliconflow-bot': 'https://super.ytjcok.org/#/register?code=iV8ahCNE',
+  'siliconflow-top': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'siliconflow-mid': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
+  'siliconflow-bot': 'https://super.yuntujc.cc/#/register?code=iV8ahCNE',
 };
 
 export async function onRequest(context) {
